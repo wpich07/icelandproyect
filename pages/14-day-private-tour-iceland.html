@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 Day Private Tour Iceland | Ultimate Private Iceland Grand Tour</title>
+<meta name="description" content="Experience the ultimate 14 day private tour of Iceland with your own driver-guide, exploring the Ring Road, South Coast, Glacier Lagoon, Eastfjords, North Iceland, West Iceland, Snæfellsnes and optional remote regions at a relaxed pace.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+/* ============================================================
+   14 DAY PRIVATE TOUR ICELAND — Page-Specific Styles
+   Ultimate Expedition: split hero, chapter itinerary, blueprint modules
+   Distinct from ALL other pages (3–12 day)
+   ============================================================ */
+
+/* ===== SPLIT HERO (unique pattern) ===== */
+.split-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sh-left {
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  padding: 120px 0 100px;
+  position: relative;
+}
+
+.sh-left::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, rgba(201,169,106,0.3), transparent);
+}
+
+.sh-left-inner {
+  max-width: 520px;
+  margin-left: auto;
+  padding-right: 60px;
+  padding-left: 24px;
+}
+
+.sh-right {
+  background: url('../assets/images/14-day-complete-iceland-private-tour.jpg') center center / cover no-repeat;
+  position: relative;
+}
+
+.sh-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7,26,45,0.25), transparent 30%, transparent 70%, rgba(7,26,45,0.35));
+}
+
+.sh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  background: rgba(201,169,106,0.08);
+  padding: 7px 18px;
+  border-radius: 50px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(201,169,106,0.12);
+}
+
+.sh-eyebrow i {
+  font-size: 0.6rem;
+}
+
+.sh-left-inner h1 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.sh-sub {
+  font-size: clamp(0.95rem, 1.3vw, 1.12rem);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.sh-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.sh-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 28px;
+}
+
+.sh-stat {
+  padding: 8px 0;
+}
+
+.sh-stat-val {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.sh-stat-lbl {
+  font-size: 0.58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ===== MANIFESTO SECTION ===== */
+.manifesto {
+  background: var(--navy);
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+
+.manifesto-quote {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  position: relative;
+  padding: 0 40px;
+}
+
+.manifesto-quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -30px;
+  left: 0;
+  font-size: 6rem;
+  color: var(--gold);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto 56px;
+}
+
+.manifesto-grid p {
+  color: rgba(244,248,250,0.65);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+.blueprint-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  max-width: 880px;
+  margin: 0 auto;
+  border: 1px solid rgba(201,169,106,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bp-stat {
+  padding: 24px 14px;
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+  border-right: 1px solid rgba(255,255,255,0.04);
+}
+
+.bp-stat:last-child {
+  border-right: none;
+}
+
+.bp-stat-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.bp-stat-lbl {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ===== EXPEDITION BLUEPRINT MODULES ===== */
+.blueprint {
+  padding: 100px 0;
+}
+
+.blueprint .section-subtitle {
+  max-width: 660px;
+}
+
+.bp-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.bp-module {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 52px 0;
+  border-bottom: 1px solid rgba(7,26,45,0.06);
+  transition: all 0.3s ease;
+}
+
+.bp-module:first-child {
+  padding-top: 0;
+}
+
+.bp-module:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.bp-mod-left {
+  position: relative;
+}
+
+.bp-mod-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(7,26,45,0.04);
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+.bp-mod-label {
+  display: inline-block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--glacier);
+  margin-bottom: 8px;
+}
+
+.bp-mod-left h3 {
+  font-size: 1.25rem;
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.bp-mod-right p {
+  font-size: 0.92rem;
+  color: var(--stone);
+  line-height: 1.7;
+  margin-bottom: 14px;
+  max-width: 560px;
+}
+
+.bp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.bp-tags span {
+  font-size: 0.66rem;
+  color: var(--stone);
+  background: rgba(111,183,200,0.06);
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(111,183,200,0.08);
+}
+
+/* ===== CHAPTER ITINERARY (unique pattern) ===== */
+.chapter-itinerary {
+  background: var(--navy);
+  padding: 100px 0;
+  position: relative;
+}
+
+.chapter-itinerary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,106,0.3), transparent);
+}
+
+.chapter-itinerary .section-title,
+.chapter-itinerary .section-subtitle {
+  color: var(--white);
+}
+
+.chapter-itinerary .section-subtitle {
+  color: rgba(255,255,255,0.55);
+}
+
+.chapter-card {
+  margin-bottom: 64px;
+}
+
+.chapter-card:last-child {
+  margin-bottom: 0;
+}
+
+.ch-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ch-roman {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.7;
+  min-width: 50px;
+}
+
+.ch-title {
+  font-size: 1.15rem;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.ch-days {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ch-day {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 24px 20px;
+  transition: all 0.3s ease;
+}
+
+.ch-day:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(201,169,106,0.1);
+  transform: translateY(-2px);
+}
+
+.ch-day-num {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--glacier);
+  margin-bottom: 8px;
+}
+
+.ch-day h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.ch-day p {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.55;
+}
+
+.ch-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.ch-tags span {
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.03);
+  padding: 2px 8px;
+  border-radius: 50px;
+}
+
+/* ===== SIGNATURE EXPERIENCES ===== */
+.sigexp {
+  background: var(--ice);
+  padding: 100px 0;
+}
+
+.sigexp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.se-card {
+  background: var(--white);
+  border: 1px solid rgba(7,26,45,0.04);
+  border-radius: 4px;
+  padding: 26px 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(7,26,45,0.02);
+}
+
+.se-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(7,26,45,0.05);
+  border-color: rgba(111,183,200,0.1);
+}
+
+.se-card .se-icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: rgba(111,183,200,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--glacier);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.se-card:hover .se-icon {
+  background: rgba(201,169,106,0.1);
+  color: var(--gold);
+}
+
+.se-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.se-card p {
+  font-size: 0.7rem;
+  color: var(--stone);
+  line-height: 1.45;
+}
+
+/* ===== CUSTOM / TAILOR-MADE ===== */
+.custom-ultimate {
+  background: var(--navy);
+  padding: 100px 0;
+  position: relative;
+  text-align: center;
+}
+
+.custom-ultimate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,106,0.25), transparent);
+}
+
+.custom-ultimate .section-title {
+  color: var(--white);
+}
+
+.custom-ultimate .section-subtitle {
+  color: rgba(255,255,255,0.55);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.custom-grid-14 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 880px;
+  margin: 48px auto 0;
+}
+
+.custom-item-14 {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 20px 14px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  transition: all 0.3s ease;
+}
+
+.custom-item-14:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(201,169,106,0.1);
+}
+
+.custom-item-14 i {
+  display: block;
+  color: var(--glacier);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+/* ===== DRIVER GUIDE ===== */
+.driver-14 {
+  background: var(--navy);
+  padding: 100px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.driver-14 .section-title { color: var(--white); }
+
+.driver-14-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.driver-14-img {
+  min-height: 440px;
+  background: url('../assets/images/private-driver-guide-iceland.jpg') center center / cover no-repeat;
+  border-radius: 4px;
+}
+
+.driver-14-text p {
+  color: rgba(244,248,250,0.68);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+.driver-14-list {
+  list-style: none;
+  padding: 0;
+}
+
+.driver-14-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.88rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.driver-14-list li:last-child { border-bottom: none; }
+
+.driver-14-list li i {
+  color: var(--glacier);
+  font-size: 0.72rem;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+/* ===== INCLUDED / NOT INCLUDED ===== */
+.incl-14 {
+  background: var(--ice);
+  padding: 100px 0;
+}
+
+.incl-14-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.incl-14-col {
+  background: var(--white);
+  border: 1px solid rgba(7,26,45,0.04);
+  border-radius: 4px;
+  padding: 38px 34px;
+  box-shadow: 0 1px 4px rgba(7,26,45,0.02);
+}
+
+.incl-14-col h3 {
+  font-size: 1.1rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--glacier);
+}
+
+.incl-14-col ul { list-style: none; padding: 0; }
+
+.incl-14-col li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  font-size: 0.87rem;
+  color: var(--stone);
+  border-bottom: 1px solid rgba(7,26,45,0.04);
+}
+
+.incl-14-col li:last-child { border-bottom: none; }
+
+.incl-14-col .fa-check { color: var(--aurora); font-size: 0.7rem; }
+.incl-14-col .fa-times { color: #c0392b; opacity: 0.4; font-size: 0.7rem; }
+
+/* ===== BEST TIME ===== */
+.season-14 {
+  background: var(--navy);
+  padding: 100px 0;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.season-14 .section-title,
+.season-14 .section-subtitle { color: var(--white); }
+.season-14 .section-subtitle { color: rgba(255,255,255,0.5); }
+
+.season-14-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.season-14-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 34px 26px;
+  transition: all 0.3s ease;
+}
+
+.season-14-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(201,169,106,0.1);
+  transform: translateY(-2px);
+}
+
+.season-14-card i { font-size: 1.3rem; color: var(--gold); margin-bottom: 14px; }
+.season-14-card h4 { font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.season-14-card p { font-size: 0.78rem; color: rgba(255,255,255,0.46); line-height: 1.6; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .sigexp-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .split-hero { grid-template-columns: 1fr; min-height: auto; }
+  .sh-left { padding: 100px 0 80px; }
+  .sh-left-inner { max-width: 600px; margin: 0 auto; padding: 0 24px; }
+  .sh-left::after { display: none; }
+  .sh-right { min-height: 50vh; order: -1; }
+  .sh-stats { grid-template-columns: repeat(3, 1fr); }
+  .bp-module { grid-template-columns: 1fr; gap: 16px; }
+  .bp-mod-num { font-size: 2.5rem; }
+  .driver-14-grid { grid-template-columns: 1fr; gap: 48px; }
+  .blueprint-stats { grid-template-columns: repeat(3, 1fr); }
+  .bp-stat:nth-child(3) { border-right: none; }
+  .custom-grid-14 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .ch-days { grid-template-columns: repeat(2, 1fr); }
+  .sigexp-grid { grid-template-columns: repeat(2, 1fr); }
+  .manifesto-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .sh-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; border-top: none; padding-top: 20px; }
+  .sh-stat-val { font-size: 1rem; }
+  .bp-module { padding: 36px 0; }
+  .ch-days { grid-template-columns: 1fr; }
+  .sigexp-grid { grid-template-columns: 1fr; }
+  .custom-grid-14 { grid-template-columns: repeat(2, 1fr); }
+  .incl-14-grid { grid-template-columns: 1fr; }
+  .season-14-grid { grid-template-columns: 1fr; }
+  .blueprint-stats { grid-template-columns: repeat(2, 1fr); }
+  .bp-stat { border-right: 1px solid rgba(255,255,255,0.04); }
+  .bp-stat:nth-child(2n) { border-right: none; }
+  .bp-stat:nth-child(5) { border-bottom: none; }
+  .manifesto-quote { font-size: 1.2rem; padding: 0 20px; }
+  .manifesto-quote::before { font-size: 4rem; top: -20px; }
+  .ch-header { flex-wrap: wrap; gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .sh-stats { grid-template-columns: 1fr; }
+  .bp-stats .bp-stat:nth-child(2n) { border-right: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      Iceland Private Tours
+      <span>Premium Multi-Day Experiences</span>
+    </a>
+    <nav class="nav">
+      <ul class="nav-list" id="navList">
+        <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
+        <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
+        <li><a href="../index.html#route" class="nav-link">By Route</a></li>
+        <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
+        <li><a href="#" class="nav-link"><!-- TODO: Create about page -->About</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== SPLIT HERO (unique pattern) ==================== -->
+<section class="split-hero">
+  <div class="sh-left">
+    <div class="sh-left-inner">
+      <span class="sh-eyebrow"><i class="fas fa-compass"></i> Ultimate Private Iceland Grand Tour</span>
+      <h1>14 Day Private Tour Iceland</h1>
+      <p class="sh-sub">Experience Iceland in its most complete form on a private two-week journey designed around your pace, with the Ring Road, South Coast, Glacier Lagoon, Eastfjords, North Iceland, West Iceland, Snæfellsnes and optional remote regions.</p>
+      <div class="sh-actions">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+        <a href="#route" class="btn btn-secondary">Explore the Ultimate Route</a>
+      </div>
+      <div class="sh-stats">
+        <div class="sh-stat">
+          <div class="sh-stat-val">14 Days</div>
+          <div class="sh-stat-lbl">13 Nights in Iceland</div>
+        </div>
+        <div class="sh-stat">
+          <div class="sh-stat-val">360°</div>
+          <div class="sh-stat-lbl">Complete Iceland Circle</div>
+        </div>
+        <div class="sh-stat">
+          <div class="sh-stat-val">RKV / KEF</div>
+          <div class="sh-stat-lbl">Flexible Start Point</div>
+        </div>
+        <div class="sh-stat">
+          <div class="sh-stat-val">1:1</div>
+          <div class="sh-stat-lbl">Private Driver-Guide</div>
+        </div>
+        <div class="sh-stat">
+          <div class="sh-stat-val">Slow</div>
+          <div class="sh-stat-lbl">Relaxed Travel Pace</div>
+        </div>
+        <div class="sh-stat">
+          <div class="sh-stat-val">Custom</div>
+          <div class="sh-stat-lbl">Fully Tailored Route</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sh-right"></div>
+</section>
+
+<!-- ==================== MANIFESTO / OVERVIEW ==================== -->
+<section class="manifesto" id="overview">
+  <div class="container">
+    <span class="section-label" style="color: var(--gold);">The Expedition</span>
+    <h2 class="section-title" style="color: var(--white);">The Most Complete Way to Experience Iceland Privately</h2>
+    <div class="manifesto-quote">
+      Fourteen days turns Iceland from a route into a private expedition shaped around your pace, your interests and the conditions of the island.
+    </div>
+    <div class="manifesto-grid">
+      <p>Fourteen days opens the door to Iceland in a way that shorter itineraries simply cannot. This is not about seeing more places — it is about travelling with genuine calm, adapting daily to the weather and the light, and giving yourself the margin to explore remote regions, add optional experiences and enjoy the journey without once feeling rushed.</p>
+      <p>With your own private driver-guide from start to finish, every detail adapts to you. Stay longer in the Eastfjords. Chase the aurora on a clear winter night. Add a day for whale watching in the north. Take the Highlands route in summer. This is Iceland on your terms — complete, private and deeply personal.</p>
+    </div>
+    <div class="blueprint-stats">
+      <div class="bp-stat">
+        <div class="bp-stat-num">14</div>
+        <div class="bp-stat-lbl">Days of Discovery</div>
+      </div>
+      <div class="bp-stat">
+        <div class="bp-stat-num">13</div>
+        <div class="bp-stat-lbl">Nights in Iceland</div>
+      </div>
+      <div class="bp-stat">
+        <div class="bp-stat-num">360°</div>
+        <div class="bp-stat-lbl">Complete Island Circle</div>
+      </div>
+      <div class="bp-stat">
+        <div class="bp-stat-num">1</div>
+        <div class="bp-stat-lbl">Private Driver-Guide</div>
+      </div>
+      <div class="bp-stat">
+        <div class="bp-stat-num">100%</div>
+        <div class="bp-stat-lbl">Custom Route &amp; Pace</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EXPEDITION BLUEPRINT ==================== -->
+<section class="blueprint section" id="route">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Expedition Blueprint</span>
+      <h2 class="section-title">The 14 Day Iceland Expedition Blueprint</h2>
+      <p class="section-subtitle">Six carefully composed modules, each representing a distinct chapter of Iceland's landscape, light and character.</p>
+    </div>
+    <div class="bp-modules">
+
+      <div class="bp-module">
+        <div class="bp-mod-left">
+          <div class="bp-mod-num">I</div>
+          <span class="bp-mod-label">Module 01</span>
+          <h3>The Arrival Gateway</h3>
+        </div>
+        <div class="bp-mod-right">
+          <p>Your expedition begins with private pickup at Keflavik Airport or Reykjavík. Depending on your arrival time, explore Reykjavík, the lunar landscapes of Reykjanes Peninsula, geothermal areas or ease into the journey with a relaxed first evening. This is your gentle introduction to Iceland on your own tempo.</p>
+          <div class="bp-tags">
+            <span>Reykjavík</span><span>Keflavik</span><span>Reykjanes Peninsula</span><span>Coastal landscapes</span><span>Geothermal areas</span><span>Flexible start</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-module">
+        <div class="bp-mod-left">
+          <div class="bp-mod-num">II</div>
+          <span class="bp-mod-label">Module 02</span>
+          <h3>Classic Iceland Icons</h3>
+        </div>
+        <div class="bp-mod-right">
+          <p>Discover the Golden Circle at your private pace: walk between tectonic plates at Þingvellir, watch Strokkur erupt at Geysir and feel the spray of Gullfoss. Continue along the South Coast to Seljalandsfoss, Skógafoss and the black sand beach of Reynisfjara with its basalt columns and Atlantic surf.</p>
+          <div class="bp-tags">
+            <span>Þingvellir</span><span>Geysir</span><span>Gullfoss</span><span>Seljalandsfoss</span><span>Skógafoss</span><span>Reynisfjara</span><span>Vík</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-module">
+        <div class="bp-mod-left">
+          <div class="bp-mod-num">III</div>
+          <span class="bp-mod-label">Module 03</span>
+          <h3>Glacier Country</h3>
+        </div>
+        <div class="bp-mod-right">
+          <p>Enter the realm of ice. Explore Skaftafell within Vatnajökull National Park, then continue to Jökulsárlón Glacier Lagoon where icebergs drift silently beneath Europe's largest glacier. Cross the road to Diamond Beach, where ice crystals scatter across black volcanic sand — one of Iceland's most photographed landscapes.</p>
+          <div class="bp-tags">
+            <span>Skaftafell</span><span>Vatnajökull</span><span>Jökulsárlón</span><span>Diamond Beach</span><span>Höfn</span><span>Vestrahorn</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-module">
+        <div class="bp-mod-left">
+          <div class="bp-mod-num">IV</div>
+          <span class="bp-mod-label">Module 04</span>
+          <h3>Remote Eastern Roads</h3>
+        </div>
+        <div class="bp-mod-right">
+          <p>The Eastfjords represent one of Iceland's quietest and most beautiful regions. Wind along coastal roads past fishing villages and beneath towering mountains. With a 14-day itinerary you have the time to spend two full days here — enough to find hidden viewpoints, walk harbour-side paths and absorb the fjord landscape without counting kilometres.</p>
+          <div class="bp-tags">
+            <span>Eastfjords</span><span>Fishing villages</span><span>Coastal roads</span><span>Mountain passes</span><span>Hidden viewpoints</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-module">
+        <div class="bp-mod-left">
+          <div class="bp-mod-num">V</div>
+          <span class="bp-mod-label">Module 05</span>
+          <h3>Volcanic North Iceland</h3>
+        </div>
+        <div class="bp-mod-right">
+          <p>North Iceland brings volcanic drama on a grand scale. Explore the geothermal vents of Námaskarð, the lava labyrinths of Dimmuborgir and the serene waters of Lake Mývatn. Witness the power of Dettifoss and Goðafoss, enjoy the relaxed charm of Akureyri, and use your extra day for whale watching, geothermal baths or northern photography stops.</p>
+          <div class="bp-tags">
+            <span>Lake Mývatn</span><span>Námaskarð</span><span>Dimmuborgir</span><span>Dettifoss</span><span>Goðafoss</span><span>Akureyri</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bp-module">
+        <div class="bp-mod-left">
+          <div class="bp-mod-num">VI</div>
+          <span class="bp-mod-label">Module 06</span>
+          <h3>Western Edge &amp; Final Landscapes</h3>
+        </div>
+        <div class="bp-mod-right">
+          <p>Close the circle through West Iceland and the Snæfellsnes Peninsula — often called Iceland in miniature. Stand beneath Kirkjufell, walk the sea cliffs of Arnarstapi, photograph the black church of Búðakirkja and gaze toward the glacier-capped Snæfellsjökull volcano. Your journey concludes with a flexible final return day shaped around your flight.</p>
+          <div class="bp-tags">
+            <span>Borgarfjörður</span><span>Kirkjufell</span><span>Arnarstapi</span><span>Búðakirkja</span><span>Snæfellsjökull</span><span>Reykjavík</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER ITINERARY (unique pattern) ==================== -->
+<section class="chapter-itinerary" id="itinerary">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color: var(--gold);">Your Journey</span>
+      <h2 class="section-title">Your 14 Day Private Iceland Itinerary</h2>
+      <p class="section-subtitle">Two weeks across Iceland, organised into six chapters that give each region the time and attention it deserves.</p>
+    </div>
+
+    <!-- Chapter I -->
+    <div class="chapter-card">
+      <div class="ch-header">
+        <span class="ch-roman">I</span>
+        <span class="ch-title">Arrival, Reykjanes &amp; Golden Circle</span>
+      </div>
+      <div class="ch-days">
+        <div class="ch-day">
+          <div class="ch-day-num">Day 01</div>
+          <h4>Arrival, Reykjavík or Reykjanes Peninsula</h4>
+          <p>Private pickup from Keflavik Airport or Reykjavík. Begin with Reykjavík, Reykjanes Peninsula, geothermal areas, coastal roads or a relaxed first evening depending on your arrival time.</p>
+          <div class="ch-tags"><span>Private pickup</span><span>Reykjavík</span><span>Flexible start</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 02</div>
+          <h4>Golden Circle at a Private Pace</h4>
+          <p>Explore Þingvellir National Park, the Geysir geothermal area and Gullfoss waterfall with time for scenic stops and a relaxed private rhythm.</p>
+          <div class="ch-tags"><span>Þingvellir</span><span>Geysir</span><span>Gullfoss</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter II -->
+    <div class="chapter-card">
+      <div class="ch-header">
+        <span class="ch-roman">II</span>
+        <span class="ch-title">South Coast &amp; Glacier Country</span>
+      </div>
+      <div class="ch-days">
+        <div class="ch-day">
+          <div class="ch-day-num">Day 03</div>
+          <h4>South Coast Waterfalls and Vík</h4>
+          <p>Travel along the South Coast with Seljalandsfoss, Skógafoss, volcanic viewpoints, coastal landscapes and the Vík area.</p>
+          <div class="ch-tags"><span>Seljalandsfoss</span><span>Skógafoss</span><span>Vík</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 04</div>
+          <h4>Black Sand Beach, Skaftafell and Glacier Landscapes</h4>
+          <p>Explore Reynisfjara Black Sand Beach, basalt columns, lava fields and continue east toward Skaftafell and Vatnajökull glacier landscapes.</p>
+          <div class="ch-tags"><span>Reynisfjara</span><span>Skaftafell</span><span>Vatnajökull</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 05</div>
+          <h4>Glacier Lagoon, Diamond Beach and Southeast Iceland</h4>
+          <p>Visit Jökulsárlón Glacier Lagoon and Diamond Beach with time for photography, icebergs, black sand and southeast Iceland's cinematic scenery.</p>
+          <div class="ch-tags"><span>Jökulsárlón</span><span>Diamond Beach</span><span>Höfn area</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter III -->
+    <div class="chapter-card">
+      <div class="ch-header">
+        <span class="ch-roman">III</span>
+        <span class="ch-title">Eastfjords &amp; Remote Landscapes</span>
+      </div>
+      <div class="ch-days">
+        <div class="ch-day">
+          <div class="ch-day-num">Day 06</div>
+          <h4>Southeast Iceland and the Eastfjords</h4>
+          <p>Continue from southeast Iceland into the Eastfjords, where the route becomes quieter, more remote and beautifully scenic.</p>
+          <div class="ch-tags"><span>Höfn area</span><span>Vestrahorn</span><span>Eastfjords</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 07</div>
+          <h4>Eastfjords Slow Scenic Day</h4>
+          <p>Use the extra time of a 14 day tour to enjoy the Eastfjords without rushing, with fishing villages, fjord roads and flexible stops.</p>
+          <div class="ch-tags"><span>Fishing villages</span><span>Fjord roads</span><span>Hidden stops</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter IV -->
+    <div class="chapter-card">
+      <div class="ch-header">
+        <span class="ch-roman">IV</span>
+        <span class="ch-title">Volcanic North Iceland</span>
+      </div>
+      <div class="ch-days">
+        <div class="ch-day">
+          <div class="ch-day-num">Day 08</div>
+          <h4>Lake Mývatn and Volcanic Landscapes</h4>
+          <p>Explore North Iceland's volcanic landscapes, geothermal areas, lava formations and waterfalls around Lake Mývatn.</p>
+          <div class="ch-tags"><span>Mývatn</span><span>Námaskarð</span><span>Dimmuborgir</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 09</div>
+          <h4>Goðafoss, Akureyri and North Iceland</h4>
+          <p>Visit Goðafoss and Akureyri, with time to enjoy the north at a comfortable pace and adapt the route around season and weather.</p>
+          <div class="ch-tags"><span>Goðafoss</span><span>Akureyri</span><span>Fjord views</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 10</div>
+          <h4>Flexible North Iceland Experience</h4>
+          <p>Use the extra day for whale watching, geothermal baths, scenic fjords, photography stops or a slower day around North Iceland depending on season.</p>
+          <div class="ch-tags"><span>Whale watching</span><span>Geothermal spa</span><span>Flexible day</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter V -->
+    <div class="chapter-card">
+      <div class="ch-header">
+        <span class="ch-roman">V</span>
+        <span class="ch-title">West Iceland &amp; Snæfellsnes</span>
+      </div>
+      <div class="ch-days">
+        <div class="ch-day">
+          <div class="ch-day-num">Day 11</div>
+          <h4>Westward Landscapes and Borgarfjörður</h4>
+          <p>Travel west through changing landscapes, with possible stops in Borgarfjörður, waterfalls, lava fields or geothermal areas depending on the route.</p>
+          <div class="ch-tags"><span>West Iceland</span><span>Borgarfjörður</span><span>Lava fields</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 12</div>
+          <h4>Snæfellsnes Peninsula</h4>
+          <p>Explore Snæfellsnes Peninsula with Kirkjufell, Arnarstapi, Búðakirkja, sea cliffs, lava fields and Snæfellsjökull glacier views.</p>
+          <div class="ch-tags"><span>Kirkjufell</span><span>Arnarstapi</span><span>Snæfellsjökull</span></div>
+        </div>
+        <div class="ch-day">
+          <div class="ch-day-num">Day 13</div>
+          <h4>Flexible Western Iceland or Optional Remote Extension</h4>
+          <p>Use the additional day for more of West Iceland, a slower Snæfellsnes experience, seasonal Highlands route or route adjustments based on weather.</p>
+          <div class="ch-tags"><span>Optional Highlands</span><span>Flexible stops</span><span>Custom route</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter VI -->
+    <div class="chapter-card">
+      <div class="ch-header">
+        <span class="ch-roman">VI</span>
+        <span class="ch-title">Final Return</span>
+      </div>
+      <div class="ch-days">
+        <div class="ch-day">
+          <div class="ch-day-num">Day 14</div>
+          <h4>Final Scenic Return to Reykjavík or Keflavik</h4>
+          <p>Enjoy a flexible final day shaped around your flight time and interests, with Reykjavík, Reykjanes Peninsula, Blue Lagoon area or final scenic stops.</p>
+          <div class="ch-tags"><span>Flexible ending</span><span>Reykjavík</span><span>Keflavik Airport</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== SIGNATURE EXPERIENCES ==================== -->
+<section class="sigexp" id="experiences">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Signature Experiences</span>
+      <h2 class="section-title">Signature Experiences Across Two Weeks</h2>
+      <p class="section-subtitle">A 14-day private journey opens the door to Iceland's most exceptional landscapes, moments and discoveries.</p>
+    </div>
+    <div class="sigexp-grid">
+      <div class="se-card"><div class="se-icon"><i class="fas fa-mountain"></i></div><h4>Golden Circle at Your Pace</h4><p>Þingvellir, Geysir and Gullfoss explored without rushing.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-water"></i></div><h4>South Coast Waterfalls</h4><p>Seljalandsfoss, Skógafoss and hidden cascades.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-bolt"></i></div><h4>Black Sand Beaches</h4><p>Reynisfjara basalt columns and volcanic coastlines.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-icicles"></i></div><h4>Glacier Lagoon</h4><p>Jökulsárlón icebergs floating beneath Vatnajökull.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-gem"></i></div><h4>Diamond Beach</h4><p>Ice crystals scattered across black volcanic sand.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-road"></i></div><h4>Eastfjords Scenic Roads</h4><p>Remote coastal routes and quiet fishing villages.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-fire"></i></div><h4>Lake Mývatn</h4><p>Volcanic craters, geothermal vents and lava formations.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-water"></i></div><h4>North Iceland Waterfalls</h4><p>Dettifoss, Goðafoss and the cascades of the north.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-city"></i></div><h4>Akureyri</h4><p>The charming capital of North Iceland with fjord views.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-globe-europe"></i></div><h4>Snæfellsnes Peninsula</h4><p>Kirkjufell, sea cliffs and glacier-capped volcano.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-star"></i></div><h4>Northern Lights in Winter</h4><p>Flexible aurora hunting with expert guidance.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-fish"></i></div><h4>Whale Watching Option</h4><p>Spot whales in North Iceland's rich coastal waters.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-hot-tub"></i></div><h4>Geothermal Spa Stops</h4><p>Natural hot springs and premium geothermal baths.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-mountain"></i></div><h4>Optional Highlands in Summer</h4><p>Remote interior roads accessible by Super Jeep.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-user-tie"></i></div><h4>Private Driver-Guide</h4><p>Your dedicated local expert throughout the journey.</p></div>
+      <div class="se-card"><div class="se-icon"><i class="fas fa-map-signs"></i></div><h4>Flexible Scenic Detours</h4><p>Spontaneous stops adapted to weather and light.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY 14 DAYS ==================== -->
+<section class="custom-ultimate" id="custom">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color: var(--gold);">Make It Yours</span>
+      <h2 class="section-title">Make the Ultimate Iceland Journey Yours</h2>
+      <p class="section-subtitle">Every aspect of your 14 day private tour can be tailored to match your season, interests and preferred rhythm of travel.</p>
+    </div>
+    <div class="custom-grid-14">
+      <div class="custom-item-14"><i class="fas fa-calendar"></i> Adapted to your season</div>
+      <div class="custom-item-14"><i class="fas fa-cloud-sun"></i> Flexible around weather</div>
+      <div class="custom-item-14"><i class="fas fa-camera"></i> Photography-friendly pace</div>
+      <div class="custom-item-14"><i class="fas fa-child"></i> Family-friendly routing</div>
+      <div class="custom-item-14"><i class="fas fa-bed"></i> Luxury accommodation</div>
+      <div class="custom-item-14"><i class="fas fa-icicles"></i> Glacier hiking available</div>
+      <div class="custom-item-14"><i class="fas fa-mountain"></i> Ice caves in winter</div>
+      <div class="custom-item-14"><i class="fas fa-star"></i> Northern Lights hunting</div>
+      <div class="custom-item-14"><i class="fas fa-fish"></i> Whale watching stops</div>
+      <div class="custom-item-14"><i class="fas fa-hot-tub"></i> Geothermal spa visits</div>
+      <div class="custom-item-14"><i class="fas fa-truck"></i> Super Jeep upgrade</div>
+      <div class="custom-item-14"><i class="fas fa-clock"></i> Slower or longer days</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DRIVER GUIDE ==================== -->
+<section class="driver-14">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color: var(--gold);">Your Guide</span>
+      <h2 class="section-title">Your Private Driver-Guide Shapes the Journey</h2>
+    </div>
+    <div class="driver-14-grid">
+      <div class="driver-14-img"></div>
+      <div class="driver-14-text">
+        <p>No large groups. No rigid bus schedules. No compromises. A private driver-guide means fourteen days of complete freedom — your pace, your interests, your Iceland — with someone who knows the roads, the weather patterns and the hidden places that make a journey unforgettable.</p>
+        <ul class="driver-14-list">
+          <li><i class="fas fa-check"></i> Flexible daily decisions based on weather, light and mood</li>
+          <li><i class="fas fa-check"></i> Safer travel with expert knowledge of Icelandic roads and microclimates</li>
+          <li><i class="fas fa-check"></i> Local insight into geology, history and hidden gems along the route</li>
+          <li><i class="fas fa-check"></i> Better use of daylight with carefully timed daily planning</li>
+          <li><i class="fas fa-check"></i> Essential for a long, premium Iceland route spanning two weeks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INCLUDED / NOT INCLUDED ==================== -->
+<section class="incl-14">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Tour Details</span>
+      <h2 class="section-title">What Is Included</h2>
+      <p class="section-subtitle">Everything you need to know about what your private 14 day Iceland tour includes.</p>
+    </div>
+    <div class="incl-14-grid">
+      <div class="incl-14-col">
+        <h3><i class="fas fa-check-circle" style="color: var(--aurora); margin-right: 8px;"></i> Included</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Private driver-guide</li>
+          <li><i class="fas fa-check"></i> Private vehicle for the full tour</li>
+          <li><i class="fas fa-check"></i> Custom itinerary planning</li>
+          <li><i class="fas fa-check"></i> Pickup and drop-off in Reykjavík or Keflavik</li>
+          <li><i class="fas fa-check"></i> Flexible route adjustments</li>
+          <li><i class="fas fa-check"></i> Support before the trip</li>
+        </ul>
+      </div>
+      <div class="incl-14-col">
+        <h3><i class="fas fa-times-circle" style="color: #c0392b; opacity: 0.4; margin-right: 8px;"></i> Not Included</h3>
+        <ul>
+          <li><i class="fas fa-times"></i> Accommodation unless arranged</li>
+          <li><i class="fas fa-times"></i> Meals and drinks</li>
+          <li><i class="fas fa-times"></i> Optional activities</li>
+          <li><i class="fas fa-times"></i> Flights</li>
+          <li><i class="fas fa-times"></i> Travel insurance</li>
+          <li><i class="fas fa-times"></i> Entrance fees where applicable</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BEST TIME ==================== -->
+<section class="season-14">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label" style="color: var(--gold);">When to Go</span>
+      <h2 class="section-title">Best Time for a 14 Day Iceland Tour</h2>
+      <p class="section-subtitle">A private 14 day tour can be enjoyed year-round, with each season bringing its own distinct character to the journey.</p>
+    </div>
+    <div class="season-14-grid">
+      <div class="season-14-card">
+        <i class="fas fa-sun"></i>
+        <h4>Summer — June to August</h4>
+        <p>Long daylight hours, easier Ring Road conditions, possible Highlands routes and generous time for scenic stops, photography and spontaneous detours throughout the country.</p>
+      </div>
+      <div class="season-14-card">
+        <i class="fas fa-snowflake"></i>
+        <h4>Winter — November to February</h4>
+        <p>Possible with flexible planning. Northern Lights potential, snow-covered landscapes and dramatic winter light. The route can be adjusted for weather and road conditions.</p>
+      </div>
+      <div class="season-14-card">
+        <i class="fas fa-leaf"></i>
+        <h4>Spring / Autumn — March to May / September to October</h4>
+        <p>Fewer travellers on the roads, beautiful low-angle light, changing colours and some of the best conditions for landscape photography across all regions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section" style="background: var(--white);" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know about our 14 day private Iceland tour.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">Is this 14 day Iceland tour fully private?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes. This is a fully private tour designed exclusively for your group. You will not share your driver-guide, vehicle or itinerary with anyone outside your travel party.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is this a full Ring Road tour?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes. This private journey completes a full circle around Iceland, connecting the Golden Circle, South Coast, Eastfjords, North Iceland, West Iceland and Snæfellsnes Peninsula in a relaxed two-week itinerary.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How is this different from the 10 or 12 day private tour?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>The 14 day tour gives you more time in every region, extra flexibility for weather adjustments, additional days in the Eastfjords and North Iceland, and the option to add remote extensions such as the Highlands in summer or more of West Iceland.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can we customise the itinerary?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Absolutely. The itinerary is fully flexible and can be adapted around your travel dates, interests, preferred pace, accommodation choices and seasonal conditions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can the tour start from Keflavik Airport?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes. The tour can begin directly from Keflavik Airport or from your accommodation in Reykjavík, depending on your arrival plans and preferred pacing.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can we include the Westfjords or Highlands?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>The Highlands can be included in summer with a Super Jeep upgrade. The Westfjords typically require more time, but we can discuss extending your tour or adapting the route depending on your priorities.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can we see the Northern Lights on this tour?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Northern Lights sightings depend on solar activity, weather and cloud cover, but a 14 day tour gives you many more opportunities to be in the right place at the right time, especially during the darker months.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Are hotels included?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Accommodation is not automatically included, but we can recommend and arrange overnight stays that match your travel style, from comfortable guesthouses to premium hotels along the route.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can we add glacier hiking, whale watching, ice caves or the Blue Lagoon?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Yes. With two weeks you have ample room for optional experiences. Glacier hiking, whale watching, ice cave visits, geothermal spa stops and other activities can all be included depending on season and availability.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is this tour suitable for families or photographers?<i class="fas fa-chevron-down"></i></button>
+        <div class="faq-answer"><p>Absolutely. The extended duration makes this tour ideal for families who need a gentler daily pace and for photographers who want time to wait for the right light. The private nature of the tour means every day adapts to your specific needs.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FINAL CTA ==================== -->
+<section class="final-cta" id="contact">
+  <div class="final-cta-bg"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="container">
+    <div class="final-cta-content">
+      <div class="final-cta-text">
+        <span class="section-label" style="color: var(--gold);">Start Your Journey</span>
+        <h2 class="section-title">Start Planning Your Ultimate 14 Day Private Iceland Tour</h2>
+        <p>Share your dates, group size and travel style, and we will design a private two-week Iceland journey around your pace, interests, comfort level and season.</p>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fas fa-check" style="color: var(--glacier); font-size: 1rem;"></i></div>
+            <span style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Free custom itinerary design</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fas fa-check" style="color: var(--glacier); font-size: 1rem;"></i></div>
+            <span style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">No obligation consultation</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="fas fa-check" style="color: var(--glacier); font-size: 1rem;"></i></div>
+            <span style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Personalised within 24 hours</span>
+          </div>
+        </div>
+      </div>
+      <form class="cta-form">
+        <div class="form-row">
+          <div class="form-group"><label for="name">Name</label><input type="text" id="name" placeholder="Your name" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="your@email.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="dates">Travel Dates</label><input type="text" id="dates" placeholder="e.g. June 2026"></div>
+          <div class="form-group">
+            <label for="travelers">Number of Travelers</label>
+            <select id="travelers">
+              <option value="">Select...</option>
+              <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+              <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="duration">Preferred Duration</label>
+          <select id="duration">
+            <option value="">Select...</option>
+            <option value="3">3 Days</option><option value="4">4 Days</option>
+            <option value="5">5 Days</option><option value="6">6 Days</option>
+            <option value="7">7 Days</option><option value="8">8 Days</option>
+            <option value="9">9 Days</option><option value="10">10 Days</option>
+            <option value="12">12 Days</option>
+            <option value="14" selected>14 Days</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us about your dream Iceland itinerary..."></textarea></div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">Iceland Private Tours<span>Premium Multi-Day Experiences</span></a>
+        <p>Discover Iceland with private multi-day tours, custom itineraries and dedicated driver-guides. Premium travel experiences designed around your pace, interests and travel style.</p>
+      </div>
+      <div>
+        <h4>Tours</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Private Multi-Day Tours</a></li>
+          <li><a href="../index.html">Custom Private Tours</a></li>
+          <li><a href="../index.html">Luxury Tours</a></li>
+          <li><a href="../index.html">Super Jeep Tours</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>By Duration</h4>
+        <ul class="footer-links">
+          <li><a href="3-day-private-tour-iceland.html">3 Day Tours</a></li>
+          <li><a href="5-day-private-tour-iceland.html">5 Day Tours</a></li>
+          <li><a href="../index.html">7 Day Tours</a></li>
+          <li><a href="../index.html">10 Day Tours</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Guides</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
+      <p>Premium private multi-day tours in Iceland</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

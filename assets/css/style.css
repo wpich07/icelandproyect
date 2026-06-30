@@ -318,7 +318,7 @@ a {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/hero-iceland-private-tours.jpg') center center / cover no-repeat;
+  background: url('../images/hero-iceland-private-tours.webp') center center / cover no-repeat;
   transform: scale(1.05);
   transition: transform 8s ease;
 }
@@ -1364,7 +1364,7 @@ a {
 .final-cta-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/final-cta-private-iceland-tour.jpg') center center / cover no-repeat;
+  background: url('../images/final-cta-private-iceland-tour.webp') center center / cover no-repeat;
 }
 
 .final-cta-overlay {

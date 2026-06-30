@@ -23,12 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (menuToggle && navList) {
     menuToggle.addEventListener('click', function () {
-      navList.classList.toggle('open');
+      const isOpen = navList.classList.toggle('open');
       const icon = menuToggle.querySelector('i');
-      if (navList.classList.contains('open')) {
-        icon.className = 'fas fa-times';
-      } else {
-        icon.className = 'fas fa-bars';
+
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+
+      if (icon) {
+        icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
       }
     });
 
@@ -36,7 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
     navList.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', function () {
         navList.classList.remove('open');
-        menuToggle.querySelector('i').className = 'fas fa-bars';
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+        const icon = menuToggle.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
       });
     });
   }
@@ -47,14 +52,17 @@ document.addEventListener('DOMContentLoaded', function () {
       const item = button.closest('.faq-item');
       const isActive = item.classList.contains('active');
 
-      // Close all
+      // Close all (and sync aria-expanded on every question)
       document.querySelectorAll('.faq-item').forEach(function (el) {
         el.classList.remove('active');
+        const q = el.querySelector('.faq-question');
+        if (q) q.setAttribute('aria-expanded', 'false');
       });
 
       // Open clicked if it was closed
       if (!isActive) {
         item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
       }
     });
   });

@@ -14,6 +14,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- ==================== HEADER ==================== -->
 <header class="header" id="header">
   <div class="container">
@@ -21,7 +23,7 @@
       Iceland Private Tours
       <span>Premium Multi-Day Experiences</span>
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <ul class="nav-list" id="navList">
         <li><a href="#private-tours" class="nav-link">Private Tours</a></li>
         <li><a href="#duration" class="nav-link">By Duration</a></li>
@@ -31,43 +33,45 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li><a href="#contact" class="nav-cta">Request Custom Tour</a></li>
       </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navList">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </nav>
   </div>
 </header>
 
+<main id="main-content">
+
 <!-- ==================== HERO ==================== -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-pattern" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-content">
-      <span class="hero-tag"><i class="fas fa-star"></i> Premium Private Tours</span>
-      <h1>Iceland Private Tours</h1>
+      <span class="hero-tag"><i class="fas fa-star" aria-hidden="true"></i> Premium Private Tours</span>
+      <h1 id="hero-title">Iceland Private Tours</h1>
       <p>Discover Iceland at your own pace with private multi-day tours, custom itineraries and your own driver-guide.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a Custom Itinerary</a>
         <a href="#private-tours" class="btn btn-secondary">Explore Private Tours</a>
       </div>
-      <div class="hero-trust">
-        <span><i class="fas fa-check-circle"></i> Private driver-guide</span>
-        <span><i class="fas fa-check-circle"></i> Custom itineraries</span>
-        <span><i class="fas fa-check-circle"></i> Multi-day Iceland experiences</span>
-      </div>
+      <ul class="hero-trust">
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Private driver-guide</li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Custom itineraries</li>
+        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Multi-day Iceland experiences</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ==================== INTRO ==================== -->
-<section class="intro section">
+<section class="intro section" aria-labelledby="intro-title">
   <div class="container">
     <div class="intro-grid">
       <div class="intro-text">
         <span class="section-label">Why Travel Private</span>
-        <h2 class="section-title">Explore Iceland on Your Own Terms</h2>
+        <h2 class="section-title" id="intro-title">Explore Iceland on Your Own Terms</h2>
         <p>Explore Iceland with a private driver-guide, flexible routing and a custom itinerary designed around your travel dates, interests and pace. From short South Coast escapes to complete Ring Road adventures, our <strong>Iceland private tours</strong> are designed for couples, families, small groups and travelers who want a more personal way to discover the country.</p>
         <p>Every <strong>private multi-day tour in Iceland</strong> is built around you. No fixed departure dates. No large groups. Just you, your travel companions and a dedicated <strong>private driver-guide</strong> who handles the planning, driving and local insight so you can focus on the experience.</p>
         <div class="intro-keywords">
@@ -79,8 +83,9 @@
         </div>
       </div>
       <div class="intro-image">
+        <img src="assets/images/intro-private-guide-iceland.jpg" alt="Private driver-guide and traveler looking out over an Icelandic landscape" loading="lazy" width="600" height="700">
         <div class="intro-badge">
-          <i class="fas fa-compass"></i>
+          <i class="fas fa-compass" aria-hidden="true"></i>
           <div class="intro-badge-text">
             100% Private
             <small>Your guide, your pace, your itinerary</small>
@@ -92,417 +97,433 @@
 </section>
 
 <!-- ==================== FEATURED PRIVATE TOURS ==================== -->
-<section class="featured section" id="private-tours">
+<section class="featured section" id="private-tours" aria-labelledby="featured-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Featured Tours</span>
-      <h2 class="section-title">Featured Private Tours in Iceland</h2>
+      <h2 class="section-title" id="featured-title">Featured Private Tours in Iceland</h2>
       <p class="section-subtitle">Choose from our most requested private tour styles, from fully custom itineraries to luxury multi-day journeys and Super Jeep adventures.</p>
-    </div>
-    <div class="featured-grid">
-      <div class="tour-card">
-        <div class="tour-card-image" style="background-image: url('assets/images/private-multiday-tour-iceland.jpg');">
+    </header>
+    <ul class="featured-grid">
+      <li><article class="tour-card">
+        <figure class="tour-card-image">
+          <img src="assets/images/private-multiday-tour-iceland.jpg" alt="Private vehicle on a multi-day Iceland tour route" loading="lazy" width="400" height="200">
           <span class="tour-card-badge">Best Seller</span>
-        </div>
+        </figure>
         <div class="tour-card-body">
           <span class="tour-card-category">Multi-Day</span>
           <h3>Private Multi-Day Tours in Iceland</h3>
           <p>Flexible private journeys across Iceland with your own dedicated driver-guide, custom stops, handpicked routes and multi-day itineraries designed entirely around your pace and interests.</p>
           <a href="#contact" class="btn">View Tour</a>
         </div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-card-image" style="background-image: url('assets/images/custom-iceland-private-tour.jpg');">
+      </article></li>
+      <li><article class="tour-card">
+        <figure class="tour-card-image">
+          <img src="assets/images/custom-iceland-private-tour.jpg" alt="Custom Iceland itinerary with a private guide reviewing the route" loading="lazy" width="400" height="200">
           <span class="tour-card-badge">Custom</span>
-        </div>
+        </figure>
         <div class="tour-card-body">
           <span class="tour-card-category">Tailor-Made</span>
           <h3>Custom Iceland Private Tours</h3>
           <p>A tailor-made Iceland itinerary designed entirely around your interests, travel dates, preferred pace and the regions you most want to explore, with complete flexibility from start to finish.</p>
           <a href="#contact" class="btn">View Tour</a>
         </div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-card-image" style="background-image: url('assets/images/luxury-private-tour-iceland.jpg');">
+      </article></li>
+      <li><article class="tour-card">
+        <figure class="tour-card-image">
+          <img src="assets/images/luxury-private-tour-iceland.jpg" alt="Luxury private vehicle parked beside an Icelandic glacier landscape" loading="lazy" width="400" height="200">
           <span class="tour-card-badge">Premium</span>
-        </div>
+        </figure>
         <div class="tour-card-body">
           <span class="tour-card-category">Luxury</span>
           <h3>Luxury Private Tours Iceland Multi-Day</h3>
           <p>Premium private travel experiences featuring comfortable vehicles, curated accommodation, exclusive routes and a more refined pace through Iceland's most extraordinary landscapes.</p>
           <a href="#contact" class="btn">View Tour</a>
         </div>
-      </div>
-      <div class="tour-card">
-        <div class="tour-card-image" style="background-image: url('assets/images/super-jeep-private-tour-iceland.jpg');">
+      </article></li>
+      <li><article class="tour-card">
+        <figure class="tour-card-image">
+          <img src="assets/images/super-jeep-private-tour-iceland.jpg" alt="Modified Super Jeep crossing rugged Icelandic terrain" loading="lazy" width="400" height="200">
           <span class="tour-card-badge">Adventure</span>
-        </div>
+        </figure>
         <div class="tour-card-body">
           <span class="tour-card-category">Super Jeep</span>
           <h3>Super Jeep Private Tours</h3>
           <p>Explore Iceland's wildest landscapes with a modified Super Jeep, reaching remote highlands, river crossings and volcanic terrain that regular vehicles simply cannot access.</p>
           <a href="#contact" class="btn">View Tour</a>
         </div>
-      </div>
-    </div>
+      </article></li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== TOURS BY DURATION ==================== -->
-<section class="section" id="duration">
+<section class="section" id="duration" aria-labelledby="duration-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Find Your Perfect Length</span>
-      <h2 class="section-title">Private Tours by Duration</h2>
+      <h2 class="section-title" id="duration-title">Private Tours by Duration</h2>
       <p class="section-subtitle">Find the right private Iceland itinerary based on the number of days you have available.</p>
-    </div>
-    <div class="duration-grid">
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/3-day-golden-circle-private-tour.jpg');">
+    </header>
+    <ul class="duration-grid">
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/3-day-golden-circle-private-tour.jpg" alt="3 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">3 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>3 Day Private Tour Iceland</h3>
           <p>A short but complete private itinerary from Reykjavík, ideal for the Golden Circle, South Coast waterfalls, black sand beaches and glacier landscapes at a comfortable pace.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/3-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/4-day-glacier-lagoon-private-tour.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/4-day-glacier-lagoon-private-tour.jpg" alt="4 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">4 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>4 Day Private Tour Iceland</h3>
           <p>A private journey combining the Golden Circle, South Coast waterfalls, black sand beaches and the spectacular Jökulsárlón Glacier Lagoon with Diamond Beach in a well-paced four-day route.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/4-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/5-day-south-coast-private-tour.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/5-day-south-coast-private-tour.jpg" alt="5 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">5 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>5 Day Private Tour Iceland</h3>
           <p>Explore South Iceland at a relaxed pace with waterfalls, volcanic black sand beaches, glacier viewpoints, geothermal areas and flexible private stops selected around your interests.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/5-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/6-day-private-tour-iceland.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/6-day-private-tour-iceland.jpg" alt="6 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">6 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>6 Day Private Tour Iceland</h3>
           <p>A complete private experience for travelers seeking more depth without the full Ring Road, with extra time for hidden stops, photography and a relaxed daily rhythm.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/6-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/7-day-snaefellsnes-private-tour.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/7-day-snaefellsnes-private-tour.jpg" alt="7 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">7 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>7 Day Private Tour Iceland</h3>
           <p>A well-balanced private itinerary covering South Iceland, the Golden Circle, West Iceland, Snæfellsnes Peninsula and natural highlights with a comfortable week-long pace.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/7-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/8-day-private-tour-iceland.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/8-day-private-tour-iceland.jpg" alt="8 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">8 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>8 Day Private Tour Iceland</h3>
           <p>A wider private route across Iceland's most spectacular regions, combining South Coast highlights, glaciers, volcanic landscapes and scenic routes with more time for spontaneous stops.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/8-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/private-multiday-tour-iceland.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/private-multiday-tour-iceland.jpg" alt="9 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">9 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>9 Day Private Tour Iceland</h3>
           <p>Go deeper into Iceland with a private journey through the South Coast, Glacier Lagoon, Snæfellsnes Peninsula and flexible scenic days, with time for photography and unhurried exploration.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/9-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/10-day-ring-road-private-tour.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/10-day-ring-road-private-tour.jpg" alt="10 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">10 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>10 Day Private Tour Iceland</h3>
           <p>Travel around Iceland on a private Ring Road journey through the Golden Circle, South Coast, Glacier Lagoon, Eastfjords, North Iceland and Snæfellsnes Peninsula at your own pace.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/10-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/12-day-private-tour-iceland.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/12-day-private-tour-iceland.jpg" alt="12 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">12 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>12 Day Private Tour Iceland</h3>
           <p>Experience Iceland at a relaxed pace on a private 12 day grand tour through the Ring Road, South Coast, Glacier Lagoon, Eastfjords, North Iceland, West Iceland and Snæfellsnes Peninsula.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/12-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="duration-card">
-        <div class="duration-card-image" style="background-image: url('assets/images/14-day-complete-iceland-private-tour.jpg');">
+      </article></li>
+      <li><article class="duration-card">
+        <figure class="duration-card-image">
+          <img src="assets/images/14-day-complete-iceland-private-tour.jpg" alt="14 Day private tour route in Iceland" loading="lazy" width="400" height="160">
           <div class="duration-badge">14 <small>Days</small></div>
-        </div>
+        </figure>
         <div class="duration-card-body">
           <h3>14 Day Private Tour Iceland</h3>
           <p>Experience the ultimate two-week private Iceland journey with the Ring Road, South Coast, Glacier Lagoon, Eastfjords, North Iceland, West Iceland, Snæfellsnes and optional remote regions.</p>
           <div class="duration-meta">
-            <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-            <span><i class="fas fa-user"></i> Private / Custom</span>
+            <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+            <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
           </div>
           <a href="pages/14-day-private-tour-iceland.html" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-    </div>
+      </article></li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== TOURS BY ROUTE ==================== -->
-<section class="section" style="background: var(--white);" id="route">
+<section class="section" style="background: var(--white);" id="route" aria-labelledby="route-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Explore by Route</span>
-      <h2 class="section-title">Private Tours by Route</h2>
+      <h2 class="section-title" id="route-title">Private Tours by Route</h2>
       <p class="section-subtitle">Explore Iceland by region, route or natural highlight with a private itinerary designed around your travel style.</p>
-    </div>
-    <div class="route-grid">
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/ring-road-private-tour-iceland.jpg');"></div>
+    </header>
+    <ul class="route-grid">
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/ring-road-private-tour-iceland.jpg" alt="Iceland Ring Road Private Tour" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Iceland Ring Road Private Tour</h3>
           <p>Travel around Iceland's famous Ring Road with a private driver-guide, combining glaciers, waterfalls, volcanic landscapes, coastal roads and flexible stops designed around your pace.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/ring-road-10-days-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/ring-road-10-days-iceland.jpg" alt="Private Ring Road Tour Iceland 10 Days" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Private Ring Road Tour Iceland 10 Days</h3>
           <p>A focused 10-day private Ring Road journey for travelers who want to experience Iceland's major regions, from the South Coast and Glacier Lagoon to the Eastfjords, North Iceland and Snæfellsnes.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/ring-road-12-days-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/ring-road-12-days-iceland.jpg" alt="Private Ring Road Tour Iceland 12 Days" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Private Ring Road Tour Iceland 12 Days</h3>
           <p>A slower and more detailed private Ring Road itinerary with extra time for scenic detours, remote landscapes, photography stops and a more relaxed pace around the island.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/south-coast-private-tour-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/south-coast-private-tour-iceland.jpg" alt="Iceland South Coast Private Tour Multi-Day" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Iceland South Coast Private Tour Multi-Day</h3>
           <p>Explore Iceland's dramatic South Coast over several days with waterfalls, black sand beaches, glacier views, volcanic landscapes and flexible private stops along the route.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/golden-circle-south-coast-private-tour.jpg');"></div>
+      </article></li>
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/golden-circle-south-coast-private-tour.jpg" alt="Iceland Golden Circle and South Coast Private Tour" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Iceland Golden Circle and South Coast Private Tour</h3>
           <p>Combine the Golden Circle with the South Coast on a private multi-day route featuring Þingvellir, Geysir, Gullfoss, waterfalls, black sand beaches and glacier scenery.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/west-south-private-tour-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/west-south-private-tour-iceland.jpg" alt="Iceland West and South Private Tour" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Iceland West and South Private Tour</h3>
           <p>Discover the contrast between West Iceland and the South Coast, with lava fields, waterfalls, coastal roads, glacier views and a private itinerary adapted to your travel style.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="route-card">
-        <div class="route-card-image" style="background-image: url('assets/images/highlands-private-tour-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="route-card">
+        <figure class="route-card-image"><img src="assets/images/highlands-private-tour-iceland.jpg" alt="Iceland Highlands Private Tour" loading="lazy" width="400" height="180"></figure>
         <div class="route-card-body">
           <h3>Iceland Highlands Private Tour</h3>
           <p>Experience Iceland's wild interior landscapes with a private guide, exploring remote mountain roads, volcanic scenery, geothermal areas and seasonal routes when conditions allow.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-    </div>
+      </article></li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== SEASONAL TOURS ==================== -->
-<section class="seasonal section" id="seasonal">
+<section class="seasonal section" id="seasonal" aria-labelledby="seasonal-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Seasonal Experiences</span>
-      <h2 class="section-title">Seasonal Private Tours in Iceland</h2>
+      <h2 class="section-title" id="seasonal-title">Seasonal Private Tours in Iceland</h2>
       <p class="section-subtitle">Choose the best private Iceland experience depending on the season, weather, daylight and natural phenomena.</p>
-    </div>
-    <div class="seasonal-grid">
-      <div class="seasonal-card">
-        <div class="seasonal-card-image" style="background-image: url('assets/images/winter-private-tour-iceland.jpg');"></div>
+    </header>
+    <ul class="seasonal-grid">
+      <li><article class="seasonal-card">
+        <figure class="seasonal-card-image"><img src="assets/images/winter-private-tour-iceland.jpg" alt="Iceland Winter Private Tours Multi-Day" loading="lazy" width="400" height="180"></figure>
         <div class="seasonal-card-body">
           <h3>Iceland Winter Private Tours Multi-Day</h3>
           <p>Private winter journeys through snowy landscapes, frozen waterfalls, ice caves and the Northern Lights, with safe flexible routing adapted daily to weather and road conditions.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="seasonal-card">
-        <div class="seasonal-card-image" style="background-image: url('assets/images/summer-private-tour-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="seasonal-card">
+        <div class="seasonal-card-image"><img src="assets/images/summer-private-tour-iceland.jpg" alt="Iceland Summer Private Tours Multi-Day" loading="lazy" width="400" height="180"></div>
         <div class="seasonal-card-body">
           <h3>Iceland Summer Private Tours Multi-Day</h3>
           <p>Explore Iceland during the long daylight hours of summer, with access to the Highlands, the complete Ring Road, puffin colonies and scenic routes under the midnight sun.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="seasonal-card">
-        <div class="seasonal-card-image" style="background-image: url('assets/images/northern-lights-private-tour-iceland.jpg');"></div>
+      </article></li>
+      <li><article class="seasonal-card">
+        <figure class="seasonal-card-image"><img src="assets/images/northern-lights-private-tour-iceland.jpg" alt="Iceland Northern Lights Private Tour" loading="lazy" width="400" height="180"></figure>
         <div class="seasonal-card-body">
           <h3>Iceland Northern Lights Private Tour</h3>
           <p>A private Iceland experience designed around maximising your chances to see the Northern Lights, with flexible evening timing, expert aurora knowledge and route adjustments based on real-time forecasts.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-    </div>
+      </article></li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== TOURS FROM REYKJAVIK / KEFLAVIK ==================== -->
-<section class="section" style="background: var(--white);">
+<section class="section" style="background: var(--white);" aria-labelledby="location-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Departure Points</span>
-      <h2 class="section-title">Private Tours from Reykjavík and Keflavik Airport</h2>
-    </div>
-    <div class="location-grid">
-      <div class="location-card">
-        <div class="location-card-image" style="background-image: url('assets/images/private-tours-from-reykjavik.jpg');"></div>
+      <h2 class="section-title" id="location-title">Private Tours from Reykjavík and Keflavik Airport</h2>
+    </header>
+    <ul class="location-grid">
+      <li><article class="location-card">
+        <figure class="location-card-image"><img src="assets/images/private-tours-from-reykjavik.jpg" alt="Private Tours from Reykjavik Multi-Day" loading="lazy" width="400" height="200"></figure>
         <div class="location-card-body">
           <h3>Private Tours from Reykjavik Multi-Day</h3>
           <p>Start your private Iceland tour directly from Reykjavík with hotel pick-up and a custom multi-day itinerary designed around your travel dates, pace and preferred destinations.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-      <div class="location-card">
-        <div class="location-card-image" style="background-image: url('assets/images/private-tours-from-keflavik-airport.jpg');"></div>
+      </article></li>
+      <li><article class="location-card">
+        <figure class="location-card-image"><img src="assets/images/private-tours-from-keflavik-airport.jpg" alt="Private Tours from Keflavik Airport" loading="lazy" width="400" height="200"></figure>
         <div class="location-card-body">
           <h3>Private Tours from Keflavik Airport</h3>
           <p>Begin your private Iceland journey directly upon arrival at Keflavik Airport with seamless airport pick-up, flexible first-day planning and a custom private route from the moment you land.</p>
           <a href="#contact" class="btn btn-outline">View Tour</a>
         </div>
-      </div>
-    </div>
+      </article></li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== WHY CHOOSE ==================== -->
-<section class="why-choose section">
+<section class="why-choose section" aria-labelledby="why-choose-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Why Private</span>
-      <h2 class="section-title">Why Choose a Private Tour in Iceland?</h2>
+      <h2 class="section-title" id="why-choose-title">Why Choose a Private Tour in Iceland?</h2>
       <p class="section-subtitle">Experience Iceland with complete freedom, comfort and personal attention. No crowds, no fixed schedules, no compromises.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-        <h4>Travel at Your Own Pace</h4>
+    </header>
+    <ul class="benefits-grid">
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+        <h3>Travel at Your Own Pace</h3>
         <p>No rush, no fixed schedules. Stay longer where you love, skip what does not interest you.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-user-tie"></i></div>
-        <h4>Private Driver-Guide</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
+        <h3>Private Driver-Guide</h3>
         <p>A dedicated guide who drives, plans and shares local knowledge throughout your journey.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-route"></i></div>
-        <h4>Flexible Stops</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-route" aria-hidden="true"></i></div>
+        <h3>Flexible Stops</h3>
         <p>Change plans along the way. When weather or interests shift, your itinerary can adapt.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-users-slash"></i></div>
-        <h4>No Large Bus Groups</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-users-slash" aria-hidden="true"></i></div>
+        <h3>No Large Bus Groups</h3>
         <p>Travel exclusively with your own party. No crowds, no waiting, no impersonal experiences.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-pen-alt"></i></div>
-        <h4>Custom Itinerary</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-pen-alt" aria-hidden="true"></i></div>
+        <h3>Custom Itinerary</h3>
         <p>Every route is built around your interests, travel dates, group dynamic and preferred regions.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-users"></i></div>
-        <h4>Better for Families & Groups</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
+        <h3>Better for Families & Groups</h3>
         <p>Private tours allow families and small groups to travel comfortably at a pace that suits everyone.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-        <h4>Safer Travel in Changing Weather</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
+        <h3>Safer Travel in Changing Weather</h3>
         <p>Icelandic weather is unpredictable. A private guide keeps your route safe and well-planned.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-camera"></i></div>
-        <h4>Ideal for Photographers</h4>
+      </li>
+      <li class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-camera" aria-hidden="true"></i></div>
+        <h3>Ideal for Photographers</h3>
         <p>Stop whenever and wherever the light is right. No restrictions on photo stops or timing.</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== PRIVATE DRIVER-GUIDE ==================== -->
-<section class="driver-section section">
+<section class="driver-section section" aria-labelledby="driver-title">
   <div class="container">
     <div class="driver-grid">
-      <div class="driver-image"></div>
+      <div class="driver-image">
+        <img src="assets/images/private-driver-guide-iceland.jpg" alt="Private driver-guide standing beside the vehicle on an Iceland tour" loading="lazy" width="600" height="500">
+      </div>
       <div>
         <span class="section-label">Your Guide</span>
-        <h2 class="section-title">Travel with Your Own Private Driver-Guide</h2>
+        <h2 class="section-title" id="driver-title">Travel with Your Own Private Driver-Guide</h2>
         <p style="font-size: 1.05rem; line-height: 1.8; color: var(--stone); margin-bottom: 8px;">A private driver-guide gives you more than transportation. You get local knowledge, flexible route planning, safer travel in Icelandic conditions and the freedom to stop where large group tours cannot.</p>
         <ul class="driver-points">
-          <li><i class="fas fa-check-circle"></i> Local knowledge and hidden gems</li>
-          <li><i class="fas fa-check-circle"></i> Flexible route adjustments</li>
-          <li><i class="fas fa-check-circle"></i> Weather-aware planning</li>
-          <li><i class="fas fa-check-circle"></i> Comfortable private travel</li>
-          <li><i class="fas fa-check-circle"></i> Personal recommendations</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Local knowledge and hidden gems</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Flexible route adjustments</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Weather-aware planning</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Comfortable private travel</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Personal recommendations</li>
         </ul>
       </div>
     </div>
@@ -510,149 +531,165 @@
 </section>
 
 <!-- ==================== VEHICLES ==================== -->
-<section class="vehicles section">
+<section class="vehicles section" aria-labelledby="vehicles-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Comfort & Safety</span>
-      <h2 class="section-title">Comfortable Vehicles for Private Iceland Tours</h2>
+      <h2 class="section-title" id="vehicles-title">Comfortable Vehicles for Private Iceland Tours</h2>
       <p class="section-subtitle">Private tours in Iceland require comfort, safety and the right vehicle for the season and route. Depending on the itinerary, tours can be planned with comfortable private vehicles, 4x4 options or Super Jeep experiences.</p>
-    </div>
-    <div class="vehicles-grid">
-      <div class="vehicle-card">
-        <i class="fas fa-car"></i>
-        <h4>Comfortable Private Vehicles</h4>
+    </header>
+    <ul class="vehicles-grid">
+      <li class="vehicle-card">
+        <i class="fas fa-car" aria-hidden="true"></i>
+        <h3>Comfortable Private Vehicles</h3>
         <p>Modern, well-equipped vehicles for smooth and comfortable travel across Iceland's main routes.</p>
-      </div>
-      <div class="vehicle-card">
-        <i class="fas fa-truck"></i>
-        <h4>4x4 Options</h4>
+      </li>
+      <li class="vehicle-card">
+        <i class="fas fa-truck" aria-hidden="true"></i>
+        <h3>4x4 Options</h3>
         <p>Four-wheel drive vehicles for rougher terrain, mountain roads and winter conditions.</p>
-      </div>
-      <div class="vehicle-card">
-        <i class="fas fa-tractor"></i>
-        <h4>Super Jeep Tours</h4>
+      </li>
+      <li class="vehicle-card">
+        <i class="fas fa-tractor" aria-hidden="true"></i>
+        <h3>Super Jeep Tours</h3>
         <p>Modified Super Jeeps for highland access, river crossings and off-road adventure.</p>
-      </div>
-      <div class="vehicle-card">
-        <i class="fas fa-suitcase"></i>
-        <h4>Space for Luggage</h4>
+      </li>
+      <li class="vehicle-card">
+        <i class="fas fa-suitcase" aria-hidden="true"></i>
+        <h3>Space for Luggage</h3>
         <p>Vehicles with ample space for luggage and photography equipment for multi-day travel.</p>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== HOW IT WORKS ==================== -->
-<section class="how-it-works section">
+<section class="how-it-works section" aria-labelledby="howitworks-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Simple Process</span>
-      <h2 class="section-title">How to Plan Your Private Iceland Tour</h2>
+      <h2 class="section-title" id="howitworks-title">How to Plan Your Private Iceland Tour</h2>
       <p class="section-subtitle">Planning your private Iceland experience is straightforward. Tell us what you need, and we handle the rest.</p>
-    </div>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">01</div>
-        <h4>Tell Us Your Travel Dates</h4>
+    </header>
+    <ol class="steps-grid">
+      <li class="step-card">
+        <div class="step-number" aria-hidden="true">01</div>
+        <h3>Tell Us Your Travel Dates</h3>
         <p>Share your dates, group size, interests and arrival point. We take it from there.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">02</div>
-        <h4>We Design Your Itinerary</h4>
+      </li>
+      <li class="step-card">
+        <div class="step-number" aria-hidden="true">02</div>
+        <h3>We Design Your Itinerary</h3>
         <p>We create a private Iceland route based on your time, pace and personal preferences.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">03</div>
-        <h4>Travel with Your Private Guide</h4>
+      </li>
+      <li class="step-card">
+        <div class="step-number" aria-hidden="true">03</div>
+        <h3>Travel with Your Private Guide</h3>
         <p>Enjoy Iceland with a dedicated driver-guide and flexible daily planning throughout.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-number">04</div>
-        <h4>Adjust Along the Way</h4>
+      </li>
+      <li class="step-card">
+        <div class="step-number" aria-hidden="true">04</div>
+        <h3>Adjust Along the Way</h3>
         <p>When weather or interests change, your private tour can adapt. That is the private advantage.</p>
-      </div>
-    </div>
+      </li>
+    </ol>
   </div>
 </section>
 
 <!-- ==================== FAQ ==================== -->
-<section class="section" style="background: var(--white);" id="faq">
+<section class="section" style="background: var(--white);" id="faq" aria-labelledby="faq-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Questions</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
+      <h2 class="section-title" id="faq-title">Frequently Asked Questions</h2>
       <p class="section-subtitle">Everything you need to know about private tours in Iceland.</p>
-    </div>
+    </header>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question">
-          Are your Iceland private tours fully private?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q1" type="button" aria-expanded="false" aria-controls="faq-a1">
+            Are your Iceland private tours fully private?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
           <p>Yes. These tours are designed exclusively for private travelers, couples, families or small groups who want a personalized Iceland experience. You will not share your guide, vehicle or itinerary with other parties.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          Can the itinerary be customized?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q2" type="button" aria-expanded="false" aria-controls="faq-a2">
+            Can the itinerary be customized?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
           <p>Yes. The itinerary can be fully adapted to your travel dates, interests, pace, accommodation preferences and preferred regions. Every private tour is built around your needs.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          Do your tours include a private driver-guide?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q3" type="button" aria-expanded="false" aria-controls="faq-a3">
+            Do your tours include a private driver-guide?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
           <p>Private tours can be arranged with a dedicated driver-guide who handles the driving, route planning and local guidance throughout your trip, providing a seamless and informative travel experience.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          Can we start the tour from Reykjavík or Keflavik Airport?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q4" type="button" aria-expanded="false" aria-controls="faq-a4">
+            Can we start the tour from Reykjavík or Keflavik Airport?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
           <p>Yes. Private multi-day tours can start from Reykjavík, Keflavik Airport or another agreed location depending on the itinerary and your arrival plans.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          What is the best duration for a private tour in Iceland?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q5" type="button" aria-expanded="false" aria-controls="faq-a5">
+            What is the best duration for a private tour in Iceland?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
           <p>For a short highlights trip, 3 to 5 days can work well. For a deeper experience, 7 to 12 days allows more regions, flexibility and a better travel pace. For the complete Iceland journey, 14 days covers the Ring Road, Westfjords and North Iceland.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          Are private tours available in winter?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q6" type="button" aria-expanded="false" aria-controls="faq-a6">
+            Are private tours available in winter?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
           <p>Yes. Winter private tours are possible and include snowy landscapes, ice caves, frozen waterfalls and Northern Lights opportunities, depending on weather and seasonal conditions. Winter tours use appropriate vehicles for safe travel.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          Can we see the Northern Lights on a private tour?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q7" type="button" aria-expanded="false" aria-controls="faq-a7">
+            Can we see the Northern Lights on a private tour?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7">
           <p>Northern Lights sightings depend on weather, cloud cover and solar activity, so they cannot be guaranteed. However, a private tour allows more flexibility to adjust plans when conditions are favorable for aurora viewing.</p>
         </div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">
-          Are these tours suitable for families?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
+        <h3 class="faq-question-heading">
+          <button class="faq-question" id="faq-q8" type="button" aria-expanded="false" aria-controls="faq-a8">
+            Are these tours suitable for families?
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </h3>
+        <div class="faq-answer" id="faq-a8" role="region" aria-labelledby="faq-q8">
           <p>Yes, absolutely. Private tours are ideal for families because the pace, stops, driving time and activities can be adapted to children and family group needs. Flexible scheduling makes family travel stress-free.</p>
         </div>
       </div>
@@ -661,128 +698,127 @@
 </section>
 
 <!-- ==================== TRUST PAGES ==================== -->
-<section class="trust section">
+<section class="trust section" aria-labelledby="trust-title">
   <div class="container">
-    <div class="section-header">
+    <header class="section-header">
       <span class="section-label">Plan with Confidence</span>
-      <h2 class="section-title">Plan with Confidence</h2>
+      <h2 class="section-title" id="trust-title">Plan with Confidence</h2>
       <p class="section-subtitle">Explore more resources to help you plan your private Iceland experience with complete peace of mind.</p>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-card">
-        <i class="fas fa-user-tie"></i>
-        <h4>Private Guides in Iceland</h4>
+    </header>
+    <ul class="trust-grid">
+      <li class="trust-card">
+        <i class="fas fa-user-tie" aria-hidden="true"></i>
+        <h3>Private Guides in Iceland</h3>
         <p>Meet our experienced private driver-guides and learn about their local expertise, deep knowledge of Icelandic roads and passion for creating unforgettable journeys.</p>
         <a href="#contact" class="btn btn-outline">Learn More</a>
-      </div>
-      <div class="trust-card">
-        <i class="fas fa-car"></i>
-        <h4>Private Tour Vehicles</h4>
+      </li>
+      <li class="trust-card">
+        <i class="fas fa-car" aria-hidden="true"></i>
+        <h3>Private Tour Vehicles</h3>
         <p>Learn about our fleet of comfortable vehicles, 4x4 options and Super Jeeps, and how we match the right vehicle to your tour, season and route.</p>
         <a href="#contact" class="btn btn-outline">Learn More</a>
-      </div>
-      <div class="trust-card">
-        <i class="fas fa-book"></i>
-        <h4>How to Book a Private Tour</h4>
+      </li>
+      <li class="trust-card">
+        <i class="fas fa-book" aria-hidden="true"></i>
+        <h3>How to Book a Private Tour</h3>
         <p>A simple step-by-step guide to booking your private Iceland tour with confidence, from your first enquiry to the moment your private journey begins.</p>
         <a href="#contact" class="btn btn-outline">Learn More</a>
-      </div>
-      <div class="trust-card">
-        <i class="fas fa-heart"></i>
-        <h4>About Us</h4>
+      </li>
+      <li class="trust-card">
+        <i class="fas fa-heart" aria-hidden="true"></i>
+        <h3>About Us</h3>
         <p>Learn more about our company, our values and our commitment to delivering premium private travel experiences across Iceland with care, passion and expertise.</p>
         <a href="#contact" class="btn btn-outline">Learn More</a>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
 <!-- ==================== FINAL CTA / CONTACT ==================== -->
-<section class="final-cta" id="contact">
-  <div class="final-cta-bg"></div>
-  <div class="final-cta-overlay"></div>
+<section class="final-cta" id="contact" aria-labelledby="final-cta-title">
+  <div class="final-cta-bg" aria-hidden="true"></div>
+  <div class="final-cta-overlay" aria-hidden="true"></div>
   <div class="container">
     <div class="final-cta-content">
       <div class="final-cta-text">
         <span class="section-label" style="color: var(--gold);">Start Your Journey</span>
-        <h2 class="section-title">Start Planning Your Private Iceland Tour</h2>
+        <h2 class="section-title" id="final-cta-title">Start Planning Your Private Iceland Tour</h2>
         <p>Tell us your travel dates, group size and dream destinations. We will help you create a private Iceland itinerary designed around your pace, interests and travel style.</p>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <i class="fas fa-check" style="color: var(--glacier); font-size: 1rem;"></i>
-            </div>
-            <span style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Free custom itinerary design</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <i class="fas fa-check" style="color: var(--glacier); font-size: 1rem;"></i>
-            </div>
-            <span style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">No obligation consultation</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <i class="fas fa-check" style="color: var(--glacier); font-size: 1rem;"></i>
-            </div>
-            <span style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Personalized within 24 hours</span>
-          </div>
-        </div>
+        <ul class="cta-checklist">
+          <li>
+            <span class="cta-checklist-icon"><i class="fas fa-check" aria-hidden="true"></i></span>
+            <span>Free custom itinerary design</span>
+          </li>
+          <li>
+            <span class="cta-checklist-icon"><i class="fas fa-check" aria-hidden="true"></i></span>
+            <span>No obligation consultation</span>
+          </li>
+          <li>
+            <span class="cta-checklist-icon"><i class="fas fa-check" aria-hidden="true"></i></span>
+            <span>Personalized within 24 hours</span>
+          </li>
+        </ul>
       </div>
-      <form class="cta-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your name" required>
+      <form class="cta-form" aria-labelledby="final-cta-title">
+        <fieldset>
+          <legend class="visually-hidden">Request a custom Iceland itinerary</legend>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dates">Travel Dates</label>
+              <input type="text" id="dates" name="dates" placeholder="e.g. June 2026">
+            </div>
+            <div class="form-group">
+              <label for="travelers">Number of Travelers</label>
+              <select id="travelers" name="travelers">
+                <option value="">Select...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7+</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="your@email.com" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="dates">Travel Dates</label>
-            <input type="text" id="dates" placeholder="e.g. June 2026">
-          </div>
-          <div class="form-group">
-            <label for="travelers">Number of Travelers</label>
-            <select id="travelers">
+            <label for="duration">Preferred Duration</label>
+            <select id="duration" name="duration">
               <option value="">Select...</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7+</option>
+              <option value="3">3 Days</option>
+              <option value="4">4 Days</option>
+              <option value="5">5 Days</option>
+              <option value="6">6 Days</option>
+              <option value="7">7 Days</option>
+              <option value="8">8 Days</option>
+              <option value="9">9 Days</option>
+              <option value="10">10 Days</option>
+              <option value="12">12 Days</option>
+              <option value="14">14 Days</option>
             </select>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="duration">Preferred Duration</label>
-          <select id="duration">
-            <option value="">Select...</option>
-            <option value="3">3 Days</option>
-            <option value="4">4 Days</option>
-            <option value="5">5 Days</option>
-            <option value="6">6 Days</option>
-            <option value="7">7 Days</option>
-            <option value="8">8 Days</option>
-            <option value="9">9 Days</option>
-            <option value="10">10 Days</option>
-            <option value="12">12 Days</option>
-            <option value="14">14 Days</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell us about your dream Iceland itinerary..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</button>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your dream Iceland itinerary..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a Custom Itinerary</button>
+        </fieldset>
       </form>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ==================== FOOTER ==================== -->
 <footer class="footer">
@@ -795,8 +831,8 @@
         </a>
         <p>Discover Iceland with private multi-day tours, custom itineraries and dedicated driver-guides. Premium travel experiences designed around your pace, interests and travel style.</p>
       </div>
-      <div>
-        <h4>Tours</h4>
+      <nav aria-labelledby="footer-tours-heading">
+        <h2 class="footer-heading" id="footer-tours-heading">Tours</h2>
         <ul class="footer-links">
           <li><a href="#contact">Private Multi-Day Tours</a></li>
           <li><a href="#contact">Custom Private Tours</a></li>
@@ -805,9 +841,9 @@
           <li><a href="#contact">Winter Tours</a></li>
           <li><a href="#contact">Summer Tours</a></li>
         </ul>
-      </div>
-      <div>
-        <h4>By Duration</h4>
+      </nav>
+      <nav aria-labelledby="footer-duration-heading">
+        <h2 class="footer-heading" id="footer-duration-heading">By Duration</h2>
         <ul class="footer-links">
           <li><a href="pages/3-day-private-tour-iceland.html">3 Day Tours</a></li>
           <li><a href="pages/5-day-private-tour-iceland.html">5 Day Tours</a></li>
@@ -816,9 +852,9 @@
           <li><a href="#contact">12 Day Tours</a></li>
           <li><a href="#contact">14 Day Tours</a></li>
         </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
+      </nav>
+      <nav aria-labelledby="footer-company-heading">
+        <h2 class="footer-heading" id="footer-company-heading">Company</h2>
         <ul class="footer-links">
           <li><a href="#contact">About Us</a></li>
           <li><a href="#contact">Our Guides</a></li>
@@ -826,7 +862,7 @@
           <li><a href="#contact">How to Book</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>

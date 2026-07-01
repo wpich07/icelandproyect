@@ -449,6 +449,29 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 32px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Image aspect-ratio classes (replace inline width/height attributes) */
+.img-ratio-6-7 {
+  aspect-ratio: 6 / 7;
+}
+
+.img-ratio-2-1 {
+  aspect-ratio: 2 / 1;
+}
+
+.img-ratio-5-2 {
+  aspect-ratio: 5 / 2;
+}
+
+.img-ratio-20-9 {
+  aspect-ratio: 20 / 9;
+}
+
+.img-ratio-6-5 {
+  aspect-ratio: 6 / 5;
 }
 
 .intro-keyword {

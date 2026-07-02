@@ -65,6 +65,12 @@
      ========================================================================== */
 
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ==========================================================================
+     PAGE-SPECIFIC BACKGROUND IMAGES
+     ========================================================================== */
+
+  --hero-bg-image-3-day: url('../images/3-day-golden-circle-private-tour.webp');
 }
 
 /*======================================================
@@ -1520,13 +1526,11 @@ a {
   background-position: right 16px center;
   cursor: pointer;
   transition: var(--transition);
-
 }
 
-
 .form-group select option {
-  background-color: rgba(var(--navy-rgb), 0.06);
-  color: var(--navy);
+  background-color: rgba(var(--navy-rgb), 0.8);
+  color: var(--ice);
 }
 
 .form-group textarea {
@@ -1916,3 +1920,524 @@ a {
 .location-grid>li>article {
   height: 100%;
 }
+/*======================================================
+  3-DAY TOUR PAGE (merged from style-day.css)
+======================================================*/
+
+    /* ================= HERO BACKGROUND (dynamic image) ================= */
+    .hero-bg-image {
+        background: var(--hero-bg-image-3-day)  ;
+    }
+
+    /* ================= INTRO / SEO OVERVIEW ================= */
+    .intro-section {
+        background-color: var(--stone);
+        padding: 90px 5%;
+        color: var(--ice);
+    }
+
+    .intro-container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .intro-badge-wrap {
+        margin-bottom: 20px;
+    }
+
+    .day-intro-badge {
+        border: 1px solid var(--glacier);
+        color: var(--glacier);
+        padding: 5px 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+    }
+
+    .intro-title {
+        font-size: 3rem;
+        margin-bottom: 24px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: var(--white);
+    }
+
+    .day-intro-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .cinematic-wrapper {
+        background-color: var(--navy);
+        position: relative;
+    }
+
+    .scroll-day {
+        position: relative;
+        height: 150vh; 
+    }
+
+    .scroll-bg {
+        position: sticky;
+        top: 80px; 
+        height: calc(100vh - 80px);
+        width: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .scroll-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(7, 26, 45, 0.95) 0%, rgba(7, 26, 45, 0.4) 50%, rgba(7, 26, 45, 0.1) 100%);
+    }
+
+    .scroll-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.05); 
+    }
+
+    .tactical-separator {
+        position: relative;
+        height: 35vh;
+        background-color: var(--navy);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        /*box-shadow: 0 -20px 50px rgba(7,26,45,1), 0 20px 50px rgba(7,26,45,1);*/ /*dejo este elemento comentado por si se quiere volver al estado anterior, sin embargo dependiendo del navegador puede haber una sombra a los laterales no deseada*/
+    }
+
+    .tactical-separator::before,
+    .tactical-separator::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Ajusta el tamaño del degradado */
+        pointer-events: none;
+    }
+
+    .tactical-separator::before {
+        top: -50px;
+        background: linear-gradient(
+            to bottom,
+            transparent,
+            var(--navy)
+        );
+    }
+
+    .tactical-separator::after {
+        bottom: -50px;
+        background: linear-gradient(
+            to top,
+            transparent,
+            var(--navy)
+        );
+    }
+    .separator-line {
+        width: 1px;
+        height: 50px;
+        background-color: var(--glacier);
+        opacity: 0.4;
+    }
+
+    .separator-text {
+        font-family: 'Courier New', Courier, monospace;
+        color: var(--glacier);
+        letter-spacing: 4px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
+
+    .scroll-content {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 90%;
+        max-width: 600px;
+        z-index: 2;
+        background: rgba(7, 26, 45, 0.7);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(111, 183, 200, 0.3);
+        border-radius: 4px;
+        padding: 40px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+    }
+
+    .scroll-content::before, .scroll-content::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--gold);
+    }
+    .scroll-content::before { top: 15px; left: 15px; border-right: none; border-bottom: none; }
+    .scroll-content::after { bottom: 15px; right: 15px; border-left: none; border-top: none; }
+
+    .scroll-badge {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        padding: 4px 12px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 800;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .scroll-title {
+        font-size: 2.6rem;
+        margin-bottom: 15px;
+        line-height: 1.1;
+        color: var(--ice);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+    .scroll-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(244, 248, 250, 0.85);
+        margin-bottom: 25px;
+    }
+
+    .tactical-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 25px;
+    }
+
+    .t-stat { display: flex; flex-direction: column; }
+    .t-label { font-size: 0.65rem; text-transform: uppercase; color: var(--glacier); letter-spacing: 1.5px; margin-bottom: 5px; }
+    .t-value { font-family: 'Courier New', Courier, monospace; font-size: 1rem; font-weight: bold; color: var(--white); }
+    .t-value--caution { color: #f1c40f; }
+    .t-value--warning { color: #e74c3c; }
+    .t-stat--coord { grid-column: span 2; }
+    .t-coord { font-family: 'Courier New', Courier, monospace; color: rgba(255,255,255,0.4); font-size: 0.8rem; text-align: right; margin-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 15px; }
+
+    /* ================= LIVE DASHBOARD ================= */
+    .live-dashboard {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: rgba(7, 26, 45, 0.85);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 12px;
+        padding: 20px 25px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        z-index: 100;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+        pointer-events: none;
+    }
+
+    .live-dashboard.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .classic-compass {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid var(--gold);
+        background: #111;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    }
+
+    .compass-marks {
+        position: absolute;
+        inset: 4px;
+        border-radius: 50%;
+        border: 1px dashed rgba(255,255,255,0.3);
+    }
+
+    .compass-n { position: absolute; top: 2px; left: 50%; transform: translateX(-50%); color: var(--gold); font-size: 0.6rem; font-weight: bold; }
+    
+    .compass-needle {
+        position: absolute;
+        width: 4px;
+        height: 80%;
+        background: linear-gradient(to bottom, #ff4757 50%, #ffffff 50%);
+        border-radius: 2px;
+        transform-origin: center center;
+        transform: rotate(0deg);
+        transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .dash-info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .dash-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.85rem;
+    }
+
+    .dash-lbl { color: var(--glacier); opacity: 0.8; text-transform: uppercase; }
+    .dash-val { color: var(--white); font-weight: bold; }
+
+    .altimeter-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 60px;
+        padding-left: 15px;
+        border-left: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .altimeter-bar {
+        width: 8px;
+        height: 100%;
+        background: rgba(255,255,255,0.1);
+        border-radius: 4px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .altimeter-fill {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--glacier);
+        height: 0%;
+        transition: height 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .alt-labels {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.65rem;
+        color: var(--white);
+        opacity: 0.6;
+    }
+
+    /* ================= LOGISTICS & PRICING ================= */
+    .logistics-section {
+        background-color: var(--navy);
+        padding: 90px 5%;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .logistics-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .logistics-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: start;
+    }
+
+    .logistics-col-map {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-heading {
+        color: var(--white);
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .map-frame {
+        margin: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid var(--stone);
+        height: 100%;
+        min-height: 450px;
+        position: relative;
+    }
+
+    .map-frame-overlay {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: rgba(7, 26, 45, 0.1);
+        box-shadow: inset 0 0 40px rgba(7,26,45,0.8);
+        z-index: 2;
+    }
+
+    .map-frame iframe {
+        border: 0;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .pricing-card {
+        background: rgba(244, 248, 250, 0.03);
+        padding: 45px;
+        border: 1px solid rgba(111, 183, 200, 0.2);
+        border-radius: 4px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .price-display {
+        font-size: 3rem;
+        color: var(--gold);
+        font-weight: 800;
+        margin-bottom: 35px;
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 1;
+    }
+
+    .price-unit {
+        display: block;
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.5);
+        font-weight: normal;
+        font-family: 'Inter', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+
+    .equipment-heading {
+        color: var(--glacier);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+
+    .equipment-list {
+        list-style: none;
+        padding: 0;
+        color: rgba(255,255,255,0.85);
+        font-size: 1rem;
+    }
+
+    .equipment-item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .equipment-icon {
+        color: var(--gold);
+        margin-top: 4px;
+    }
+
+    .equipment-detail {
+        font-size: 0.85rem;
+        opacity: 0.7;
+    }
+
+    /* ================= SECONDARY / PREMIUM CTA ================= */
+    .cta-secondary-section {
+        background-color: var(--navy);
+        padding: 60px 5% 100px;
+        text-align: center;
+    }
+
+    .cta-secondary-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .cta-secondary-title {
+        color: var(--white);
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .cta-secondary-text {
+        color: rgba(244, 248, 250, 0.7);
+        font-size: 1.15rem;
+        margin-bottom: 40px;
+    }
+
+    .cta-secondary-btn {
+        background-color: var(--gold);
+        color: var(--navy);
+        border: none;
+        padding: 18px 45px;
+        font-size: 1.1rem;
+        font-weight: 800;
+        border-radius: 4px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 15px rgba(201, 169, 106, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    /* ================= FINAL CTA VARIANTS ================= */
+    .final-cta-content--single {
+        grid-template-columns: 1fr;
+    }
+
+    .final-cta-text--centered {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .final-cta-text--centered p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-label--gold {
+        color: var(--gold);
+    }
+
+    .btn-spaced {
+        margin-top: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .scroll-content { top: auto; bottom: 5%; left: 5%; width: 90%; padding: 30px 20px; }
+        .scroll-title { font-size: 2rem; }
+        .tactical-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+        .live-dashboard { bottom: 15px; left: 15px; right: 15px; padding: 15px; gap: 15px; justify-content: space-between; }
+        .dash-item { flex-direction: column; gap: 2px; }
+        .logistics-grid { grid-template-columns: 1fr; }
+    }

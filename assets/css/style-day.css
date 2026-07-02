@@ -1,3 +1,13 @@
+/*======================================================
+  VARIABLES
+======================================================*/
+
+:root{
+
+    /* Background Images */
+    --hero-bg-image-3-day: url('../images/3-day-golden-circle-private-tour.webp');
+}
+
 /* ================= UTILITIES ================= */
     .sr-only {
         position: absolute;
@@ -12,8 +22,8 @@
     }
 
     /* ================= HERO BACKGROUND (dynamic image) ================= */
-    .hero-bg {
-        background-image: var(--hero-bg-image);
+    .hero-bg-image {
+        background: var(--hero-bg-image-3-day)  ;
     }
 
     /* ================= INTRO / SEO OVERVIEW ================= */

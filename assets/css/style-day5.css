@@ -1,0 +1,369 @@
+.day-accordion {
+    background: #ffffff;
+    border: 1px solid rgba(47, 58, 64, 0.15);
+    border-radius: 16px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(7, 26, 45, 0.03);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.6; /* Неактивные дни слегка приглушены */
+    transform: scale(0.98);
+    }
+
+    /* Когда день становится активным (скрипт добавляет класс .active-scroll) */
+.day-accordion.active-scroll {
+    border-color: var(--glacier, #6fb7c8);
+    box-shadow: 0 20px 40px rgba(7, 26, 45, 0.08);
+    opacity: 1;
+    transform: scale(1);
+    }
+
+.day-summary {
+    padding: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    transition: background 0.3s;
+    }
+
+.day-summary-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    }
+
+.day-number {
+    background-color: var(--navy, #071a2d);
+    color: var(--gold, #c9a96a);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    }
+
+.day-accordion.active-scroll .day-number {
+    background-color: var(--glacier, #6fb7c8);
+    color: var(--navy, #071a2d);
+    }
+
+.day-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--navy, #071a2d);
+    margin: 0;
+    }
+
+    /* Контентная область дня */
+.day-content {
+    padding: 0 30px 35px 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    /* Изначально контент скрыт, раскрывается скриптом */
+    display: none;
+    }
+
+.day-accordion.active-scroll .day-content {
+    display: grid;
+    animation: slideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+.day-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+.day-text {
+    color: var(--stone, #2f3a40);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    }
+
+    /* Исследовательская статистика (Research Log) */
+.research-stats {
+    background-color: var(--ice, #f4f8fa);
+    border-left: 4px solid var(--navy, #071a2d);
+    border-radius: 4px 12px 12px 4px;
+    padding: 20px;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    }
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    }
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--stone, #2f3a40);
+    opacity: 0.7;
+    margin-bottom: 4px;
+    }
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy, #071a2d);
+    }
+
+    /* Правая часть: Визуал (Фото дня) */
+.day-visual {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    }
+
+.day-visual .day-img {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.status-icon {
+    font-size: 1.2rem;
+    color: var(--stone, #2f3a40);
+    transition: transform 0.4s ease;
+    }
+
+.day-accordion.active-scroll .status-icon {
+    transform: rotate(180deg);
+    color: var(--glacier, #6fb7c8);
+    }
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+@media (max-width: 992px) {
+    .day-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        }
+    .day-visual {
+        height: 250px;
+        }
+    }
+/* ==================== Clases extraídas de estilos inline (5-day tour) ==================== */
+
+.hero-bg-day5 {
+    background-image: url("../assets/images/5-day-south-coast-private-tour.webp");
+    }
+
+.section-ice-padded {
+    background-color: var(--ice, #f4f8fa);
+    padding: 90px 5%;
+    }
+
+.trip-overview-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    }
+
+.trip-badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    }
+
+.badge {
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    }
+
+.badge-navy {
+    background-color: var(--navy, #071a2d);
+    color: #ffffff;
+    }
+
+.badge-glacier {
+    background-color: var(--glacier, #6fb7c8);
+    color: var(--navy, #071a2d);
+    }
+
+.trip-heading {
+    color: var(--navy, #071a2d);
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    }
+
+.trip-description {
+    color: var(--stone, #2f3a40);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    }
+
+.price-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(7, 26, 45, 0.02);
+    border: 1px solid rgba(47, 58, 64, 0.08);
+    }
+
+.price-card-label {
+    font-size: 0.85rem;
+    color: var(--stone, #2f3a40);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    }
+
+.price-card-amount {
+    font-size: 2.8rem;
+    color: var(--navy, #071a2d);
+    font-weight: 800;
+    margin: 10px 0 20px 0;
+    }
+
+.price-card-unit {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--stone, #2f3a40);
+    }
+
+.price-card-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    color: var(--stone, #2f3a40);
+    font-size: 0.95rem;
+    }
+
+.detail-icon {
+    color: var(--glacier, #6fb7c8);
+    margin-right: 8px;
+    }
+
+.route-map-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(7, 26, 45, 0.12);
+    height: 500px;
+    border: 1px solid rgba(7, 26, 45, 0.05);
+    }
+
+.route-map-iframe {
+    border: 0;
+    }
+
+.section-white-padded {
+    background-color: #ffffff;
+    padding: 100px 5%;
+    }
+
+.container-narrow {
+    max-width: 1050px;
+    margin: 0 auto;
+    }
+
+.section-intro-center {
+    text-align: center;
+    margin-bottom: 60px;
+    }
+
+.section-heading-navy {
+    color: var(--navy, #071a2d);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    }
+
+.section-subheading-stone {
+    color: var(--stone, #2f3a40);
+    font-size: 1.1rem;
+    opacity: 0.8;
+    }
+
+.section-navy-cta {
+    background-color: var(--navy, #071a2d);
+    padding: 90px 5%;
+    text-align: center;
+    }
+
+.container-cta {
+    max-width: 800px;
+    margin: 0 auto;
+    }
+
+.cta-heading-white {
+    color: #ffffff;
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    }
+
+.cta-text-ice {
+    color: var(--ice, #f4f8fa);
+    font-size: 1.2rem;
+    margin-bottom: 45px;
+    opacity: 0.85;
+    }
+
+.cta-button-gold {
+    background-color: var(--gold, #c9a96a);
+    color: var(--navy, #071a2d);
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 20px rgba(201, 169, 106, 0.25);
+    }
+
+.final-cta-content-single {
+    grid-template-columns: 1fr;
+    }
+
+.final-cta-text-center {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    }
+
+.section-label-gold {
+    color: var(--gold, #c9a96a);
+    }
+
+.btn-margin-top {
+    margin-top: 16px;
+    }

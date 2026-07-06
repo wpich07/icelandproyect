@@ -1,0 +1,674 @@
+/* --- Utility classes replacing inline styles --- */
+
+/* Hero (page-specific background image + overlay gradient) */
+.tour-hero-bg {
+  background-image: url('../assets/images/6-day-private-tour-iceland.webp');
+}
+
+.hero-overlay--tour {
+  background: linear-gradient(135deg, rgba(7,26,45,0.85) 0%, rgba(7,26,45,0.35) 50%, rgba(7,26,45,0.6) 100%);
+}
+
+/* Intro image (page-specific background) */
+.intro-image--6day {
+  background-image: url('../assets/images/private-multiday-tour-iceland.webp');
+}
+
+/* Section background variants */
+.section--navy { background: var(--navy); }
+.section--ice { background: var(--ice); }
+.section--white { background: var(--white); }
+
+/* Section header text on dark backgrounds */
+.section-label--on-dark { color: var(--glacier); }
+.section-label--gold { color: var(--gold); }
+.section-title--on-dark { color: var(--white); }
+.section-subtitle--on-dark { color: rgba(255,255,255,0.6); }
+
+/* Buttons */
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn--spaced {
+  margin-top: 16px;
+}
+
+/* Custom section CTA wrapper */
+.custom-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* Included / Not Included column titles */
+.included-col-title--positive,
+.included-col-title--positive i {
+  color: var(--aurora);
+}
+
+.included-col-title--negative,
+.included-col-title--negative i {
+  color: #e74c3c;
+}
+
+.included-col-title--negative {
+  opacity: 0.7;
+}
+
+.included-col-title--negative i {
+  opacity: 0.5;
+}
+
+/* Season icon color variants */
+.season-icon--summer { color: #f39c12; }
+.season-icon--shoulder { color: var(--aurora); }
+
+/* Final CTA centered layout variant */
+.final-cta-content--centered {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.final-cta-text--centered {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* List resets for elements converted from <div> to <ul>/<ol>/<li> for semantic markup */
+.benefits-grid,
+.journey-map,
+.highlights-grid,
+.custom-grid,
+.best-time-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 40px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  max-width: 680px;
+}
+
+.hero-stat {
+  flex: 1;
+  min-width: 120px;
+  padding: 16px 20px;
+  position: relative;
+}
+
+.hero-stat:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.hero-stat-label {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 4px;
+}
+
+.hero-stat-value {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* --- Journey Route Map --- */
+.journey-section {
+  background: var(--white);
+  padding: 100px 0;
+  position: relative;
+}
+
+.journey-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glacier), transparent);
+}
+
+.journey-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.journey-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.journey-map::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: calc(16.66% + 10px);
+  right: calc(16.66% + 10px);
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--glacier) 0, var(--glacier) 8px, transparent 8px, transparent 16px);
+  z-index: 1;
+}
+
+.journey-stop {
+  background: var(--ice);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.journey-stop:hover {
+  border-color: var(--glacier);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.journey-stop-number {
+  width: 44px;
+  height: 44px;
+  background: var(--navy);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 auto 16px;
+  transition: var(--transition);
+}
+
+.journey-stop:hover .journey-stop-number {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.journey-stop h4 {
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.journey-stop p {
+  font-size: 0.78rem;
+  color: var(--stone);
+  line-height: 1.6;
+}
+
+/* --- Day Cards (Scroll Reveal) --- */
+.days-section {
+  padding: 100px 0;
+  background: var(--ice);
+}
+
+.day-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(7,26,45,0.06);
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  border: 1px solid rgba(7,26,45,0.04);
+}
+
+.day-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.day-card-image {
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.day-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7,26,45,0.15) 0%, transparent 60%);
+}
+
+.day-card-content {
+  padding: 48px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.day-card-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: var(--navy);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.day-card-text {
+  font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.day-card-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.day-card-highlight {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--glacier);
+  background: var(--glacier-light);
+  padding: 5px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(111,183,200,0.15);
+}
+
+/* --- Highlights Grid --- */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.highlight-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(7,26,45,0.04);
+  transition: var(--transition);
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(111,183,200,0.15);
+}
+
+.highlight-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  background: var(--glacier-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--glacier);
+  transition: var(--transition);
+}
+
+.highlight-card:hover .highlight-icon {
+  background: var(--gold-light);
+  color: var(--gold);
+}
+
+.highlight-card h4 {
+  font-size: 0.88rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  font-size: 0.75rem;
+  color: var(--stone);
+  line-height: 1.5;
+}
+
+/* --- Custom Section --- */
+.custom-section {
+  background: var(--navy);
+  position: relative;
+}
+
+.custom-section .section-title,
+.custom-section .section-subtitle {
+  color: var(--white);
+}
+
+.custom-section .section-subtitle {
+  color: rgba(255,255,255,0.65);
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.custom-option {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.custom-option:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(201,169,106,0.2);
+  transform: translateY(-3px);
+}
+
+.custom-option i {
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.custom-option h4 {
+  font-size: 0.9rem;
+  color: var(--white);
+  margin-bottom: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.custom-option p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* --- Included / Not Included --- */
+.included-section {
+  background: var(--ice);
+}
+
+.included-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.included-col {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(7,26,45,0.04);
+}
+
+.included-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.included-col h3 i {
+  font-size: 1.1rem;
+}
+
+.included-col ul {
+  list-style: none;
+}
+
+.included-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 0.92rem;
+  color: var(--stone);
+  border-bottom: 1px solid rgba(7,26,45,0.04);
+}
+
+.included-col li:last-child {
+  border-bottom: none;
+}
+
+.included-col li i {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.included-col .fa-check {
+  color: var(--aurora);
+}
+
+.included-col .fa-times {
+  color: #e74c3c;
+  opacity: 0.5;
+}
+
+/* --- Best Time --- */
+.best-time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.season-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(7,26,45,0.04);
+  transition: var(--transition);
+  text-align: center;
+}
+
+.season-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(111,183,200,0.15);
+}
+
+.season-card i {
+  font-size: 2rem;
+  color: var(--glacier);
+  margin-bottom: 16px;
+}
+
+.season-card h4 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.season-card p {
+  font-size: 0.85rem;
+  color: var(--stone);
+  line-height: 1.7;
+}
+
+/* --- Driver Guide Premium Block --- */
+.driver-premium {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(7,26,45,0.04);
+}
+
+.driver-premium-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.driver-premium-image {
+  min-height: 400px;
+  background: url('../assets/images/private-driver-guide-iceland.webp') center center / cover no-repeat;
+}
+
+.driver-premium-content {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.driver-premium-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.driver-premium-content p {
+  font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.driver-premium-list {
+  list-style: none;
+}
+
+.driver-premium-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--navy);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(7,26,45,0.04);
+}
+
+.driver-premium-list li:last-child {
+  border-bottom: none;
+}
+
+.driver-premium-list li i {
+  color: var(--glacier);
+  font-size: 0.85rem;
+}
+
+/* --- Final CTA Custom --- */
+.final-cta-6day {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+}
+
+.final-cta-6day-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/final-cta-private-iceland-tour.webp') center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.final-cta-6day-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7,26,45,0.92) 0%, rgba(7,26,45,0.65) 100%);
+}
+
+.final-cta-6day .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 1200px) {
+  .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .day-card { grid-template-columns: 1fr; }
+  .day-card-image { min-height: 250px; }
+  .day-card-content { padding: 32px 28px; }
+  .driver-premium-grid { grid-template-columns: 1fr; }
+  .driver-premium-image { min-height: 280px; }
+}
+
+@media (max-width: 900px) {
+  .journey-map { grid-template-columns: repeat(2, 1fr); }
+  .journey-map::before { display: none; }
+  .best-time-grid { grid-template-columns: 1fr; }
+  .custom-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .hero-stat:not(:last-child)::after { display: none; }
+  .hero-stat { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .hero-stats-bar { border-radius: 8px; }
+  .included-grid { grid-template-columns: 1fr; }
+  .day-card-content { padding: 28px 24px; }
+  .driver-premium-content { padding: 32px 24px; }
+  .journey-map { grid-template-columns: 1fr; }
+  .final-cta-6day { padding: 80px 0; }
+}
+
+@media (max-width: 600px) {
+  .highlights-grid { grid-template-columns: 1fr; }
+  .custom-grid { grid-template-columns: 1fr; }
+  .hero-stats-bar { flex-direction: column; }
+  .hero-stat { min-width: 100%; }
+}

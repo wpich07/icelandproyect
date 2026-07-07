@@ -9,9 +9,7 @@
     content="Explore Iceland on an 8 day private tour with your own driver-guide, combining the Golden Circle, South Coast, Glacier Lagoon, Snæfellsnes Peninsula and flexible custom experiences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/style-day8.css">
@@ -876,26 +874,8 @@
 			</div>
 		</footer>
 
-  <!-- ==================== SCROLL REVEAL SCRIPT ==================== -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var blocks = document.querySelectorAll('.itinerary-8day-block');
-
-      var revealObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      }, { threshold: 0.15 });
-
-      blocks.forEach(function (block) {
-        revealObserver.observe(block);
-      });
-    });
-  </script>
-
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/reveal-cards.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const dayCards = document.querySelectorAll('.day-card, .journal-day');
+    const dayCards = document.querySelectorAll('.day-card, .journal-day, .itinerary-8day-block');
 
     const revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

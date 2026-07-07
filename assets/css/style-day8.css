@@ -140,7 +140,6 @@
   border-radius: 18px;
   overflow: hidden;
   min-height: 500px;
-  background: url('../assets/images/8-day-private-tour-iceland.webp') center center / cover no-repeat;
 }
 
 .visual-intro-card {
@@ -196,9 +195,8 @@
 
 .chapter-image {
   min-height: 360px;
-  background-size: cover;
-  background-position: center;
   position: relative;
+  overflow: hidden;
 }
 
 .chapter-image::after {
@@ -275,8 +273,6 @@
   border-radius: 16px;
   overflow: hidden;
   min-height: 320px;
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: flex-end;
   cursor: default;
@@ -292,6 +288,7 @@
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(transparent 30%, rgba(7,26,45,0.7) 100%);
   transition: var(--transition);
 }
@@ -360,9 +357,8 @@
 
 .itinerary-image {
   min-height: 340px;
-  background-size: cover;
-  background-position: center;
   position: relative;
+  overflow: hidden;
 }
 
 .itinerary-image::after {
@@ -588,8 +584,9 @@
 }
 
 .driver-8-image {
+  position: relative;
+  overflow: hidden;
   min-height: 420px;
-  background: url('../assets/images/private-driver-guide-iceland.webp') center center / cover no-repeat;
 }
 
 .driver-8-content {
@@ -727,8 +724,7 @@
 .final-cta-8day-bg {
   position: absolute;
   inset: 0;
-  background: url('../assets/images/final-cta-private-iceland-tour.webp') center center / cover no-repeat;
-  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .final-cta-8day-overlay {
@@ -782,4 +778,98 @@
   .hero-stats-panel { flex-direction: column; }
   .hero-stat-block { min-width: 100%; }
   .visual-intro-stats { grid-template-columns: 1fr; }
+}
+
+/* --- Image containers: semantic <img> replacing background-image divs --- */
+.hero-8day .hero-bg img,
+.visual-intro-image img,
+.chapter-image img,
+.moment-card img,
+.itinerary-image img,
+.driver-8-image img,
+.final-cta-8day-bg img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-8day .hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* --- Utility classes replacing inline styles --- */
+.section-bg-ice { background: var(--ice); }
+
+.section-bg-white { background: var(--white); }
+
+.section-label-glacier { color: var(--glacier); }
+
+.section-label-gold { color: var(--gold); }
+
+.section-title-white { color: var(--white); }
+
+.section-subtitle-light { color: rgba(255,255,255,0.6); }
+
+.visual-intro-icon {
+  font-size: 1.4rem;
+  color: var(--glacier);
+}
+
+.why-8-stat-icon {
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.optional-note {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: var(--stone);
+  opacity: 0.7;
+}
+
+.included-heading-positive,
+.included-heading-positive i {
+  color: var(--aurora);
+}
+
+.included-heading-negative,
+.included-heading-negative i {
+  color: #e74c3c;
+}
+
+.included-heading-negative { opacity: 0.7; }
+
+.included-heading-negative i { opacity: 0.5; }
+
+.season-icon-summer { color: #f39c12; }
+
+.season-icon-winter { color: var(--glacier); }
+
+.season-icon-spring { color: var(--aurora); }
+
+.final-cta-content-centered {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.final-cta-text-narrow {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.final-cta-text .btn-primary { margin-top: 8px; }
+
+.final-cta-description {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
 }

@@ -450,15 +450,29 @@ a {
   overflow: hidden;
 }
 
+.hero-3-day {
+    min-height: 70vh;
+    padding: 120px;
+}
+
+.hero-3-day-img {
+  position: absolute;
+  inset: 0;
+  background: url("../images/hero-iceland-private-tours.webp") center center / cover no-repeat;
+  transform: scale(1.05);
+  transition: transform 8s ease;
+  background-image: url("../images/3-day-golden-circle-private-tour.webp");
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/hero-iceland-private-tours.webp') center center / cover no-repeat;
+  background: url("../images/hero-iceland-private-tours.webp") center center / cover no-repeat;
   transform: scale(1.05);
   transition: transform 8s ease;
 }
 
-.hero:hover .hero-bg {
+.hero:hover .hero-bg .hero-3-day-img{
   transform: scale(1);
 }
 
@@ -1432,10 +1446,7 @@ a {
   3-DAY TOUR PAGE (merged from style-day.css)
 ======================================================*/
 
-/* ================= HERO BACKGROUND (dynamic image) ================= */
-.hero-bg-image {
-  background: var(--hero-bg-image-3-day);
-}
+
 
 /* ================= INTRO / SEO OVERVIEW ================= */
 .intro-section {

@@ -50,6 +50,7 @@
 
   /* PAGE-SPECIFIC BACKGROUND IMAGES */
   --hero-bg-image-3-day: url('../images/3-day-golden-circle-private-tour.webp');
+  --hero-bg-image-4-day: url('../images/4-day-glacier-lagoon-private-tour.webp');
 }
 
 /*======================================================
@@ -174,9 +175,9 @@ a {
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--stone);
-  max-width: 720px;
+  max-width: 650px;
   line-height: 1.7;
   font-weight: 400;
 }
@@ -465,18 +466,26 @@ a {
   overflow: hidden;
 }
 
-.hero-3-day {
-    min-height: 70vh;
+.hero-page-day {
+    min-height: 60vh;
     padding: 120px;
 }
 
-.hero-3-day-img {
+.hero-3-day-img, 
+.hero-4-day-img {
   position: absolute;
   inset: 0;
   background: url("../images/hero-iceland-private-tours.webp") center center / cover no-repeat;
   transform: scale(1.05);
   transition: transform 8s ease;
-  background-image: url("../images/3-day-golden-circle-private-tour.webp");
+}
+
+.hero-3-day-img {
+    background-image: var(--hero-bg-image-3-day);
+}
+
+.hero-4-day-img {
+    background-image: var(--hero-bg-image-4-day);
 }
 
 .hero-bg {
@@ -487,7 +496,10 @@ a {
   transition: transform 8s ease;
 }
 
-.hero:hover .hero-bg .hero-3-day-img{
+.hero:hover, 
+.hero-bg,
+.hero-page-day
+{
   transform: scale(1);
 }
 

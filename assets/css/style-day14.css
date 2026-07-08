@@ -1,3 +1,18 @@
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  padding: 0.75em 1.25em;
+  background: #0c2340;
+  color: #fff;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 1em;
+  top: 1em;
+}
+
 .split-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,15 +45,24 @@
   padding-left: 24px;
 }
 
-.sh-right {
-  background: url('../assets/images/14-day-complete-iceland-private-tour.webp') center center / cover no-repeat;
+.sh-right-wrapper {
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.sh-right::before {
-  content: '';
+.sh-right {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
+  object-fit: cover;
+}
+
+.sh-right-overlay {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: linear-gradient(to bottom, rgba(7,26,45,0.25), transparent 30%, transparent 70%, rgba(7,26,45,0.35));
 }
 
@@ -546,8 +570,11 @@
 }
 
 .driver-14-img {
+  display: block;
+  width: 100%;
   min-height: 440px;
-  background: url('../assets/images/private-driver-guide-iceland.webp') center center / cover no-repeat;
+  height: auto;
+  object-fit: cover;
   border-radius: 4px;
 }
 
@@ -712,3 +739,17 @@
   .sh-stats { grid-template-columns: 1fr; }
   .bp-stats .bp-stat:nth-child(2n) { border-right: none; }
 }
+
+/* ===== Utility classes merged from temporary file ===== */
+.text-gold { color: var(--gold); }
+.text-white { color: var(--white); }
+.bg-white { background: var(--white); }
+
+.icon-aurora { color: var(--aurora); margin-right: 8px; }
+.icon-times { color: #c0392b; opacity: 0.4; margin-right: 8px; }
+
+.cta-features { display: flex; flex-direction: column; gap: 16px; }
+.cta-feature-row { display: flex; align-items: center; gap: 14px; }
+.feature-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(111,183,200,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.feature-icon i { color: var(--glacier); font-size: 1rem; }
+.feature-text { color: rgba(255,255,255,0.8); font-size: 0.95rem; }

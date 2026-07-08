@@ -57,12 +57,24 @@ document.addEventListener('DOMContentLoaded', function () {
         el.classList.remove('active');
         const q = el.querySelector('.faq-question');
         if (q) q.setAttribute('aria-expanded', 'false');
+        // hide associated panel if present
+        if (q && q.hasAttribute('aria-controls')) {
+          const pid = q.getAttribute('aria-controls');
+          const panel = document.getElementById(pid);
+          if (panel) panel.setAttribute('hidden', '');
+        }
       });
 
       // Open clicked if it was closed
       if (!isActive) {
         item.classList.add('active');
         button.setAttribute('aria-expanded', 'true');
+        // show associated panel if present
+        if (button.hasAttribute('aria-controls')) {
+          const pid = button.getAttribute('aria-controls');
+          const panel = document.getElementById(pid);
+          if (panel) panel.removeAttribute('hidden');
+        }
       }
     });
   });

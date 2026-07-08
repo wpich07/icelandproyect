@@ -837,24 +837,6 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
-  <script>
-    // Accessible FAQ accordion: toggle answers and aria-expanded
-    (function(){
-      const faqButtons = document.querySelectorAll('.faq-question');
-      faqButtons.forEach((btn)=>{
-        btn.addEventListener('click', ()=>{
-          const id = btn.getAttribute('aria-controls');
-          const panel = document.getElementById(id);
-          const expanded = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', String(!expanded));
-          if(panel){
-            if(expanded){ panel.setAttribute('hidden',''); }
-            else { panel.removeAttribute('hidden'); }
-          }
-        });
-      });
-    })();
-  </script>
 </body>
 
 </html>

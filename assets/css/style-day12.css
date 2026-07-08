@@ -1,3 +1,18 @@
+.skip-link {
+				position: absolute;
+				left: -9999px;
+				top: 0;
+				z-index: 1000;
+				padding: 0.75em 1.25em;
+				background: #0c2340;
+				color: #fff;
+				text-decoration: none;
+			}
+			.skip-link:focus {
+				left: 1em;
+				top: 1em;
+			}
+
 .grand-hero {
   min-height: 100vh;
 }
@@ -264,6 +279,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+  list-style: none;
 }
 
 .atlas-tag {
@@ -299,6 +315,11 @@
 
 .itinerary-12 .section-subtitle {
   color: rgba(255,255,255,0.55);
+}
+
+/* Section label gold color */
+.section-label-gold {
+  color: var(--gold);
 }
 
 .days-grid-12 {
@@ -656,6 +677,45 @@
   font-size: 0.78rem;
   color: rgba(255,255,255,0.48);
   line-height: 1.6;
+}
+
+/* ===== CTA SECTION ===== */
+.final-cta-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cta-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cta-benefit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(111,183,200,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cta-benefit-icon i {
+  color: var(--glacier);
+  font-size: 1rem;
+}
+
+.cta-benefit-text {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section-white {
+  background: var(--white);
 }
 
 /* ===== RESPONSIVE ===== */

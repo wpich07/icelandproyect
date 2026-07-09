@@ -1,18 +1,3 @@
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 1000;
-  padding: 0.75em 1.25em;
-  background: #0c2340;
-  color: #fff;
-  text-decoration: none;
-}
-.skip-link:focus {
-  left: 1em;
-  top: 1em;
-}
-
 .split-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -440,8 +425,6 @@
 }
 
 .sigexp-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
 
@@ -741,10 +724,6 @@
 }
 
 /* ===== Utility classes merged from temporary file ===== */
-.text-gold { color: var(--gold); }
-.text-white { color: var(--white); }
-.bg-white { background: var(--white); }
-
 .icon-aurora { color: var(--aurora); margin-right: 8px; }
 .icon-times { color: #c0392b; opacity: 0.4; margin-right: 8px; }
 

@@ -907,14 +907,6 @@
 }
 
 /* ===== UTILITY CLASSES (replacing former inline styles) ===== */
-.label-gold {
-  color: var(--gold);
-}
-
-.bg-white {
-  background: var(--white);
-}
-
 .incl-col h3 .icon-included {
   color: var(--aurora);
   margin-right: 8px;

@@ -174,6 +174,11 @@ a {
   display: block;
 }
 
+.section-label--gold,
+.section-label-gold {
+  color: var(--gold);
+}
+
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 16px;
@@ -203,11 +208,36 @@ a {
   top: 1em;
 }
 
+.text-gold,
 .text_gold {
   color: var(--gold);
 }
 
+.text-white {
+  color: var(--white);
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.icon-included {
+  color: var(--aurora);
+  margin-right: 10px;
+}
+
+.icon-excluded {
+  color: #c0392b;
+  opacity: 0.5;
+  margin-right: 10px;
+}
+
 /* Cards */
+.sigexp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .card {
   background: var(--white);
   border-radius: var(--radius-md);

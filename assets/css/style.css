@@ -215,6 +215,17 @@ a {
   background: var(--white);
 }
 
+.icon-included {
+  color: var(--aurora);
+  margin-right: 10px;
+}
+
+.icon-excluded {
+  color: #c0392b;
+  opacity: 0.5;
+  margin-right: 10px;
+}
+
 /* Cards */
 .sigexp-grid {
   display: grid;

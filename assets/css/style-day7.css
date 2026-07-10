@@ -68,20 +68,12 @@
 }
 
 /* --- Utility classes replacing inline styles --- */
-.text-white {
-    color: var(--white);
-}
-
 .text-white-60 {
     color: rgba(255, 255, 255, 0.6);
 }
 
 .text-glacier {
     color: var(--glacier);
-}
-
-.text-gold {
-    color: var(--gold);
 }
 
 .text-aurora {

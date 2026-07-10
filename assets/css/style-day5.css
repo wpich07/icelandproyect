@@ -353,17 +353,3 @@
 .final-cta-content-single {
     grid-template-columns: 1fr;
     }
-
-.final-cta-text-center {
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto;
-    }
-
-.section-label-gold {
-    color: var(--gold, #c9a96a);
-    }
-
-.btn-margin-top {
-    margin-top: 16px;
-    }

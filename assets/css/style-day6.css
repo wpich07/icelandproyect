@@ -21,7 +21,6 @@
 
 /* Section header text on dark backgrounds */
 .section-label--on-dark { color: var(--glacier); }
-.section-label--gold { color: var(--gold); }
 .section-title--on-dark { color: var(--white); }
 .section-subtitle--on-dark { color: rgba(255,255,255,0.6); }
 
@@ -68,11 +67,6 @@
 .final-cta-content--centered {
   grid-template-columns: 1fr;
   text-align: center;
-}
-
-.final-cta-text--centered {
-  max-width: 640px;
-  margin: 0 auto;
 }
 
 /* List resets for elements converted from <div> to <ul>/<ol>/<li> for semantic markup */

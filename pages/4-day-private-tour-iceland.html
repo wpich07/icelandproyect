@@ -1,496 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4 Day Private Tour Iceland | Iceland Private Tours</title>
-<meta name="description" content="Book a 4-day private tour of Iceland. Explore the Golden Circle, South Coast, Jökulsárlón Glacier Lagoon and Diamond Beach with your own driver-guide.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Day Private Tour Iceland | Iceland Private Tours</title>
+    <meta name="description" content="Book a 4-day private tour of Iceland. Explore the Golden Circle, South Coast, Jökulsárlón Glacier Lagoon and Diamond Beach with your own driver-guide.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ==================== HEADER ==================== -->
-<header class="header" id="header">
-  <div class="container">
-    <a href="../index.html" class="logo">
-      Iceland Private Tours
-      <span>Premium Multi-Day Experiences</span>
-    </a>
-    <nav class="nav">
-      <ul class="nav-list" id="navList">
-        <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
-        <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
-        <li><a href="../index.html#route" class="nav-link">By Route</a></li>
-        <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
-        <li><a href="#" class="nav-link"><!-- TODO: Create about page -->About</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- ==================== PAGE HERO ==================== -->
-<section class="hero" style="min-height: 60vh;">
-  <div class="hero-bg" style="background-image: url('../assets/images/4-day-glacier-lagoon-private-tour.jpg');"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-tag"><i class="fas fa-clock"></i> 4 Days</span>
-      <h1>4 Day Private Tour Iceland</h1>
-      <p>A private journey combining the Golden Circle, South Coast, Jökulsárlón Glacier Lagoon and Diamond Beach.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
-        <a href="../index.html" class="btn btn-secondary">← Back to All Tours</a>
-      </div>
-      <div class="hero-trust">
-        <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-        <span><i class="fas fa-user"></i> Private / Custom</span>
-        <span><i class="fas fa-calendar"></i> Available year-round</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== TEMPLATE PLACEHOLDER ==================== -->
-
-   <!-- ================= СТИЛИ ДЛЯ ТАЙМЛАЙНА ================= -->
-<style>
-    .timeline-section {
-        background-color: var(--ice, #F4F8FA);
-        padding: 100px 5%;
-        overflow: hidden;
-    }
-
-    .timeline-header {
-        text-align: center;
-        margin-bottom: 80px;
-    }
-
-    .timeline-header h2 {
-        font-size: 3.2rem;
-        color: var(--navy, #071A2D);
-        font-weight: 800;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        letter-spacing: -1px;
-    }
-
-    .timeline-container {
-        position: relative;
-        max-width: 1050px;
-        margin: 0 auto;
-    }
-
-    /* Центральная линия */
-    .timeline-line {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 4px;
-        background-color: rgba(7, 26, 45, 0.08);
-        transform: translateX(-50%);
-        border-radius: 4px;
-    }
-
-    /* Прогресс-бар (заполняется через JS) */
-    .timeline-progress {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 0%;
-        background-color: var(--gold, #C9A96A);
-        border-radius: 4px;
-        transition: height 0.4s ease-out;
-    }
-
-    .timeline-item {
-        position: relative;
-        width: 50%;
-        padding: 40px;
-        opacity: 0;
-        transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Чередование лево/право */
-    .timeline-item:nth-child(odd) {
-        left: 0;
-        text-align: right;
-        padding-right: 70px;
-        transform: translateX(-50px);
-    }
-
-    .timeline-item:nth-child(even) {
-        left: 50%;
-        padding-left: 70px;
-        transform: translateX(50px);
-    }
-
-    .timeline-item.in-view {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* Узлы на линии */
-    .timeline-node {
-        position: absolute;
-        top: 50px;
-        width: 24px;
-        height: 24px;
-        background-color: var(--ice, #F4F8FA);
-        border: 4px solid var(--navy, #071A2D);
-        border-radius: 50%;
-        z-index: 2;
-        transition: all 0.4s ease;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-node { right: -12px; }
-    .timeline-item:nth-child(even) .timeline-node { left: -12px; }
-
-    .timeline-item.in-view .timeline-node {
-        border-color: var(--gold, #C9A96A);
-        background-color: var(--gold, #C9A96A);
-        box-shadow: 0 0 20px rgba(201, 169, 106, 0.6);
-    }
-
-    /* Карточка контента */
-    .timeline-card {
-        background: var(--white, #ffffff);
-        padding: 35px;
-        border-radius: 16px;
-        box-shadow: 0 15px 35px rgba(7, 26, 45, 0.06);
-        border: 1px solid rgba(7, 26, 45, 0.05);
-        text-align: left; /* Возвращаем текст налево даже для правых блоков */
-    }
-
-    .timeline-day {
-        font-size: 0.9rem;
-        font-weight: 800;
-        color: var(--glacier, #6FB7C8);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-        display: block;
-    }
-
-    .timeline-title {
-        font-size: 2rem;
-        color: var(--navy, #071A2D);
-        font-weight: 800;
-        margin-bottom: 15px;
-        line-height: 1.2;
-    }
-
-    .timeline-desc {
-        color: var(--stone, #2F3A40);
-        line-height: 1.7;
-        font-size: 1.05rem;
-        margin-bottom: 25px;
-    }
-
-    /* APP-Статистика */
-    .app-stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 25px;
-    }
-
-    .app-stat-badge {
-        background: rgba(111, 183, 200, 0.1);
-        color: var(--navy, #071A2D);
-        padding: 6px 14px;
-        border-radius: 30px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        border: 1px solid rgba(111, 183, 200, 0.2);
-    }
-
-    .app-stat-badge span {
-        color: var(--stone);
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-size: 0.7rem;
-    }
-
-    .timeline-img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    @media (max-width: 992px) {
-        .timeline-line { left: 30px; }
-        .timeline-item { width: 100%; padding: 0 0 40px 70px !important; text-align: left !important; }
-        .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { left: 0; transform: translateX(30px); }
-        .timeline-item.in-view { transform: translateX(0); }
-        .timeline-item:nth-child(odd) .timeline-node, .timeline-item:nth-child(even) .timeline-node { left: 18px; }
-    }
-</style>
-
-<!-- ================= TIMELINE INTERACTIVE ================= -->
-<div class="timeline-section">
-    <div class="timeline-header">
-        <h2>The 4-Day Journey Path</h2>
-        <p style="color: var(--stone); font-size: 1.15rem; max-width: 650px; margin: 0 auto; line-height: 1.8;">Follow the progression of your private expedition across Iceland's most iconic landscapes. Every day is optimized for maximum discovery.</p>
-    </div>
-
-    <div class="timeline-container" id="timeline-container">
-        <!-- Линия скролла -->
-        <div class="timeline-line">
-            <div class="timeline-progress" id="timeline-progress"></div>
-        </div>
-
-        <!-- DAY 1 -->
-        <div class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-                <span class="timeline-day">Day 01</span>
-                <h3 class="timeline-title">Arrival & Reykjavik</h3>
-                <p class="timeline-desc">Transfer from Keflavik Airport via the soothing geothermal waters of the Blue Lagoon. Settle into Reykjavik and explore its vibrant culinary and cultural scene.</p>
-                
-                <div class="app-stats">
-                    <div class="app-stat-badge"><span>Drive:</span> 50 KM</div>
-                    <div class="app-stat-badge"><span>Pace:</span> Relaxed</div>
-                    <div class="app-stat-badge"><span>Highlight:</span> Geothermal Spa</div>
-                </div>
-
-                        <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?q=80&w=800&auto=format&fit=crop" class="day-img" alt="Akureyri">
-            </div>
-        </div>
-
-        <!-- DAY 2 -->
-        <div class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-                <span class="timeline-day">Day 02</span>
-                <h3 class="timeline-title">The Golden Circle</h3>
-                <p class="timeline-desc">Walk between continental plates at Thingvellir National Park, watch the powerful Strokkur geyser erupt, and marvel at the massive Gullfoss waterfall.</p>
-                
-                <div class="app-stats">
-                    <div class="app-stat-badge"><span>Drive:</span> 250 KM</div>
-                    <div class="app-stat-badge"><span>Trail Time:</span> 2.5 Hrs</div>
-                    <div class="app-stat-badge"><span>Highlight:</span> Tectonic Rift</div>
-                </div>
-
-                <img src="https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80&w=800&auto=format&fit=crop" class="timeline-img" alt="Golden Circle">
-            </div>
-        </div>
-
-        <!-- DAY 3 -->
-        <div class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-                <span class="timeline-day">Day 03</span>
-                <h3 class="timeline-title">Glacier Lagoon</h3>
-                <p class="timeline-desc">Venture deep into the South Coast to witness giant icebergs floating in Jökulsárlón lagoon and washing up on the volcanic black sands of Diamond Beach.</p>
-                
-                <div class="app-stats">
-                    <div class="app-stat-badge"><span>Drive:</span> 380 KM</div>
-                    <div class="app-stat-badge"><span>Trail Time:</span> 3.0 Hrs</div>
-                    <div class="app-stat-badge"><span>Highlight:</span> Ice Diamonds</div>
-                </div>
-
-                <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=800&auto=format&fit=crop" class="timeline-img" alt="Glacier Lagoon">
-            </div>
-        </div>
-
-        <!-- DAY 4 -->
-        <div class="timeline-item">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-                <span class="timeline-day">Day 04</span>
-                <h3 class="timeline-title">Waterfalls & Extraction</h3>
-                <p class="timeline-desc">Conclude your journey by visiting the majestic Skógafoss and Seljalandsfoss waterfalls before your private driver safely escorts you back to the airport.</p>
-                
-                <div class="app-stats">
-                    <div class="app-stat-badge"><span>Drive:</span> 220 KM</div>
-                    <div class="app-stat-badge"><span>Pace:</span> Moderate</div>
-                    <div class="app-stat-badge"><span>Highlight:</span> Cascading Falls</div>
-                </div>
-
-                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" class="timeline-img" alt="Waterfalls">
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!-- ================= LOGISTICS & PRICING ================= -->
-<section style="background-color: var(--navy); padding: 100px 5%;">
-    <div class="container" style="max-width: 1100px; margin: 0 auto;">
-        
-        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: start;">
-            
-            <!-- Левая колонка: Карта -->
-            <!-- Левая колонка: Карта -->
-<div style="display: flex; flex-direction: column;">
-    <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 25px; font-weight: 800;">Expedition Map</h3>
-    <!-- Исправление: Добавлен display: flex и flex-direction: column в контейнер -->
-    <div style="border-radius: 16px; overflow: hidden; height: 100%; min-height: 480px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); display: flex; flex-direction: column;">
-        <!-- Исправление: Убран height="100%" и добавлены style="flex-grow: 1; min-height: 480px;" -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715424.1687009477!2d-22.138478413110292!3d64.2185265538186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2sIceland!5e0!3m2!1sen!2ses!4v1716309876543!5m2!1sen!2ses" width="100%" style="border:0; flex-grow: 1; min-height: 480px;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-</div>
-            
-            <!-- Правая колонка: Цена -->
-            <div style="background: var(--white); padding: 45px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-                <div style="display: inline-block; background: var(--ice); color: var(--navy); padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Private Rate</div>
-                
-                <h3 style="color: var(--navy); font-size: 2.2rem; margin-bottom: 15px; font-weight: 800;">All-Inclusive Route</h3>
-                
-                <div style="font-size: 3.2rem; color: var(--navy); font-weight: 800; margin-bottom: 30px; line-height: 1;">
-                    €2,150 <span style="display: block; font-size: 0.95rem; color: var(--stone); font-weight: 400; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px;">Per Person (2 Travelers Minimum)</span>
-                </div>
-                
-                <h4 style="color: var(--glacier); font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;">Operational Gear & Services</h4>
-                
-                <ul style="list-style: none; padding: 0; color: var(--stone); font-size: 1.05rem;">
-                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
-                        <span style="background: var(--ice); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--navy);"><i class="fa-solid fa-car-side"></i></span>
-                        <span>Luxury 4x4 SUV (Wi-Fi & Water)</span>
-                    </li>
-                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
-                        <span style="background: var(--ice); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--navy);"><i class="fa-solid fa-user-tie"></i></span>
-                        <span>Dedicated Expert Driver-Guide</span>
-                    </li>
-                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
-                        <span style="background: var(--ice); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--navy);"><i class="fa-solid fa-route"></i></span>
-                        <span>Fully Customizable Itinerary</span>
-                    </li>
-                    <li style="display: flex; align-items: center; gap: 15px;">
-                        <span style="background: var(--ice); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--navy);"><i class="fa-solid fa-gas-pump"></i></span>
-                        <span>All Fuel, Taxes, and Parking</span>
-                    </li>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                Iceland Private Tours
+                <span>Premium Multi-Day Experiences</span>
+            </a>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list" id="navList">
+                    <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
+                    <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
+                    <li><a href="../index.html#route" class="nav-link">By Route</a></li>
+                    <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
+                    <li><a href="pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
                 </ul>
-            </div>
-
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navList">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- ================= PREMIUM CTA ================= -->
-<section style="background-color: var(--ice); padding: 80px 5%; text-align: center;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="color: var(--navy); font-size: 2.8rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -1px;">Ready to Initiate?</h2>
-        <p style="color: var(--stone); font-size: 1.15rem; margin-bottom: 40px;">Contact us today to tailor this 4-day path exactly to your preferences.</p>
-        
-        <button style="background-color: var(--gold); color: var(--navy); border: none; padding: 20px 50px; font-size: 1.1rem; font-weight: 800; border-radius: 50px; cursor: pointer; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 10px 25px rgba(201, 169, 106, 0.3); transition: transform 0.3s ease;">
-            Request a Custom Itinerary
-        </button>
-    </div>
-</section>
+    <main id="main-content">
+        <!-- ==================== PAGE HERO ==================== -->
+        <section class="hero hero-page-day" aria-labelledby="hero-heading">
+            <div class="hero-4-day-img" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-pattern" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag"><i class="fas fa-clock" aria-hidden="true"></i> 4 Days</span>
+                    <h1 id="hero-heading">4 Day Private Tour Iceland</h1>
+                    <p>A private journey combining the Golden Circle, South Coast, Jökulsárlón Glacier Lagoon and Diamond Beach.</p>
+                    <div class="hero-actions">
+                        <a href="../index.html#contact" class="btn btn-primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a Custom Itinerary</a>
+                        <a href="../index.html" class="btn btn-secondary" aria-label="Back to all tours">← Back to All Tours</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span><i class="fas fa-map-pin" aria-hidden="true"></i> Start: Reykjavík</span>
+                        <span><i class="fas fa-user" aria-hidden="true"></i> Private / Custom</span>
+                        <span><i class="fas fa-calendar" aria-hidden="true"></i> Available year-round</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- ================= СКРИПТ ДЛЯ ТАЙМЛАЙНА ================= -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const items = document.querySelectorAll('.timeline-item');
-        const container = document.getElementById('timeline-container');
-        const progressBar = document.getElementById('timeline-progress');
+        <!-- ================= TIMELINE INTERACTIVE ================= -->
+        <section class="timeline-section" aria-labelledby="timeline-heading">
+            <header class="timeline-header">
+                <h2 id="timeline-heading">The 4-Day Journey Path</h2>
+                <p class="timeline-subtitle ">Follow the progression of your private expedition across Iceland's most iconic landscapes. Every day is optimized for maximum discovery.</p>
+            </header>
 
-        // Анимация появления карточек
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                }
-            });
-        }, { threshold: 0.3 });
+            <div class="timeline-container" id="timeline-container">
+                <!-- Línea de progreso del scroll -->
+                <div class="timeline-line" aria-hidden="true">
+                    <div class="timeline-progress" id="timeline-progress"></div>
+                </div>
 
-        items.forEach(item => observer.observe(item));
+                <ol class="timeline-list">
+                    <!-- DAY 1 -->
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true"></div>
+                        <article class="timeline-card">
+                            <span class="timeline-day">Day 01</span>
+                            <h3 class="timeline-title">Arrival & Reykjavik</h3>
+                            <p class="timeline-desc">Transfer from Keflavik Airport via the soothing geothermal waters of the Blue Lagoon. Settle into Reykjavik and explore its vibrant culinary and cultural scene.</p>
 
-        // Анимация центральной линии скролла
-        window.addEventListener('scroll', () => {
-            const containerRect = container.getBoundingClientRect();
-            const viewportHeight = window.innerHeight;
-            
-            if (containerRect.top < viewportHeight && containerRect.bottom > 0) {
-                let scrolled = (viewportHeight / 2 - containerRect.top) / containerRect.height * 100;
-                scrolled = Math.max(0, Math.min(100, scrolled));
-                progressBar.style.height = scrolled + '%';
-            }
-        });
-    });
-</script>
-  </div>
-</section>
+                            <dl class="app-stats">
+                                <div class="app-stat-badge"><dt>Drive:</dt><dd>50 KM</dd></div>
+                                <div class="app-stat-badge"><dt>Pace:</dt><dd>Relaxed</dd></div>
+                                <div class="app-stat-badge"><dt>Highlight:</dt><dd>Geothermal Spa</dd></div>
+                            </dl>
+                            <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?q=80&w=800&auto=format&fit=crop" class="day-img" alt="Blue Lagoon geothermal spa near Reykjavik" loading="lazy" decoding="async">
+                        </article>
+                    </li>
 
-<!-- ==================== FINAL CTA ==================== -->
-<section class="final-cta">
-  <div class="final-cta-bg"></div>
-  <div class="final-cta-overlay"></div>
-  <div class="container">
-    <div class="final-cta-content" style="grid-template-columns: 1fr;">
-      <div class="final-cta-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
-        <span class="section-label" style="color: var(--gold);">Start Your Journey</span>
-        <h2 class="section-title">Ready to Book Your 4-Day Private Tour?</h2>
-        <p>Tell us your travel dates, group size and preferences. We will create a private 4-day Iceland itinerary designed around your pace and interests.</p>
-        <a href="#" class="btn btn-primary" style="margin-top: 16px;"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+                    <!-- DAY 2 -->
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true"></div>
+                        <article class="timeline-card">
+                            <span class="timeline-day">Day 02</span>
+                            <h3 class="timeline-title">The Golden Circle</h3>
+                            <p class="timeline-desc">Walk between continental plates at Thingvellir National Park, watch the powerful Strokkur geyser erupt, and marvel at the massive Gullfoss waterfall.</p>
+                            <dl class="app-stats">
+                                <div class="app-stat-badge"><dt>Drive:</dt><dd>250 KM</dd></div>
+                                <div class="app-stat-badge"><dt>Trail Time:</dt><dd>2.5 Hrs</dd></div>
+                                <div class="app-stat-badge"><dt>Highlight:</dt><dd>Tectonic Rift</dd></div>
+                            </dl>
+                            <img src="https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80&w=800&auto=format&fit=crop" class="timeline-img" alt="Golden Circle" loading="lazy" decoding="async">
+                        </article>
+                    </li>
+
+                    <!-- DAY 3 -->
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true"></div>
+                        <article class="timeline-card">
+                            <span class="timeline-day">Day 03</span>
+                            <h3 class="timeline-title">Glacier Lagoon</h3>
+                            <p class="timeline-desc">Venture deep into the South Coast to witness giant icebergs floating in Jökulsárlón lagoon and washing up on the volcanic black sands of Diamond Beach.</p>
+                            <dl class="app-stats">
+                                <div class="app-stat-badge"><dt>Drive:</dt><dd>380 KM</dd></div>
+                                <div class="app-stat-badge"><dt>Trail Time:</dt><dd>3.0 Hrs</dd></div>
+                                <div class="app-stat-badge"><dt>Highlight:</dt><dd>Ice Diamonds</dd></div>
+                            </dl>
+                            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=800&auto=format&fit=crop" class="timeline-img" alt="Glacier Lagoon" loading="lazy" decoding="async">
+                        </article>
+                    </li>
+
+                    <!-- DAY 4 -->
+                    <li class="timeline-item">
+                        <div class="timeline-node" aria-hidden="true"></div>
+                        <article class="timeline-card">
+                            <span class="timeline-day">Day 04</span>
+                            <h3 class="timeline-title">Waterfalls & Extraction</h3>
+                            <p class="timeline-desc">Conclude your journey by visiting the majestic Skógafoss and Seljalandsfoss waterfalls before your private driver safely escorts you back to the airport.</p>
+                            <dl class="app-stats">
+                                <div class="app-stat-badge"><dt>Drive:</dt><dd>220 KM</dd></div>
+                                <div class="app-stat-badge"><dt>Pace:</dt><dd>Moderate</dd></div>
+                                <div class="app-stat-badge"><dt>Highlight:</dt><dd>Cascading Falls</dd></div>
+                            </dl>
+                            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=800&auto=format&fit=crop" class="timeline-img" alt="Waterfalls" loading="lazy" decoding="async">
+                        </article>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ================= LOGISTICS & PRICING ================= -->
+        <section class="logistics-section" aria-label="Route map and pricing">
+            <div class="container logistics-container">
+                <div class="logistics-grid">
+                    <div class="logistics-map-col">
+                        <h3 class="logistics-map-title">Expedition Map</h3>
+                        <div class="logistics-map-embed">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715424.1687009477!2d-22.138478413110292!3d64.2185265538186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2sIceland!5e0!3m2!1sen!2ses!4v1716309876543!5m2!1sen!2ses" width="100%" class="logistics-map-iframe" title="Map of the 4-day Iceland private tour route" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-badge">Private Rate</div>
+                        <h3 class="pricing-title">All-Inclusive Route</h3>
+                        <div class="pricing-amount">
+                            €2,150 <span class="pricing-amount-sub">Per Person (2 Travelers Minimum)</span>
+                        </div>
+                        <h4 class="pricing-services-title">Operational Gear & Services</h4>
+                        <ul class="pricing-services-list">
+                            <li class="pricing-service-item">
+                                <span class="pricing-service-icon" aria-hidden="true"><i class="fa-solid fa-car-side"></i></span>
+                                <span>Luxury 4x4 SUV (Wi-Fi & Water)</span>
+                            </li>
+                            <li class="pricing-service-item">
+                                <span class="pricing-service-icon" aria-hidden="true"><i class="fa-solid fa-user-tie"></i></span>
+                                <span>Dedicated Expert Driver-Guide</span>
+                            </li>
+                            <li class="pricing-service-item">
+                                <span class="pricing-service-icon" aria-hidden="true"><i class="fa-solid fa-route"></i></span>
+                                <span>Fully Customizable Itinerary</span>
+                            </li>
+                            <li class="pricing-service-item pricing-service-item--last">
+                                <span class="pricing-service-icon" aria-hidden="true"><i class="fa-solid fa-gas-pump"></i></span>
+                                <span>All Fuel, Taxes, and Parking</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PREMIUM CTA ================= -->
+        <section class="premium-cta-section" aria-labelledby="premium-cta-heading">
+            <div class="container premium-cta-container">
+                <h2 class="premium-cta-title" id="premium-cta-heading">Ready to Initiate?</h2>
+                <p class="premium-cta-text">Contact us today to tailor this 4-day path exactly to your preferences.</p>
+                <a href="../index.html#contact" class="btn premium-cta-btn">
+                    Request a Custom Itinerary
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== FINAL CTA ==================== -->
+        <section class="final-cta" aria-labelledby="final-cta-heading">
+            <div class="final-cta-bg" aria-hidden="true"></div>
+            <div class="final-cta-overlay" aria-hidden="true"></div>
+            <div class="container">
+                <div class="final-cta-content final-cta-content--single">
+                    <div class="final-cta-text final-cta-text--centered">
+                        <span class="section-label section-label--gold">Start Your Journey</span>
+                        <h2 class="section-title" id="final-cta-heading">Ready to Book Your 4-Day Private Tour?</h2>
+                        <p>Tell us your travel dates, group size and preferences. We will create a private 4-day Iceland itinerary designed around your pace and interests.</p>
+                        <a href="../index.html#contact" class="btn btn-primary btn-spaced"><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a Custom Itinerary</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo">
+              Iceland Private Tours
+              <span>Premium Multi-Day Experiences</span>
+            </a>
+            <p>
+              Discover Iceland with private multi-day tours, custom itineraries
+              and dedicated driver-guides. Premium travel experiences designed
+              around your pace, interests and travel style.
+            </p>
+          </div>
+          <nav aria-labelledby="footer-tours-heading">
+            <h2 class="footer-heading" id="footer-tours-heading">Tours</h2>
+            <ul class="footer-links">
+              <li><a href="#contact">Private Multi-Day Tours</a></li>
+              <li><a href="#contact">Custom Private Tours</a></li>
+              <li><a href="#contact">Luxury Tours</a></li>
+              <li><a href="#contact">Super Jeep Tours</a></li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="footer-duration-heading">
+            <h2 class="footer-heading" id="footer-duration-heading">
+              By Duration
+            </h2>
+            <ul class="footer-links">
+              <li>
+                <a href="pages/3-day-private-tour-iceland.html">3 Day Tours</a>
+              </li>
+              <li>
+                <a href="pages/5-day-private-tour-iceland.html">5 Day Tours</a>
+              </li>
+              <li>
+                <a href="pages/7-day-private-tour-iceland.html">7 Day Tours</a>
+              </li>
+              <li>
+                <a href="pages/10-day-private-tour-iceland.html">10 Day Tours</a>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-labelledby="footer-company-heading">
+            <h2 class="footer-heading" id="footer-company-heading">Company</h2>
+            <ul class="footer-links">
+              <li><a href="#contact">About Us</a></li>
+              <li><a href="#contact">Our Guides</a></li>
+              <li><a href="#contact">Our Vehicles</a></li>
+              <li><a href="#contact">How to Book</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
+          <p>Premium private multi-day tours in Iceland</p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="../index.html" class="logo">
-          Iceland Private Tours
-          <span>Premium Multi-Day Experiences</span>
-        </a>
-        <p>Discover Iceland with private multi-day tours, custom itineraries and dedicated driver-guides. Premium travel experiences designed around your pace, interests and travel style.</p>
-      </div>
-      <div>
-        <h4>Tours</h4>
-        <ul class="footer-links">
-          <li><a href="../index.html">Private Multi-Day Tours</a></li>
-          <li><a href="../index.html">Custom Private Tours</a></li>
-          <li><a href="../index.html">Luxury Tours</a></li>
-          <li><a href="../index.html">Super Jeep Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>By Duration</h4>
-        <ul class="footer-links">
-          <li><a href="3-day-private-tour-iceland.html">3 Day Tours</a></li>
-          <li><a href="4-day-private-tour-iceland.html">4 Day Tours</a></li>
-          <li><a href="5-day-private-tour-iceland.html">5 Day Tours</a></li>
-          <li><a href="../index.html">10 Day Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul class="footer-links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Our Guides</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
-      <p>Premium private multi-day tours in Iceland</p>
-    </div>
-  </div>
-</footer>
-
-<script src="../assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/time-line.js"></script>
 </body>
 </html>

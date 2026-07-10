@@ -1,1600 +1,889 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>8 Day Private Tour Iceland | Private Iceland Adventure</title>
-<meta name="description" content="Explore Iceland on an 8 day private tour with your own driver-guide, combining the Golden Circle, South Coast, Glacier Lagoon, Snæfellsnes Peninsula and flexible custom experiences.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/style.css">
-<style>
-/* ========== 8-DAY TOUR — PREMIUM VISUAL EXPEDITION ========== */
-
-/* --- Cinematic Hero --- */
-.hero-8day {
-  min-height: 100vh;
-}
-
-.hero-8day .hero-bg {
-  transform: scale(1.1);
-  animation: heroZoom8 25s ease-in-out infinite alternate;
-}
-
-@keyframes heroZoom8 {
-  from { transform: scale(1.08); }
-  to { transform: scale(1); }
-}
-
-.hero-8day .hero-overlay {
-  background: linear-gradient(135deg, rgba(7,26,45,0.9) 0%, rgba(7,26,45,0.25) 50%, rgba(7,26,45,0.65) 100%);
-}
-
-.hero-stats-panel {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  margin-top: 40px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-  max-width: 780px;
-}
-
-.hero-stat-block {
-  flex: 1;
-  min-width: 140px;
-  padding: 18px 22px;
-  position: relative;
-}
-
-.hero-stat-block:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 18%;
-  height: 64%;
-  width: 1px;
-  background: rgba(255,255,255,0.08);
-}
-
-.hero-stat-block .stat-label {
-  display: block;
-  font-size: 0.55rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 4px;
-}
-
-.hero-stat-block .stat-value {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--white);
-}
-
-/* --- Visual Intro (Split) --- */
-.visual-intro {
-  background: var(--white);
-  padding: 100px 0;
-  position: relative;
-}
-
-.visual-intro::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-
-.visual-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.visual-intro-text h2 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  margin-bottom: 20px;
-  line-height: 1.25;
-}
-
-.visual-intro-text p {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: var(--stone);
-  margin-bottom: 16px;
-}
-
-.visual-intro-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 32px;
-}
-
-.visual-intro-stat {
-  background: var(--ice);
-  padding: 20px 18px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.visual-intro-stat .number {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--navy);
-  line-height: 1;
-}
-
-.visual-intro-stat .number span {
-  font-size: 0.9rem;
-  color: var(--glacier);
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.visual-intro-stat .desc {
-  font-size: 0.72rem;
-  color: var(--stone);
-  margin-top: 4px;
-}
-
-.visual-intro-image {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  min-height: 500px;
-  background: url('../assets/images/8-day-private-tour-iceland.jpg') center center / cover no-repeat;
-}
-
-.visual-intro-card {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  background: rgba(7,26,45,0.92);
-  backdrop-filter: blur(12px);
-  padding: 20px 24px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.visual-intro-card p {
-  color: var(--white);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-.visual-intro-card i {
-  color: var(--gold);
-  margin-right: 8px;
-}
-
-/* --- Route Chapters (Full-Bleed Panels) --- */
-.chapters-section {
-  padding: 100px 0;
-  background: var(--ice);
-}
-
-.chapter-grid {
-  display: grid;
-  gap: 28px;
-}
-
-.chapter-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-radius: 20px;
-  overflow: hidden;
-  background: var(--white);
-  box-shadow: 0 8px 40px rgba(7,26,45,0.06);
-  border: 1px solid rgba(7,26,45,0.04);
-  transition: var(--transition);
-}
-
-.chapter-panel:hover {
-  box-shadow: 0 12px 48px rgba(7,26,45,0.1);
-  transform: translateY(-3px);
-}
-
-.chapter-image {
-  min-height: 360px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.chapter-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(7,26,45,0.1) 0%, transparent 50%);
-}
-
-.chapter-badge {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: var(--navy);
-  color: var(--gold);
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 6px 16px;
-  border-radius: 50px;
-}
-
-.chapter-content {
-  padding: 44px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.chapter-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-}
-
-.chapter-content p {
-  font-size: 0.92rem;
-  color: var(--stone);
-  line-height: 1.7;
-  margin-bottom: 18px;
-}
-
-.chapter-landscapes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chapter-landscape {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--glacier);
-  background: var(--glacier-light);
-  padding: 5px 14px;
-  border-radius: 50px;
-  border: 1px solid rgba(111,183,200,0.15);
-}
-
-/* --- Moments (Image overlay cards) --- */
-.moments-section {
-  padding: 100px 0;
-  background: var(--white);
-  position: relative;
-}
-
-.moments-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.moment-card {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  min-height: 320px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  cursor: default;
-  transition: var(--transition);
-}
-
-.moment-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(7,26,45,0.15);
-}
-
-.moment-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent 30%, rgba(7,26,45,0.7) 100%);
-  transition: var(--transition);
-}
-
-.moment-card:hover::before {
-  background: linear-gradient(transparent 20%, rgba(7,26,45,0.85) 100%);
-}
-
-.moment-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 24px 20px;
-  width: 100%;
-}
-
-.moment-overlay i {
-  font-size: 1.4rem;
-  color: var(--gold);
-  margin-bottom: 8px;
-  display: block;
-}
-
-.moment-overlay h4 {
-  font-size: 0.95rem;
-  color: var(--white);
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.moment-overlay p {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.4;
-}
-
-/* --- Detailed Itinerary (Visual Panels) --- */
-.itinerary-8day {
-  padding: 100px 0;
-  background: var(--ice);
-}
-
-.itinerary-8day-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  background: var(--white);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 8px 40px rgba(7,26,45,0.06);
-  margin-bottom: 36px;
-  border: 1px solid rgba(7,26,45,0.04);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.itinerary-8day-block.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.itinerary-8day-block.reverse .itinerary-image {
-  order: 2;
-}
-
-.itinerary-image {
-  min-height: 340px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.itinerary-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(7,26,45,0.08) 0%, transparent 50%);
-}
-
-.itinerary-image .day-number-overlay {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 3.2rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.12);
-  line-height: 1;
-  pointer-events: none;
-}
-
-.itinerary-content {
-  padding: 40px 40px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.itinerary-content .day-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--navy);
-  color: var(--gold);
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 14px;
-  width: fit-content;
-}
-
-.itinerary-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
-
-.itinerary-content p {
-  font-size: 0.92rem;
-  color: var(--stone);
-  line-height: 1.75;
-  margin-bottom: 18px;
-}
-
-.itinerary-content .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.itinerary-content .tags span {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--glacier);
-  background: var(--glacier-light);
-  padding: 5px 14px;
-  border-radius: 50px;
-  border: 1px solid rgba(111,183,200,0.15);
-}
-
-/* --- Why 8 Days - Premium Navy --- */
-.why-8-section {
-  background: var(--navy);
-  padding: 100px 0;
-  position: relative;
-}
-
-.why-8-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201,169,106,0.3), transparent);
-}
-
-.why-8-stats-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 48px;
-}
-
-.why-8-stat {
-  text-align: center;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  padding: 32px 20px;
-}
-
-.why-8-stat .big-number {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.why-8-stat .stat-label {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 500;
-}
-
-.why-8-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.why-8-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  padding: 32px 24px;
-  transition: var(--transition);
-}
-
-.why-8-card:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(201,169,106,0.2);
-  transform: translateY(-3px);
-}
-
-.why-8-card i {
-  font-size: 1.5rem;
-  color: var(--gold);
-  margin-bottom: 14px;
-  display: block;
-}
-
-.why-8-card h4 {
-  font-size: 0.92rem;
-  color: var(--white);
-  margin-bottom: 8px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.why-8-card p {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.6;
-}
-
-/* --- Optional Experiences --- */
-.optional-section {
-  background: var(--ice);
-  padding: 100px 0;
-}
-
-.optional-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.optional-card {
-  background: var(--white);
-  border-radius: 14px;
-  padding: 28px 22px;
-  text-align: center;
-  border: 1px solid rgba(7,26,45,0.04);
-  transition: var(--transition);
-}
-
-.optional-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(111,183,200,0.15);
-}
-
-.optional-card i {
-  font-size: 1.5rem;
-  color: var(--glacier);
-  margin-bottom: 12px;
-}
-
-.optional-card h4 {
-  font-size: 0.88rem;
-  color: var(--navy);
-  margin-bottom: 6px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.optional-card p {
-  font-size: 0.75rem;
-  color: var(--stone);
-  line-height: 1.5;
-}
-
-/* --- Driver Section --- */
-.driver-8-premium {
-  background: var(--white);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(7,26,45,0.04);
-}
-
-.driver-8-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.driver-8-image {
-  min-height: 420px;
-  background: url('../assets/images/private-driver-guide-iceland.jpg') center center / cover no-repeat;
-}
-
-.driver-8-content {
-  padding: 56px 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.driver-8-content h3 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-}
-
-.driver-8-content p {
-  font-size: 0.95rem;
-  color: var(--stone);
-  line-height: 1.8;
-  margin-bottom: 24px;
-}
-
-.driver-8-list {
-  list-style: none;
-}
-
-.driver-8-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-  font-size: 0.9rem;
-  color: var(--navy);
-  font-weight: 500;
-  border-bottom: 1px solid rgba(7,26,45,0.04);
-}
-
-.driver-8-list li:last-child {
-  border-bottom: none;
-}
-
-.driver-8-list li i {
-  color: var(--glacier);
-  font-size: 0.85rem;
-}
-
-/* --- Included --- */
-.included-8-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.included-8-col {
-  background: var(--white);
-  border-radius: 16px;
-  padding: 40px 36px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(7,26,45,0.04);
-}
-
-.included-8-col h3 {
-  font-size: 1.2rem;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.included-8-col h3 i { font-size: 1.1rem; }
-
-.included-8-col ul { list-style: none; }
-
-.included-8-col li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 0;
-  font-size: 0.92rem;
-  color: var(--stone);
-  border-bottom: 1px solid rgba(7,26,45,0.04);
-}
-
-.included-8-col li:last-child { border-bottom: none; }
-
-.included-8-col li i { margin-top: 3px; flex-shrink: 0; }
-
-.included-8-col .fa-check { color: var(--aurora); }
-
-.included-8-col .fa-times { color: #e74c3c; opacity: 0.5; }
-
-/* --- Best Time --- */
-.best-time-8-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.season-8-card {
-  background: var(--white);
-  border-radius: 16px;
-  padding: 36px 28px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(7,26,45,0.04);
-  transition: var(--transition);
-  text-align: center;
-}
-
-.season-8-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(111,183,200,0.15);
-}
-
-.season-8-card i { font-size: 2rem; color: var(--glacier); margin-bottom: 16px; }
-
-.season-8-card h4 {
-  font-size: 1rem;
-  color: var(--navy);
-  margin-bottom: 10px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.season-8-card p { font-size: 0.85rem; color: var(--stone); line-height: 1.7; }
-
-/* --- Final CTA --- */
-.final-cta-8day {
-  position: relative;
-  padding: 120px 0;
-  overflow: hidden;
-}
-
-.final-cta-8day-bg {
-  position: absolute;
-  inset: 0;
-  background: url('../assets/images/final-cta-private-iceland-tour.jpg') center center / cover no-repeat;
-  background-attachment: fixed;
-}
-
-.final-cta-8day-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(7,26,45,0.92) 0%, rgba(7,26,45,0.6) 100%);
-}
-
-.final-cta-8day .container { position: relative; z-index: 2; }
-
-/* --- Responsive --- */
-@media (max-width: 1200px) {
-  .moments-grid { grid-template-columns: repeat(2, 1fr); }
-  .optional-grid { grid-template-columns: repeat(2, 1fr); }
-  .why-8-stats-row { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 1024px) {
-  .visual-intro-grid { grid-template-columns: 1fr; gap: 40px; }
-  .visual-intro-image { min-height: 380px; }
-  .chapter-panel { grid-template-columns: 1fr; }
-  .chapter-image { min-height: 280px; }
-  .itinerary-8day-block { grid-template-columns: 1fr; }
-  .itinerary-8day-block.reverse .itinerary-image { order: 0; }
-  .itinerary-image { min-height: 260px; }
-  .driver-8-grid { grid-template-columns: 1fr; }
-  .driver-8-image { min-height: 280px; }
-}
-
-@media (max-width: 900px) {
-  .why-8-grid { grid-template-columns: repeat(2, 1fr); }
-  .best-time-8-grid { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 768px) {
-  .hero-stat-block:not(:last-child)::after { display: none; }
-  .hero-stat-block { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .hero-stats-panel { border-radius: 8px; }
-  .included-8-grid { grid-template-columns: 1fr; }
-  .driver-8-content { padding: 32px 24px; }
-  .final-cta-8day { padding: 80px 0; }
-  .itinerary-content { padding: 28px 24px; }
-  .chapter-content { padding: 28px 24px; }
-}
-
-@media (max-width: 600px) {
-  .moments-grid { grid-template-columns: 1fr; }
-  .optional-grid { grid-template-columns: 1fr; }
-  .why-8-grid { grid-template-columns: 1fr; }
-  .why-8-stats-row { grid-template-columns: 1fr; }
-  .hero-stats-panel { flex-direction: column; }
-  .hero-stat-block { min-width: 100%; }
-  .visual-intro-stats { grid-template-columns: 1fr; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 Day Private Tour Iceland | Private Iceland Adventure</title>
+  <meta name="description"
+    content="Explore Iceland on an 8 day private tour with your own driver-guide, combining the Golden Circle, South Coast, Glacier Lagoon, Snæfellsnes Peninsula and flexible custom experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-day8.css">
 </head>
+
 <body>
 
-<!-- ==================== HEADER ==================== -->
-<header class="header" id="header">
-  <div class="container">
-    <a href="../index.html" class="logo">
-      Iceland Private Tours
-      <span>Premium Multi-Day Experiences</span>
-    </a>
-    <nav class="nav">
-      <ul class="nav-list" id="navList">
-        <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
-        <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
-        <li><a href="../index.html#route" class="nav-link">By Route</a></li>
-        <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </div>
-</header>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        Iceland Private Tours
+        <span>Premium Multi-Day Experiences</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
+          <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
+          <li><a href="../index.html#route" class="nav-link">By Route</a></li>
+          <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+          <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-<!-- ==================== HERO ==================== -->
-<section class="hero hero-8day" style="min-height: 100vh;">
-  <div class="hero-bg" style="background-image: url('../assets/images/8-day-private-tour-iceland.jpg');"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-tag"><i class="fas fa-compass"></i> Private 8 Day Iceland Tour</span>
-      <h1>8 Day Private Tour Iceland</h1>
-      <p>Go deeper into Iceland with a private 8 day journey through the Golden Circle, South Coast, Glacier Lagoon, Snæfellsnes Peninsula and flexible scenic routes designed around your pace.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
-        <a href="#route" class="btn btn-secondary">Discover the Route</a>
-      </div>
-      <div class="hero-stats-panel">
-        <div class="hero-stat-block">
-          <span class="stat-label">Duration</span>
-          <span class="stat-value">8 Days / 7 Nights</span>
+  <!-- ==================== HERO ==================== -->
+  <section class="hero hero-8day">
+    <div class="hero-bg"><img src="../assets/images/8-day-private-tour-iceland.webp" alt="Panoramic view of Iceland's landscape on a private 8 day tour" loading="eager"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag"><i class="fas fa-compass"></i> Private 8 Day Iceland Tour</span>
+        <h1>8 Day Private Tour Iceland</h1>
+        <p>Go deeper into Iceland with a private 8 day journey through the Golden Circle, South Coast, Glacier Lagoon,
+          Snæfellsnes Peninsula and flexible scenic routes designed around your pace.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+          <a href="#route" class="btn btn-secondary">Discover the Route</a>
         </div>
-        <div class="hero-stat-block">
-          <span class="stat-label">Start</span>
-          <span class="stat-value">Reykjavík or Keflavik</span>
-        </div>
-        <div class="hero-stat-block">
-          <span class="stat-label">Style</span>
-          <span class="stat-value">Private / Custom</span>
-        </div>
-        <div class="hero-stat-block">
-          <span class="stat-label">Best for</span>
-          <span class="stat-value">Scenic depth &amp; photography</span>
-        </div>
-        <div class="hero-stat-block">
-          <span class="stat-label">Route</span>
-          <span class="stat-value">South + Snæfellsnes</span>
+        <div class="hero-stats-panel">
+          <div class="hero-stat-block">
+            <span class="stat-label">Duration</span>
+            <span class="stat-value">8 Days / 7 Nights</span>
+          </div>
+          <div class="hero-stat-block">
+            <span class="stat-label">Start</span>
+            <span class="stat-value">Reykjavík or Keflavik</span>
+          </div>
+          <div class="hero-stat-block">
+            <span class="stat-label">Style</span>
+            <span class="stat-value">Private / Custom</span>
+          </div>
+          <div class="hero-stat-block">
+            <span class="stat-label">Best for</span>
+            <span class="stat-value">Scenic depth &amp; photography</span>
+          </div>
+          <div class="hero-stat-block">
+            <span class="stat-label">Route</span>
+            <span class="stat-value">South + Snæfellsnes</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== VISUAL INTRO ==================== -->
-<section class="visual-intro" id="overview">
-  <div class="container">
-    <div class="visual-intro-grid">
-      <div class="visual-intro-text">
-        <span class="section-label">The Visual Expedition</span>
-        <h2 class="section-title">A Deeper Private Journey Through Iceland</h2>
-        <p>This tour is designed for travelers who want more margin, more landscapes and more flexibility. Over eight days, you explore the Golden Circle, the full South Coast, the Glacier Lagoon and Diamond Beach, the Snæfellsnes Peninsula, and the Reykjanes Peninsula — all with the freedom to linger where the landscape moves you most.</p>
-        <p>Eight days give you what shorter tours cannot: the ability to slow down. Your private driver-guide adapts the route to the weather, the light and your interests. Extra time at waterfalls. A detour to a hidden canyon. An evening spent watching the Northern Lights when conditions align. This is a journey built around your rhythm, not a bus timetable.</p>
-        <div class="visual-intro-stats">
-          <div class="visual-intro-stat">
-            <div class="number">8 <span>days</span></div>
-            <div class="desc">Private multi-day travel</div>
-          </div>
-          <div class="visual-intro-stat">
-            <div class="number">4 <span>regions</span></div>
-            <div class="desc">South, southeast, west &amp; Snæfellsnes</div>
-          </div>
-          <div class="visual-intro-stat">
-            <div class="number"><i class="fas fa-route" style="font-size: 1.4rem; color: var(--glacier);"></i></div>
-            <div class="desc">Flexible route planning</div>
-          </div>
-          <div class="visual-intro-stat">
-            <div class="number"><i class="fas fa-user-tie" style="font-size: 1.4rem; color: var(--glacier);"></i></div>
-            <div class="desc">Private driver-guide</div>
+  <!-- ==================== VISUAL INTRO ==================== -->
+  <section class="visual-intro" id="overview">
+    <div class="container">
+      <div class="visual-intro-grid">
+        <div class="visual-intro-text">
+          <span class="section-label">The Visual Expedition</span>
+          <h2 class="section-title">A Deeper Private Journey Through Iceland</h2>
+          <p>This tour is designed for travelers who want more margin, more landscapes and more flexibility. Over eight
+            days, you explore the Golden Circle, the full South Coast, the Glacier Lagoon and Diamond Beach, the
+            Snæfellsnes Peninsula, and the Reykjanes Peninsula — all with the freedom to linger where the landscape
+            moves you most.</p>
+          <p>Eight days give you what shorter tours cannot: the ability to slow down. Your private driver-guide adapts
+            the route to the weather, the light and your interests. Extra time at waterfalls. A detour to a hidden
+            canyon. An evening spent watching the Northern Lights when conditions align. This is a journey built around
+            your rhythm, not a bus timetable.</p>
+          <div class="visual-intro-stats">
+            <div class="visual-intro-stat">
+              <div class="number">8 <span>days</span></div>
+              <div class="desc">Private multi-day travel</div>
+            </div>
+            <div class="visual-intro-stat">
+              <div class="number">4 <span>regions</span></div>
+              <div class="desc">South, southeast, west &amp; Snæfellsnes</div>
+            </div>
+            <div class="visual-intro-stat">
+              <div class="number"><i class="fas fa-route visual-intro-icon"></i></div>
+              <div class="desc">Flexible route planning</div>
+            </div>
+            <div class="visual-intro-stat">
+              <div class="number"><i class="fas fa-user-tie visual-intro-icon"></i>
+              </div>
+              <div class="desc">Private driver-guide</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="visual-intro-image">
-        <div class="visual-intro-card">
-          <p><i class="fas fa-quote-left"></i> The extra day transforms the journey. You stop chasing the clock and start following the light.<i class="fas fa-quote-right"></i></p>
+        <div class="visual-intro-image">
+          <img src="../assets/images/8-day-private-tour-iceland.webp" alt="Iceland's dramatic landscape on the private 8 day journey" loading="lazy">
+          <div class="visual-intro-card">
+            <p><i class="fas fa-quote-left"></i> The extra day transforms the journey. You stop chasing the clock and
+              start following the light.<i class="fas fa-quote-right"></i></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== ROUTE CHAPTERS ==================== -->
-<section class="chapters-section" id="route">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Route Chapters</span>
-      <h2 class="section-title">The 8 Day Route Experience</h2>
-      <p class="section-subtitle">Four visual chapters that trace your private expedition across Iceland's most iconic landscapes, from tectonic divides to glacier-carved shores.</p>
+  <!-- ==================== ROUTE CHAPTERS ==================== -->
+  <section class="chapters-section" id="route">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Route Chapters</span>
+        <h2 class="section-title">The 8 Day Route Experience</h2>
+        <p class="section-subtitle">Four visual chapters that trace your private expedition across Iceland's most iconic
+          landscapes, from tectonic divides to glacier-carved shores.</p>
+      </div>
+      <div class="chapter-grid">
+
+        <div class="chapter-panel">
+          <div class="chapter-image">
+            <img src="../assets/images/golden-circle-south-coast-private-tour.webp" alt="Golden Circle and South Coast landscapes in Iceland" loading="lazy">
+            <span class="chapter-badge">Chapter 1</span>
+          </div>
+          <div class="chapter-content">
+            <h3>Golden Circle &amp; First Landscapes</h3>
+            <p>Your journey begins with Iceland's most celebrated route — Þingvellir National Park, the Geysir
+              geothermal area and Gullfoss waterfall. Depending on arrival time, you can also explore the Reykjanes
+              Peninsula or the colorful streets of Reykjavík before settling into your first evening in Iceland.</p>
+            <div class="chapter-landscapes">
+              <span class="chapter-landscape">Þingvellir National Park</span>
+              <span class="chapter-landscape">Geysir</span>
+              <span class="chapter-landscape">Gullfoss</span>
+              <span class="chapter-landscape">Reykjanes Peninsula</span>
+              <span class="chapter-landscape">Reykjavík</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter-panel">
+          <div class="chapter-image">
+            <img src="../assets/images/south-coast-private-tour-iceland.webp" alt="South Coast waterfalls and black sand beaches in Iceland" loading="lazy">
+            <span class="chapter-badge">Chapter 2</span>
+          </div>
+          <div class="chapter-content">
+            <h3>South Coast Waterfalls &amp; Black Sand Beaches</h3>
+            <p>Travel the dramatic South Coast with stops at Seljalandsfoss, where you can walk behind the cascading
+              water, and Skógafoss with its powerful curtain of foam. Continue to Reynisfjara Black Sand Beach, where
+              basalt columns and roaring Atlantic waves create one of Iceland's most iconic landscapes.</p>
+            <div class="chapter-landscapes">
+              <span class="chapter-landscape">Seljalandsfoss</span>
+              <span class="chapter-landscape">Skógafoss</span>
+              <span class="chapter-landscape">Reynisfjara</span>
+              <span class="chapter-landscape">Dyrhólaey</span>
+              <span class="chapter-landscape">Vík</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter-panel">
+          <div class="chapter-image">
+            <img src="../assets/images/winter-private-tour-iceland.webp" alt="Jökulsárlón Glacier Lagoon in southeast Iceland" loading="lazy">
+            <span class="chapter-badge">Chapter 3</span>
+          </div>
+          <div class="chapter-content">
+            <h3>Glacier Lagoon &amp; Southeast Iceland</h3>
+            <p>Venture east to Jökulsárlón Glacier Lagoon, where icebergs calve from Breiðamerkurjökull and drift slowly
+              toward the sea. Walk on Diamond Beach as crystal-clear ice glistens against black volcanic sand. Explore
+              the vast Vatnajökull region and the landscapes around Höfn, with time for photography and optional glacier
+              activities.</p>
+            <div class="chapter-landscapes">
+              <span class="chapter-landscape">Jökulsárlón Glacier Lagoon</span>
+              <span class="chapter-landscape">Diamond Beach</span>
+              <span class="chapter-landscape">Vatnajökull</span>
+              <span class="chapter-landscape">Höfn area</span>
+              <span class="chapter-landscape">Skaftafell</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chapter-panel">
+          <div class="chapter-image">
+            <img src="../assets/images/7-day-snaefellsnes-private-tour.webp" alt="Snæfellsnes Peninsula landscapes in western Iceland" loading="lazy">
+            <span class="chapter-badge">Chapter 4</span>
+          </div>
+          <div class="chapter-content">
+            <h3>Snæfellsnes Peninsula &amp; Flexible Return</h3>
+            <p>Explore the Snæfellsnes Peninsula — Iceland in miniature — with Kirkjufell, Arnarstapi's basalt cliffs,
+              the black church at Búðakirkja and views of Snæfellsjökull glacier. Your final day is fully flexible, with
+              options for Reykjavík, the Blue Lagoon area, Reykjanes Peninsula or coastal photography stops on the way
+              to Keflavik Airport.</p>
+            <div class="chapter-landscapes">
+              <span class="chapter-landscape">Kirkjufell</span>
+              <span class="chapter-landscape">Arnarstapi</span>
+              <span class="chapter-landscape">Búðakirkja</span>
+              <span class="chapter-landscape">Snæfellsjökull</span>
+              <span class="chapter-landscape">Blue Lagoon area</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="chapter-grid">
+  </section>
 
-      <div class="chapter-panel">
-        <div class="chapter-image" style="background-image: url('../assets/images/golden-circle-south-coast-private-tour.jpg');">
-          <span class="chapter-badge">Chapter 1</span>
+  <!-- ==================== MOMENTS ==================== -->
+  <section class="moments-section" id="moments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Journey Moments</span>
+        <h2 class="section-title">Moments That Define the Journey</h2>
+        <p class="section-subtitle">These are the moments that turn a private tour into an unforgettable Icelandic
+          memory.</p>
+      </div>
+      <div class="moments-grid">
+        <div class="moment-card">
+          <img src="../assets/images/south-coast-private-tour-iceland.webp" alt="Seljalandsfoss waterfall in Iceland" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-umbrella-beach"></i>
+            <h4>Walk Behind a Waterfall</h4>
+            <p>Step behind Seljalandsfoss and feel the raw power of Iceland's cascading waters</p>
+          </div>
         </div>
-        <div class="chapter-content">
-          <h3>Golden Circle &amp; First Landscapes</h3>
-          <p>Your journey begins with Iceland's most celebrated route — Þingvellir National Park, the Geysir geothermal area and Gullfoss waterfall. Depending on arrival time, you can also explore the Reykjanes Peninsula or the colorful streets of Reykjavík before settling into your first evening in Iceland.</p>
-          <div class="chapter-landscapes">
-            <span class="chapter-landscape">Þingvellir National Park</span>
-            <span class="chapter-landscape">Geysir</span>
-            <span class="chapter-landscape">Gullfoss</span>
-            <span class="chapter-landscape">Reykjanes Peninsula</span>
-            <span class="chapter-landscape">Reykjavík</span>
+        <div class="moment-card">
+          <img src="../assets/images/4-day-glacier-lagoon-private-tour.webp" alt="Reynisfjara black sand beach with basalt columns" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-water"></i>
+            <h4>Stand on a Black Sand Beach</h4>
+            <p>Feel the Atlantic wind at Reynisfjara among basalt columns and volcanic shores</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="../assets/images/winter-private-tour-iceland.webp" alt="Icebergs floating at Jökulsárlón Glacier Lagoon" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-snowflake"></i>
+            <h4>Watch Icebergs at Jökulsárlón</h4>
+            <p>Witness floating ice sculptures drift through the serene Glacier Lagoon</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="../assets/images/5-day-south-coast-private-tour.webp" alt="Diamond Beach with ice on black sand at dawn" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-gem"></i>
+            <h4>See Diamond Beach at Dawn</h4>
+            <p>Crystal ice scattered across black sand as the first light touches the lagoon</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="../assets/images/3-day-golden-circle-private-tour.webp" alt="Icelandic lava fields and glaciers" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-fire"></i>
+            <h4>Explore Lava Fields &amp; Glaciers</h4>
+            <p>Walk through volcanic landscapes shaped by fire and ice over millennia</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="../assets/images/7-day-snaefellsnes-private-tour.webp" alt="Kirkjufell mountain on the Snæfellsnes Peninsula" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-mountain"></i>
+            <h4>Photograph Kirkjufell</h4>
+            <p>Capture Iceland's most photographed mountain on the Snæfellsnes Peninsula</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="../assets/images/private-driver-guide-iceland.webp" alt="Private driver-guide traveling through Iceland" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-user-tie"></i>
+            <h4>Travel With No Bus Schedule</h4>
+            <p>Your private guide adapts every stop to the landscape, the light and your pace</p>
+          </div>
+        </div>
+        <div class="moment-card">
+          <img src="../assets/images/northern-lights-private-tour-iceland.webp" alt="Northern Lights over the Icelandic landscape" loading="lazy">
+          <div class="moment-overlay">
+            <i class="fas fa-star"></i>
+            <h4>Follow the Best Light</h4>
+            <p>Golden hour sunsets, midnight sun or aurora — your guide follows the conditions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DETAILED ITINERARY ==================== -->
+  <section class="itinerary-8day" id="itinerary">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Detailed Itinerary</span>
+        <h2 class="section-title">Your 8 Day Private Iceland Itinerary</h2>
+        <p class="section-subtitle">Each day is designed to give you the richness of Iceland's south, southeast and
+          west, with the freedom to adapt as you go.</p>
+      </div>
+
+      <!-- Day 1 -->
+      <div class="itinerary-8day-block">
+        <div class="itinerary-image">
+          <img src="../assets/images/private-tours-from-keflavik-airport.webp" alt="Private tour pickup from Keflavik Airport" loading="lazy">
+          <div class="day-number-overlay">01</div>
+        </div>
+        <div class="itinerary-content">
+          <span class="day-badge">Day 1</span>
+          <h3>Arrival, Reykjavík or Golden Circle</h3>
+          <p>Private pickup from Reykjavík or Keflavik. Begin with a flexible introduction to Iceland, with time for
+            Reykjavík, the Reykjanes Peninsula or the Golden Circle depending on arrival time.</p>
+          <div class="tags">
+            <span>Private pickup</span>
+            <span>Reykjavík</span>
+            <span>Reykjanes Peninsula</span>
+            <span>Þingvellir</span>
+            <span>Geysir</span>
+            <span>Gullfoss</span>
           </div>
         </div>
       </div>
 
-      <div class="chapter-panel">
-        <div class="chapter-image" style="background-image: url('../assets/images/south-coast-private-tour-iceland.jpg');">
-          <span class="chapter-badge">Chapter 2</span>
+      <!-- Day 2 -->
+      <div class="itinerary-8day-block reverse">
+        <div class="itinerary-content">
+          <span class="day-badge">Day 2</span>
+          <h3>Golden Circle and South Coast</h3>
+          <p>Explore the Golden Circle before continuing toward the South Coast, with waterfalls, geothermal landscapes
+            and scenic countryside along the route.</p>
+          <div class="tags">
+            <span>Þingvellir National Park</span>
+            <span>Geysir</span>
+            <span>Gullfoss</span>
+            <span>Seljalandsfoss</span>
+            <span>Countryside landscapes</span>
+          </div>
         </div>
-        <div class="chapter-content">
-          <h3>South Coast Waterfalls &amp; Black Sand Beaches</h3>
-          <p>Travel the dramatic South Coast with stops at Seljalandsfoss, where you can walk behind the cascading water, and Skógafoss with its powerful curtain of foam. Continue to Reynisfjara Black Sand Beach, where basalt columns and roaring Atlantic waves create one of Iceland's most iconic landscapes.</p>
-          <div class="chapter-landscapes">
-            <span class="chapter-landscape">Seljalandsfoss</span>
-            <span class="chapter-landscape">Skógafoss</span>
-            <span class="chapter-landscape">Reynisfjara</span>
-            <span class="chapter-landscape">Dyrhólaey</span>
-            <span class="chapter-landscape">Vík</span>
+        <div class="itinerary-image">
+          <img src="../assets/images/golden-circle-south-coast-private-tour.webp" alt="Golden Circle and South Coast route in Iceland" loading="lazy">
+          <div class="day-number-overlay">02</div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="itinerary-8day-block">
+        <div class="itinerary-image">
+          <img src="../assets/images/south-coast-private-tour-iceland.webp" alt="South Coast waterfalls near Vík, Iceland" loading="lazy">
+          <div class="day-number-overlay">03</div>
+        </div>
+        <div class="itinerary-content">
+          <span class="day-badge">Day 3</span>
+          <h3>South Coast Waterfalls and Vík</h3>
+          <p>Travel deeper along the South Coast with stops at Seljalandsfoss, Skógafoss, coastal viewpoints and the Vík
+            area. Your driver-guide will recommend the best photo spots and hidden angles.</p>
+          <div class="tags">
+            <span>Seljalandsfoss</span>
+            <span>Skógafoss</span>
+            <span>Eyjafjallajökull views</span>
+            <span>Vík</span>
+            <span>Coastal scenery</span>
           </div>
         </div>
       </div>
 
-      <div class="chapter-panel">
-        <div class="chapter-image" style="background-image: url('../assets/images/winter-private-tour-iceland.jpg');">
-          <span class="chapter-badge">Chapter 3</span>
+      <!-- Day 4 -->
+      <div class="itinerary-8day-block reverse">
+        <div class="itinerary-content">
+          <span class="day-badge">Day 4</span>
+          <h3>Black Sand Beaches and Glacier Region</h3>
+          <p>Explore Reynisfjara Black Sand Beach, basalt columns, lava fields and continue toward Skaftafell or the
+            glacier region for your first views of Vatnajökull.</p>
+          <div class="tags">
+            <span>Reynisfjara</span>
+            <span>Dyrhólaey</span>
+            <span>Lava fields</span>
+            <span>Skaftafell</span>
+            <span>Glacier views</span>
+          </div>
         </div>
-        <div class="chapter-content">
-          <h3>Glacier Lagoon &amp; Southeast Iceland</h3>
-          <p>Venture east to Jökulsárlón Glacier Lagoon, where icebergs calve from Breiðamerkurjökull and drift slowly toward the sea. Walk on Diamond Beach as crystal-clear ice glistens against black volcanic sand. Explore the vast Vatnajökull region and the landscapes around Höfn, with time for photography and optional glacier activities.</p>
-          <div class="chapter-landscapes">
-            <span class="chapter-landscape">Jökulsárlón Glacier Lagoon</span>
-            <span class="chapter-landscape">Diamond Beach</span>
-            <span class="chapter-landscape">Vatnajökull</span>
-            <span class="chapter-landscape">Höfn area</span>
-            <span class="chapter-landscape">Skaftafell</span>
+        <div class="itinerary-image">
+          <img src="../assets/images/4-day-glacier-lagoon-private-tour.webp" alt="Reynisfjara black sand beach and glacier region" loading="lazy">
+          <div class="day-number-overlay">04</div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="itinerary-8day-block">
+        <div class="itinerary-image">
+          <img src="../assets/images/winter-private-tour-iceland.webp" alt="Jökulsárlón Glacier Lagoon and Diamond Beach" loading="lazy">
+          <div class="day-number-overlay">05</div>
+        </div>
+        <div class="itinerary-content">
+          <span class="day-badge">Day 5</span>
+          <h3>Glacier Lagoon, Diamond Beach and Southeast Iceland</h3>
+          <p>Spend the day around Jökulsárlón Glacier Lagoon, Diamond Beach and the cinematic southeast, with optional
+            glacier hiking, ice cave visits or boat tours depending on the season.</p>
+          <div class="tags">
+            <span>Jökulsárlón Glacier Lagoon</span>
+            <span>Diamond Beach</span>
+            <span>Vatnajökull</span>
+            <span>Höfn area</span>
+            <span>Photography stops</span>
           </div>
         </div>
       </div>
 
-      <div class="chapter-panel">
-        <div class="chapter-image" style="background-image: url('../assets/images/7-day-snaefellsnes-private-tour.jpg');">
-          <span class="chapter-badge">Chapter 4</span>
-        </div>
-        <div class="chapter-content">
-          <h3>Snæfellsnes Peninsula &amp; Flexible Return</h3>
-          <p>Explore the Snæfellsnes Peninsula — Iceland in miniature — with Kirkjufell, Arnarstapi's basalt cliffs, the black church at Búðakirkja and views of Snæfellsjökull glacier. Your final day is fully flexible, with options for Reykjavík, the Blue Lagoon area, Reykjanes Peninsula or coastal photography stops on the way to Keflavik Airport.</p>
-          <div class="chapter-landscapes">
-            <span class="chapter-landscape">Kirkjufell</span>
-            <span class="chapter-landscape">Arnarstapi</span>
-            <span class="chapter-landscape">Búðakirkja</span>
-            <span class="chapter-landscape">Snæfellsjökull</span>
-            <span class="chapter-landscape">Blue Lagoon area</span>
+      <!-- Day 6 -->
+      <div class="itinerary-8day-block reverse">
+        <div class="itinerary-content">
+          <span class="day-badge">Day 6</span>
+          <h3>Scenic Return with Hidden Stops</h3>
+          <p>Return west through the South Coast at a relaxed pace, using the private format for hidden viewpoints,
+            canyons, waterfalls or seasonal detours that larger tours cannot access.</p>
+          <div class="tags">
+            <span>Hidden stops</span>
+            <span>Canyons</span>
+            <span>Waterfalls</span>
+            <span>Volcanic landscapes</span>
+            <span>Flexible route planning</span>
           </div>
+        </div>
+        <div class="itinerary-image">
+          <img src="../assets/images/5-day-south-coast-private-tour.webp" alt="Scenic South Coast return route with hidden stops" loading="lazy">
+          <div class="day-number-overlay">06</div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="itinerary-8day-block">
+        <div class="itinerary-image">
+          <img src="../assets/images/7-day-snaefellsnes-private-tour.webp" alt="Snæfellsnes Peninsula with Kirkjufell mountain" loading="lazy">
+          <div class="day-number-overlay">07</div>
+        </div>
+        <div class="itinerary-content">
+          <span class="day-badge">Day 7</span>
+          <h3>Snæfellsnes Peninsula</h3>
+          <p>Explore the Snæfellsnes Peninsula — Iceland in miniature — with Kirkjufell mountain, Arnarstapi's sea
+            cliffs, the historic black church at Búðakirkja, lava fields and views of the glacier-capped Snæfellsjökull
+            volcano.</p>
+          <div class="tags">
+            <span>Kirkjufell</span>
+            <span>Arnarstapi</span>
+            <span>Búðakirkja</span>
+            <span>Lava fields</span>
+            <span>Snæfellsjökull views</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="itinerary-8day-block reverse">
+        <div class="itinerary-content">
+          <span class="day-badge">Day 8</span>
+          <h3>Flexible Final Day to Reykjavík or Keflavik</h3>
+          <p>Enjoy a final day shaped around your flight time and interests, with options for Reykjavík, the Reykjanes
+            Peninsula, the Blue Lagoon area, coastal roads or extra photography stops you may have missed.</p>
+          <div class="tags">
+            <span>Flexible ending</span>
+            <span>Reykjavík</span>
+            <span>Keflavik Airport</span>
+            <span>Reykjanes Peninsula</span>
+            <span>Blue Lagoon area</span>
+          </div>
+        </div>
+        <div class="itinerary-image">
+          <img src="../assets/images/6-day-private-tour-iceland.webp" alt="Flexible final day route to Reykjavík or Keflavik" loading="lazy">
+          <div class="day-number-overlay">08</div>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== MOMENTS ==================== -->
-<section class="moments-section" id="moments">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Journey Moments</span>
-      <h2 class="section-title">Moments That Define the Journey</h2>
-      <p class="section-subtitle">These are the moments that turn a private tour into an unforgettable Icelandic memory.</p>
+  <!-- ==================== WHY 8 DAYS ==================== -->
+  <section class="why-8-section" id="custom">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label section-label-glacier">The Advantage</span>
+        <h2 class="section-title section-title-white">Why Choose an 8 Day Private Tour?</h2>
+        <p class="section-subtitle section-subtitle-light">More margin, more landscapes, more flexibility
+          — this is the sweet spot between depth and comfort.</p>
+      </div>
+
+      <div class="why-8-stats-row">
+        <div class="why-8-stat">
+          <div class="big-number">8</div>
+          <div class="stat-label">Days of Private Travel</div>
+        </div>
+        <div class="why-8-stat">
+          <div class="big-number">7</div>
+          <div class="stat-label">Nights in Iceland</div>
+        </div>
+        <div class="why-8-stat">
+          <div class="big-number"><i class="fas fa-user-tie why-8-stat-icon"></i></div>
+          <div class="stat-label">Private Driver-Guide</div>
+        </div>
+        <div class="why-8-stat">
+          <div class="big-number"><i class="fas fa-route why-8-stat-icon"></i></div>
+          <div class="stat-label">Custom Route</div>
+        </div>
+      </div>
+
+      <div class="why-8-grid">
+        <div class="why-8-card">
+          <i class="fas fa-clock"></i>
+          <h4>More Margin Than 6 or 7 Days</h4>
+          <p>An extra day transforms the journey. You stop watching the clock and start following the landscape at your
+            own rhythm.</p>
+        </div>
+        <div class="why-8-card">
+          <i class="fas fa-wind"></i>
+          <h4>Travel Without Rushing</h4>
+          <p>Eight days allow for relaxed mornings, spontaneous detours and the kind of unhurried travel that reveals
+            Iceland's quieter magic.</p>
+        </div>
+        <div class="why-8-card">
+          <i class="fas fa-cloud-sun"></i>
+          <h4>Weather Flexibility</h4>
+          <p>Icelandic weather changes fast. With eight days, your guide can shift plans when conditions change, turning
+            delays into discoveries.</p>
+        </div>
+        <div class="why-8-card">
+          <i class="fas fa-island-tropical"></i>
+          <h4>Add Snæfellsnes &amp; a Flexible Final Day</h4>
+          <p>Include the full Snæfellsnes Peninsula and a final day that adapts to your flight, interests or Northern
+            Lights opportunities.</p>
+        </div>
+        <div class="why-8-card">
+          <i class="fas fa-camera"></i>
+          <h4>Ideal for Photographers &amp; Families</h4>
+          <p>More time at golden hour locations, shorter driving days for families and the freedom to explore at a pace
+            that works for everyone.</p>
+        </div>
+        <div class="why-8-card">
+          <i class="fas fa-hiking"></i>
+          <h4>Room for Optional Activities</h4>
+          <p>Add glacier hiking, ice cave tours, boat trips or spa visits without compressing the rest of your
+            itinerary.</p>
+        </div>
+      </div>
     </div>
-    <div class="moments-grid">
-      <div class="moment-card" style="background-image: url('../assets/images/south-coast-private-tour-iceland.jpg');">
-        <div class="moment-overlay">
-          <i class="fas fa-umbrella-beach"></i>
-          <h4>Walk Behind a Waterfall</h4>
-          <p>Step behind Seljalandsfoss and feel the raw power of Iceland's cascading waters</p>
-        </div>
+  </section>
+
+  <!-- ==================== OPTIONAL EXPERIENCES ==================== -->
+  <section class="optional-section" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Enhance Your Journey</span>
+        <h2 class="section-title">Optional Experiences to Add</h2>
+        <p class="section-subtitle">Customize your 8 day tour with additional activities that match the season, your
+          interests and your sense of adventure.</p>
       </div>
-      <div class="moment-card" style="background-image: url('../assets/images/4-day-glacier-lagoon-private-tour.jpg');">
-        <div class="moment-overlay">
-          <i class="fas fa-water"></i>
-          <h4>Stand on a Black Sand Beach</h4>
-          <p>Feel the Atlantic wind at Reynisfjara among basalt columns and volcanic shores</p>
-        </div>
-      </div>
-      <div class="moment-card" style="background-image: url('../assets/images/winter-private-tour-iceland.jpg');">
-        <div class="moment-overlay">
-          <i class="fas fa-snowflake"></i>
-          <h4>Watch Icebergs at Jökulsárlón</h4>
-          <p>Witness floating ice sculptures drift through the serene Glacier Lagoon</p>
-        </div>
-      </div>
-      <div class="moment-card" style="background-image: url('../assets/images/5-day-south-coast-private-tour.jpg');">
-        <div class="moment-overlay">
-          <i class="fas fa-gem"></i>
-          <h4>See Diamond Beach at Dawn</h4>
-          <p>Crystal ice scattered across black sand as the first light touches the lagoon</p>
-        </div>
-      </div>
-      <div class="moment-card" style="background-image: url('../assets/images/3-day-golden-circle-private-tour.jpg');">
-        <div class="moment-overlay">
-          <i class="fas fa-fire"></i>
-          <h4>Explore Lava Fields &amp; Glaciers</h4>
-          <p>Walk through volcanic landscapes shaped by fire and ice over millennia</p>
-        </div>
-      </div>
-      <div class="moment-card" style="background-image: url('../assets/images/7-day-snaefellsnes-private-tour.jpg');">
-        <div class="moment-overlay">
+      <div class="optional-grid">
+        <div class="optional-card">
           <i class="fas fa-mountain"></i>
-          <h4>Photograph Kirkjufell</h4>
-          <p>Capture Iceland's most photographed mountain on the Snæfellsnes Peninsula</p>
+          <h4>Glacier Hiking</h4>
+          <p>Walk on ancient ice with a certified guide. Available year-round on Vatnajökull or Sólheimajökull.</p>
         </div>
-      </div>
-      <div class="moment-card" style="background-image: url('../assets/images/private-driver-guide-iceland.jpg');">
-        <div class="moment-overlay">
-          <i class="fas fa-user-tie"></i>
-          <h4>Travel With No Bus Schedule</h4>
-          <p>Your private guide adapts every stop to the landscape, the light and your pace</p>
+        <div class="optional-card">
+          <i class="fas fa-icicles"></i>
+          <h4>Ice Cave Visit</h4>
+          <p>Explore natural ice caves beneath Vatnajökull. Seasonal access from November to March.</p>
         </div>
-      </div>
-      <div class="moment-card" style="background-image: url('../assets/images/northern-lights-private-tour-iceland.jpg');">
-        <div class="moment-overlay">
+        <div class="optional-card">
           <i class="fas fa-star"></i>
-          <h4>Follow the Best Light</h4>
-          <p>Golden hour sunsets, midnight sun or aurora — your guide follows the conditions</p>
+          <h4>Northern Lights Hunting</h4>
+          <p>Flexible evening routing when aurora conditions are favorable between September and March.</p>
+        </div>
+        <div class="optional-card">
+          <i class="fas fa-hot-tub"></i>
+          <h4>Blue Lagoon or Geothermal Spa</h4>
+          <p>Relax in Iceland's famous geothermal waters, the Sky Lagoon or local hot springs along the route.</p>
+        </div>
+        <div class="optional-card">
+          <i class="fas fa-camera"></i>
+          <h4>Photography Stops</h4>
+          <p>Extra time at golden hour for long exposures, sunrise landscapes and hidden angles.</p>
+        </div>
+        <div class="optional-card">
+          <i class="fas fa-star"></i>
+          <h4>Luxury Accommodation</h4>
+          <p>Premium hotels, countryside lodges or farm stays curated to your comfort level.</p>
+        </div>
+        <div class="optional-card">
+          <i class="fas fa-child"></i>
+          <h4>Family-Friendly Adjustments</h4>
+          <p>Shorter drives, activity breaks and flexible pacing for multi-generational travelers.</p>
+        </div>
+        <div class="optional-card">
+          <i class="fas fa-truck"></i>
+          <h4>Super Jeep Upgrade</h4>
+          <p>Access remote highland routes and river crossings with a modified Super Jeep experience.</p>
+        </div>
+      </div>
+      <p class="optional-note"><i
+          class="fas fa-info-circle"></i> Optional experiences depend on season, availability and weather conditions.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== DRIVER-GUIDE ==================== -->
+  <section class="section section-bg-ice">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Your Guide</span>
+        <h2 class="section-title">Travel Privately, Stop Freely</h2>
+        <p class="section-subtitle">Your driver-guide is the difference between a good trip and an unforgettable one.
+          Here is why traveling privately transforms your 8 day journey.</p>
+      </div>
+      <div class="driver-8-premium">
+        <div class="driver-8-grid">
+          <div class="driver-8-image">
+            <img src="../assets/images/private-driver-guide-iceland.webp" alt="Private driver-guide with clients traveling through Iceland" loading="lazy">
+          </div>
+          <div class="driver-8-content">
+            <h3>Your Route, Your Rhythm</h3>
+            <p>Your private driver-guide stays with you for the full eight days, handling every road, every decision and
+              every unexpected Icelandic weather change. You get local stories, insider knowledge and the freedom to
+              explore without worrying about directions or road conditions.</p>
+            <ul class="driver-8-list">
+              <li><i class="fas fa-check-circle"></i> No large groups — just you and your travel companions</li>
+              <li><i class="fas fa-check-circle"></i> No fixed bus schedule — stop whenever you want</li>
+              <li><i class="fas fa-check-circle"></i> Flexible daily rhythm based on your energy and interests</li>
+              <li><i class="fas fa-check-circle"></i> Local knowledge and off-the-map recommendations</li>
+              <li><i class="fas fa-check-circle"></i> Safer driving in Icelandic road and weather conditions</li>
+              <li><i class="fas fa-check-circle"></i> Better use of daylight and seasonal light</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== DETAILED ITINERARY ==================== -->
-<section class="itinerary-8day" id="itinerary">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Detailed Itinerary</span>
-      <h2 class="section-title">Your 8 Day Private Iceland Itinerary</h2>
-      <p class="section-subtitle">Each day is designed to give you the richness of Iceland's south, southeast and west, with the freedom to adapt as you go.</p>
-    </div>
-
-    <!-- Day 1 -->
-    <div class="itinerary-8day-block">
-      <div class="itinerary-image" style="background-image: url('../assets/images/private-tours-from-keflavik-airport.jpg');">
-        <div class="day-number-overlay">01</div>
+  <!-- ==================== INCLUDED / NOT INCLUDED ==================== -->
+  <section class="section section-bg-ice">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Inclusions</span>
+        <h2 class="section-title">What's Included</h2>
+        <p class="section-subtitle">Everything you need for a seamless private tour experience in Iceland.</p>
       </div>
-      <div class="itinerary-content">
-        <span class="day-badge">Day 1</span>
-        <h3>Arrival, Reykjavík or Golden Circle</h3>
-        <p>Private pickup from Reykjavík or Keflavik. Begin with a flexible introduction to Iceland, with time for Reykjavík, the Reykjanes Peninsula or the Golden Circle depending on arrival time.</p>
-        <div class="tags">
-          <span>Private pickup</span>
-          <span>Reykjavík</span>
-          <span>Reykjanes Peninsula</span>
-          <span>Þingvellir</span>
-          <span>Geysir</span>
-          <span>Gullfoss</span>
+      <div class="included-8-grid">
+        <div class="included-8-col">
+          <h3 class="included-heading-positive"><i class="fas fa-check-circle"></i> Included
+          </h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Private driver-guide for the full 8 days</li>
+            <li><i class="fas fa-check"></i> Private vehicle with space for luggage and gear</li>
+            <li><i class="fas fa-check"></i> Custom itinerary planning before your trip</li>
+            <li><i class="fas fa-check"></i> Pickup and drop-off in Reykjavík or Keflavik</li>
+            <li><i class="fas fa-check"></i> Flexible route adjustments along the way</li>
+            <li><i class="fas fa-check"></i> Support before and during your journey</li>
+          </ul>
         </div>
-      </div>
-    </div>
-
-    <!-- Day 2 -->
-    <div class="itinerary-8day-block reverse">
-      <div class="itinerary-content">
-        <span class="day-badge">Day 2</span>
-        <h3>Golden Circle and South Coast</h3>
-        <p>Explore the Golden Circle before continuing toward the South Coast, with waterfalls, geothermal landscapes and scenic countryside along the route.</p>
-        <div class="tags">
-          <span>Þingvellir National Park</span>
-          <span>Geysir</span>
-          <span>Gullfoss</span>
-          <span>Seljalandsfoss</span>
-          <span>Countryside landscapes</span>
-        </div>
-      </div>
-      <div class="itinerary-image" style="background-image: url('../assets/images/golden-circle-south-coast-private-tour.jpg');">
-        <div class="day-number-overlay">02</div>
-      </div>
-    </div>
-
-    <!-- Day 3 -->
-    <div class="itinerary-8day-block">
-      <div class="itinerary-image" style="background-image: url('../assets/images/south-coast-private-tour-iceland.jpg');">
-        <div class="day-number-overlay">03</div>
-      </div>
-      <div class="itinerary-content">
-        <span class="day-badge">Day 3</span>
-        <h3>South Coast Waterfalls and Vík</h3>
-        <p>Travel deeper along the South Coast with stops at Seljalandsfoss, Skógafoss, coastal viewpoints and the Vík area. Your driver-guide will recommend the best photo spots and hidden angles.</p>
-        <div class="tags">
-          <span>Seljalandsfoss</span>
-          <span>Skógafoss</span>
-          <span>Eyjafjallajökull views</span>
-          <span>Vík</span>
-          <span>Coastal scenery</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 4 -->
-    <div class="itinerary-8day-block reverse">
-      <div class="itinerary-content">
-        <span class="day-badge">Day 4</span>
-        <h3>Black Sand Beaches and Glacier Region</h3>
-        <p>Explore Reynisfjara Black Sand Beach, basalt columns, lava fields and continue toward Skaftafell or the glacier region for your first views of Vatnajökull.</p>
-        <div class="tags">
-          <span>Reynisfjara</span>
-          <span>Dyrhólaey</span>
-          <span>Lava fields</span>
-          <span>Skaftafell</span>
-          <span>Glacier views</span>
-        </div>
-      </div>
-      <div class="itinerary-image" style="background-image: url('../assets/images/4-day-glacier-lagoon-private-tour.jpg');">
-        <div class="day-number-overlay">04</div>
-      </div>
-    </div>
-
-    <!-- Day 5 -->
-    <div class="itinerary-8day-block">
-      <div class="itinerary-image" style="background-image: url('../assets/images/winter-private-tour-iceland.jpg');">
-        <div class="day-number-overlay">05</div>
-      </div>
-      <div class="itinerary-content">
-        <span class="day-badge">Day 5</span>
-        <h3>Glacier Lagoon, Diamond Beach and Southeast Iceland</h3>
-        <p>Spend the day around Jökulsárlón Glacier Lagoon, Diamond Beach and the cinematic southeast, with optional glacier hiking, ice cave visits or boat tours depending on the season.</p>
-        <div class="tags">
-          <span>Jökulsárlón Glacier Lagoon</span>
-          <span>Diamond Beach</span>
-          <span>Vatnajökull</span>
-          <span>Höfn area</span>
-          <span>Photography stops</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 6 -->
-    <div class="itinerary-8day-block reverse">
-      <div class="itinerary-content">
-        <span class="day-badge">Day 6</span>
-        <h3>Scenic Return with Hidden Stops</h3>
-        <p>Return west through the South Coast at a relaxed pace, using the private format for hidden viewpoints, canyons, waterfalls or seasonal detours that larger tours cannot access.</p>
-        <div class="tags">
-          <span>Hidden stops</span>
-          <span>Canyons</span>
-          <span>Waterfalls</span>
-          <span>Volcanic landscapes</span>
-          <span>Flexible route planning</span>
-        </div>
-      </div>
-      <div class="itinerary-image" style="background-image: url('../assets/images/5-day-south-coast-private-tour.jpg');">
-        <div class="day-number-overlay">06</div>
-      </div>
-    </div>
-
-    <!-- Day 7 -->
-    <div class="itinerary-8day-block">
-      <div class="itinerary-image" style="background-image: url('../assets/images/7-day-snaefellsnes-private-tour.jpg');">
-        <div class="day-number-overlay">07</div>
-      </div>
-      <div class="itinerary-content">
-        <span class="day-badge">Day 7</span>
-        <h3>Snæfellsnes Peninsula</h3>
-        <p>Explore the Snæfellsnes Peninsula — Iceland in miniature — with Kirkjufell mountain, Arnarstapi's sea cliffs, the historic black church at Búðakirkja, lava fields and views of the glacier-capped Snæfellsjökull volcano.</p>
-        <div class="tags">
-          <span>Kirkjufell</span>
-          <span>Arnarstapi</span>
-          <span>Búðakirkja</span>
-          <span>Lava fields</span>
-          <span>Snæfellsjökull views</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 8 -->
-    <div class="itinerary-8day-block reverse">
-      <div class="itinerary-content">
-        <span class="day-badge">Day 8</span>
-        <h3>Flexible Final Day to Reykjavík or Keflavik</h3>
-        <p>Enjoy a final day shaped around your flight time and interests, with options for Reykjavík, the Reykjanes Peninsula, the Blue Lagoon area, coastal roads or extra photography stops you may have missed.</p>
-        <div class="tags">
-          <span>Flexible ending</span>
-          <span>Reykjavík</span>
-          <span>Keflavik Airport</span>
-          <span>Reykjanes Peninsula</span>
-          <span>Blue Lagoon area</span>
-        </div>
-      </div>
-      <div class="itinerary-image" style="background-image: url('../assets/images/6-day-private-tour-iceland.jpg');">
-        <div class="day-number-overlay">08</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ==================== WHY 8 DAYS ==================== -->
-<section class="why-8-section" id="custom">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label" style="color: var(--glacier);">The Advantage</span>
-      <h2 class="section-title" style="color: var(--white);">Why Choose an 8 Day Private Tour?</h2>
-      <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">More margin, more landscapes, more flexibility — this is the sweet spot between depth and comfort.</p>
-    </div>
-
-    <div class="why-8-stats-row">
-      <div class="why-8-stat">
-        <div class="big-number">8</div>
-        <div class="stat-label">Days of Private Travel</div>
-      </div>
-      <div class="why-8-stat">
-        <div class="big-number">7</div>
-        <div class="stat-label">Nights in Iceland</div>
-      </div>
-      <div class="why-8-stat">
-        <div class="big-number"><i class="fas fa-user-tie" style="font-size: 2rem; color: var(--gold);"></i></div>
-        <div class="stat-label">Private Driver-Guide</div>
-      </div>
-      <div class="why-8-stat">
-        <div class="big-number"><i class="fas fa-route" style="font-size: 2rem; color: var(--gold);"></i></div>
-        <div class="stat-label">Custom Route</div>
-      </div>
-    </div>
-
-    <div class="why-8-grid">
-      <div class="why-8-card">
-        <i class="fas fa-clock"></i>
-        <h4>More Margin Than 6 or 7 Days</h4>
-        <p>An extra day transforms the journey. You stop watching the clock and start following the landscape at your own rhythm.</p>
-      </div>
-      <div class="why-8-card">
-        <i class="fas fa-wind"></i>
-        <h4>Travel Without Rushing</h4>
-        <p>Eight days allow for relaxed mornings, spontaneous detours and the kind of unhurried travel that reveals Iceland's quieter magic.</p>
-      </div>
-      <div class="why-8-card">
-        <i class="fas fa-cloud-sun"></i>
-        <h4>Weather Flexibility</h4>
-        <p>Icelandic weather changes fast. With eight days, your guide can shift plans when conditions change, turning delays into discoveries.</p>
-      </div>
-      <div class="why-8-card">
-        <i class="fas fa-island-tropical"></i>
-        <h4>Add Snæfellsnes &amp; a Flexible Final Day</h4>
-        <p>Include the full Snæfellsnes Peninsula and a final day that adapts to your flight, interests or Northern Lights opportunities.</p>
-      </div>
-      <div class="why-8-card">
-        <i class="fas fa-camera"></i>
-        <h4>Ideal for Photographers &amp; Families</h4>
-        <p>More time at golden hour locations, shorter driving days for families and the freedom to explore at a pace that works for everyone.</p>
-      </div>
-      <div class="why-8-card">
-        <i class="fas fa-hiking"></i>
-        <h4>Room for Optional Activities</h4>
-        <p>Add glacier hiking, ice cave tours, boat trips or spa visits without compressing the rest of your itinerary.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== OPTIONAL EXPERIENCES ==================== -->
-<section class="optional-section" id="experiences">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Enhance Your Journey</span>
-      <h2 class="section-title">Optional Experiences to Add</h2>
-      <p class="section-subtitle">Customize your 8 day tour with additional activities that match the season, your interests and your sense of adventure.</p>
-    </div>
-    <div class="optional-grid">
-      <div class="optional-card">
-        <i class="fas fa-mountain"></i>
-        <h4>Glacier Hiking</h4>
-        <p>Walk on ancient ice with a certified guide. Available year-round on Vatnajökull or Sólheimajökull.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-icicles"></i>
-        <h4>Ice Cave Visit</h4>
-        <p>Explore natural ice caves beneath Vatnajökull. Seasonal access from November to March.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-star"></i>
-        <h4>Northern Lights Hunting</h4>
-        <p>Flexible evening routing when aurora conditions are favorable between September and March.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-hot-tub"></i>
-        <h4>Blue Lagoon or Geothermal Spa</h4>
-        <p>Relax in Iceland's famous geothermal waters, the Sky Lagoon or local hot springs along the route.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-camera"></i>
-        <h4>Photography Stops</h4>
-        <p>Extra time at golden hour for long exposures, sunrise landscapes and hidden angles.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-star"></i>
-        <h4>Luxury Accommodation</h4>
-        <p>Premium hotels, countryside lodges or farm stays curated to your comfort level.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-child"></i>
-        <h4>Family-Friendly Adjustments</h4>
-        <p>Shorter drives, activity breaks and flexible pacing for multi-generational travelers.</p>
-      </div>
-      <div class="optional-card">
-        <i class="fas fa-truck"></i>
-        <h4>Super Jeep Upgrade</h4>
-        <p>Access remote highland routes and river crossings with a modified Super Jeep experience.</p>
-      </div>
-    </div>
-    <p style="text-align: center; margin-top: 32px; font-size: 0.85rem; color: var(--stone); opacity: 0.7;"><i class="fas fa-info-circle"></i> Optional experiences depend on season, availability and weather conditions.</p>
-  </div>
-</section>
-
-<!-- ==================== DRIVER-GUIDE ==================== -->
-<section class="section" style="background: var(--ice);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Your Guide</span>
-      <h2 class="section-title">Travel Privately, Stop Freely</h2>
-      <p class="section-subtitle">Your driver-guide is the difference between a good trip and an unforgettable one. Here is why traveling privately transforms your 8 day journey.</p>
-    </div>
-    <div class="driver-8-premium">
-      <div class="driver-8-grid">
-        <div class="driver-8-image"></div>
-        <div class="driver-8-content">
-          <h3>Your Route, Your Rhythm</h3>
-          <p>Your private driver-guide stays with you for the full eight days, handling every road, every decision and every unexpected Icelandic weather change. You get local stories, insider knowledge and the freedom to explore without worrying about directions or road conditions.</p>
-          <ul class="driver-8-list">
-            <li><i class="fas fa-check-circle"></i> No large groups — just you and your travel companions</li>
-            <li><i class="fas fa-check-circle"></i> No fixed bus schedule — stop whenever you want</li>
-            <li><i class="fas fa-check-circle"></i> Flexible daily rhythm based on your energy and interests</li>
-            <li><i class="fas fa-check-circle"></i> Local knowledge and off-the-map recommendations</li>
-            <li><i class="fas fa-check-circle"></i> Safer driving in Icelandic road and weather conditions</li>
-            <li><i class="fas fa-check-circle"></i> Better use of daylight and seasonal light</li>
+        <div class="included-8-col">
+          <h3 class="included-heading-negative"><i class="fas fa-times-circle"></i> Not Included</h3>
+          <ul>
+            <li><i class="fas fa-times"></i> Accommodation unless arranged in advance</li>
+            <li><i class="fas fa-times"></i> Meals and drinks during the tour</li>
+            <li><i class="fas fa-times"></i> Optional activities (glacier hiking, ice caves, boat tours)</li>
+            <li><i class="fas fa-times"></i> Flights to and from Iceland</li>
+            <li><i class="fas fa-times"></i> Travel insurance</li>
+            <li><i class="fas fa-times"></i> Entrance fees where applicable</li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== INCLUDED / NOT INCLUDED ==================== -->
-<section class="section" style="background: var(--ice);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Inclusions</span>
-      <h2 class="section-title">What's Included</h2>
-      <p class="section-subtitle">Everything you need for a seamless private tour experience in Iceland.</p>
-    </div>
-    <div class="included-8-grid">
-      <div class="included-8-col">
-        <h3 style="color: var(--aurora);"><i class="fas fa-check-circle" style="color: var(--aurora);"></i> Included</h3>
-        <ul>
-          <li><i class="fas fa-check"></i> Private driver-guide for the full 8 days</li>
-          <li><i class="fas fa-check"></i> Private vehicle with space for luggage and gear</li>
-          <li><i class="fas fa-check"></i> Custom itinerary planning before your trip</li>
-          <li><i class="fas fa-check"></i> Pickup and drop-off in Reykjavík or Keflavik</li>
-          <li><i class="fas fa-check"></i> Flexible route adjustments along the way</li>
-          <li><i class="fas fa-check"></i> Support before and during your journey</li>
-        </ul>
+  <!-- ==================== BEST TIME ==================== -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">When to Go</span>
+        <h2 class="section-title">Best Time for an 8 Day Iceland Tour</h2>
+        <p class="section-subtitle">This tour is available year-round. Each season brings a completely different
+          character to Iceland's southern and western landscapes.</p>
       </div>
-      <div class="included-8-col">
-        <h3 style="color: #e74c3c; opacity: 0.7;"><i class="fas fa-times-circle" style="color: #e74c3c; opacity: 0.5;"></i> Not Included</h3>
-        <ul>
-          <li><i class="fas fa-times"></i> Accommodation unless arranged in advance</li>
-          <li><i class="fas fa-times"></i> Meals and drinks during the tour</li>
-          <li><i class="fas fa-times"></i> Optional activities (glacier hiking, ice caves, boat tours)</li>
-          <li><i class="fas fa-times"></i> Flights to and from Iceland</li>
-          <li><i class="fas fa-times"></i> Travel insurance</li>
-          <li><i class="fas fa-times"></i> Entrance fees where applicable</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== BEST TIME ==================== -->
-<section class="section" style="background: var(--white);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">When to Go</span>
-      <h2 class="section-title">Best Time for an 8 Day Iceland Tour</h2>
-      <p class="section-subtitle">This tour is available year-round. Each season brings a completely different character to Iceland's southern and western landscapes.</p>
-    </div>
-    <div class="best-time-8-grid">
-      <div class="season-8-card">
-        <i class="fas fa-sun" style="color: #f39c12;"></i>
-        <h4>Summer (Jun &ndash; Aug)</h4>
-        <p>Long daylight hours, easier road access, greener landscapes and more time for extended scenic stops across the South Coast and Snæfellsnes.</p>
-      </div>
-      <div class="season-8-card">
-        <i class="fas fa-snowflake" style="color: var(--glacier);"></i>
-        <h4>Winter (Oct &ndash; Mar)</h4>
-        <p>Northern Lights possibilities, dramatic snow-covered landscapes, frozen waterfalls and seasonal ice cave access under Vatnajökull.</p>
-      </div>
-      <div class="season-8-card">
-        <i class="fas fa-leaf" style="color: var(--aurora);"></i>
-        <h4>Spring / Autumn</h4>
-        <p>Fewer travelers, strong photography conditions, changing light and flexible weather planning across all four regions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== FAQ ==================== -->
-<section class="section" style="background: var(--ice);" id="faq">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Questions</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-subtitle">Everything you need to know about the 8 day private tour in Iceland.</p>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">
-          Is this 8 day Iceland tour fully private?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. This tour is exclusively private. You and your travel companions will have your own driver-guide and vehicle for the entire eight days. You will not share your guide, itinerary or space with other groups.</p>
+      <div class="best-time-8-grid">
+        <div class="season-8-card">
+          <i class="fas fa-sun season-icon-summer"></i>
+          <h4>Summer (Jun &ndash; Aug)</h4>
+          <p>Long daylight hours, easier road access, greener landscapes and more time for extended scenic stops across
+            the South Coast and Snæfellsnes.</p>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can we customize the itinerary?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Absolutely. The entire route, daily timing, stops, accommodation style and activities can be adapted to your preferences. Your driver-guide also adjusts things along the way based on weather and interests.</p>
+        <div class="season-8-card">
+          <i class="fas fa-snowflake season-icon-winter"></i>
+          <h4>Winter (Oct &ndash; Mar)</h4>
+          <p>Northern Lights possibilities, dramatic snow-covered landscapes, frozen waterfalls and seasonal ice cave
+            access under Vatnajökull.</p>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can the tour start from Keflavik Airport?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. The tour can start directly from Keflavik Airport on your arrival day, or from your accommodation in Reykjavík. We tailor the pickup to your travel plans and flight schedule.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Is this a full Ring Road tour?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>No. This tour focuses on South Iceland, the southeast, the Snæfellsnes Peninsula and western Iceland. It is not a complete Ring Road itinerary. For a full Ring Road experience, we recommend a 10-day or longer private tour.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Is 8 days enough for the South Coast and Snæfellsnes?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Eight days is an ideal duration for exploring the Golden Circle, South Coast, Jökulsárlón Glacier Lagoon, Diamond Beach, Snæfellsnes Peninsula and Reykjanes Peninsula at a comfortable, well-paced rhythm.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can we see the Northern Lights on this tour?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Northern Lights sightings depend on solar activity, cloud cover and the season. Between September and March, your driver-guide can adjust evening plans when aurora conditions are promising, giving you the best possible chance.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Are hotels included in the tour?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Accommodation is not automatically included unless arranged during the booking process. We can recommend and help organize guesthouses, hotels or farm stays along the route to match your comfort level and budget.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can we add glacier hiking, ice caves or the Blue Lagoon?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Optional activities such as glacier hiking, ice cave tours, boat trips on the Glacier Lagoon, snowmobiling or a visit to the Blue Lagoon area can be arranged and added to your itinerary. These depend on the season and require advance coordination.</p>
+        <div class="season-8-card">
+          <i class="fas fa-leaf season-icon-spring"></i>
+          <h4>Spring / Autumn</h4>
+          <p>Fewer travelers, strong photography conditions, changing light and flexible weather planning across all
+            four regions.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== FINAL CTA ==================== -->
-<section class="final-cta-8day" id="contact">
-  <div class="final-cta-8day-bg"></div>
-  <div class="final-cta-8day-overlay"></div>
-  <div class="container">
-    <div class="final-cta-content" style="grid-template-columns: 1fr; text-align: center;">
-      <div class="final-cta-text" style="max-width: 640px; margin: 0 auto;">
-        <span class="section-label" style="color: var(--gold);">Begin Your Expedition</span>
-        <h2 class="section-title" style="color: var(--white);">Plan Your 8 Day Private Iceland Adventure</h2>
-        <p style="color: rgba(255,255,255,0.7); font-size: 1.05rem; line-height: 1.7; margin-bottom: 32px;">Tell us your dates, group size and travel style, and we'll design a private 8 day Iceland itinerary around your pace, interests and season.</p>
-        <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 8px;"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+  <!-- ==================== FAQ ==================== -->
+  <section class="section section-bg-ice" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about the 8 day private tour in Iceland.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Is this 8 day Iceland tour fully private?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. This tour is exclusively private. You and your travel companions will have your own driver-guide and
+              vehicle for the entire eight days. You will not share your guide, itinerary or space with other groups.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can we customize the itinerary?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. The entire route, daily timing, stops, accommodation style and activities can be adapted to
+              your preferences. Your driver-guide also adjusts things along the way based on weather and interests.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can the tour start from Keflavik Airport?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. The tour can start directly from Keflavik Airport on your arrival day, or from your accommodation in
+              Reykjavík. We tailor the pickup to your travel plans and flight schedule.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is this a full Ring Road tour?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>No. This tour focuses on South Iceland, the southeast, the Snæfellsnes Peninsula and western Iceland. It
+              is not a complete Ring Road itinerary. For a full Ring Road experience, we recommend a 10-day or longer
+              private tour.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is 8 days enough for the South Coast and Snæfellsnes?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Eight days is an ideal duration for exploring the Golden Circle, South Coast, Jökulsárlón Glacier
+              Lagoon, Diamond Beach, Snæfellsnes Peninsula and Reykjanes Peninsula at a comfortable, well-paced rhythm.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can we see the Northern Lights on this tour?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Northern Lights sightings depend on solar activity, cloud cover and the season. Between September and
+              March, your driver-guide can adjust evening plans when aurora conditions are promising, giving you the
+              best possible chance.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Are hotels included in the tour?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Accommodation is not automatically included unless arranged during the booking process. We can recommend
+              and help organize guesthouses, hotels or farm stays along the route to match your comfort level and
+              budget.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can we add glacier hiking, ice caves or the Blue Lagoon?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Optional activities such as glacier hiking, ice cave tours, boat trips on the Glacier Lagoon,
+              snowmobiling or a visit to the Blue Lagoon area can be arranged and added to your itinerary. These depend
+              on the season and require advance coordination.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="../index.html" class="logo">
-          Iceland Private Tours
-          <span>Premium Multi-Day Experiences</span>
-        </a>
-        <p>Discover Iceland with private multi-day tours, custom itineraries and dedicated driver-guides. Premium travel experiences designed around your pace, interests and travel style.</p>
-      </div>
-      <div>
-        <h4>Tours</h4>
-        <ul class="footer-links">
-          <li><a href="../index.html">Private Multi-Day Tours</a></li>
-          <li><a href="../index.html">Custom Private Tours</a></li>
-          <li><a href="../index.html">Luxury Tours</a></li>
-          <li><a href="../index.html">Super Jeep Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>By Duration</h4>
-        <ul class="footer-links">
-          <li><a href="3-day-private-tour-iceland.html">3 Day Tours</a></li>
-          <li><a href="4-day-private-tour-iceland.html">4 Day Tours</a></li>
-          <li><a href="5-day-private-tour-iceland.html">5 Day Tours</a></li>
-          <li><a href="6-day-private-tour-iceland.html">6 Day Tours</a></li>
-          <li><a href="7-day-private-tour-iceland.html">7 Day Tours</a></li>
-          <li><a href="8-day-private-tour-iceland.html">8 Day Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul class="footer-links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Our Guides</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta-8day" id="contact">
+    <div class="final-cta-8day-bg">
+      <img src="../assets/images/final-cta-private-iceland-tour.webp" alt="Iceland landscape backdrop for planning your private tour" loading="lazy">
+    </div>
+    <div class="final-cta-8day-overlay"></div>
+    <div class="container">
+      <div class="final-cta-content final-cta-content-centered">
+        <div class="final-cta-text final-cta-text-narrow">
+          <span class="section-label section-label-gold">Begin Your Expedition</span>
+          <h2 class="section-title section-title-white">Plan Your 8 Day Private Iceland Adventure</h2>
+          <p class="final-cta-description">Tell us
+            your dates, group size and travel style, and we'll design a private 8 day Iceland itinerary around your
+            pace, interests and season.</p>
+          <a href="../index.html#contact" class="btn btn-primary"><i
+              class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
-      <p>Premium private multi-day tours in Iceland</p>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<!-- ==================== SCROLL REVEAL SCRIPT ==================== -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var blocks = document.querySelectorAll('.itinerary-8day-block');
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" aria-label="Site footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-brand">
+						<a href="/" class="logo"> Iceland Private Tours <span>Premium Multi-Day Experiences</span> </a>
+						<p>
+							Discover Iceland with private multi-day tours, custom itineraries
+							and dedicated driver-guides. Premium travel experiences designed
+							around your pace, interests and travel style.
+						</p>
+					</div>
+					<nav aria-labelledby="footer-tours-heading">
+						<h2 class="footer-heading" id="footer-tours-heading">Tours</h2>
+						<ul class="footer-links">
+							<li><a href="#contact">Private Multi-Day Tours</a></li>
+							<li><a href="#contact">Custom Private Tours</a></li>
+							<li><a href="#contact">Luxury Tours</a></li>
+							<li><a href="#contact">Super Jeep Tours</a></li>
+						</ul>
+					</nav>
+					<nav aria-labelledby="footer-duration-heading">
+						<h2 class="footer-heading" id="footer-duration-heading"> By Duration </h2>
+						<ul class="footer-links">
+							<li> <a href="pages/3-day-private-tour-iceland.html">3 Day Tours</a> </li>
+							<li> <a href="pages/5-day-private-tour-iceland.html">5 Day Tours</a> </li>
+							<li> <a href="pages/7-day-private-tour-iceland.html">7 Day Tours</a> </li>
+							<li> <a href="pages/10-day-private-tour-iceland.html">10 Day Tours</a> </li>
+						</ul>
+					</nav>
+					<nav aria-labelledby="footer-company-heading">
+						<h2 class="footer-heading" id="footer-company-heading">Company</h2>
+						<ul class="footer-links">
+							<li><a href="#contact">About Us</a></li>
+							<li><a href="#contact">Our Guides</a></li>
+							<li><a href="#contact">Our Vehicles</a></li>
+							<li><a href="#contact">How to Book</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
+					<p>Premium private multi-day tours in Iceland</p>
+				</div>
+			</div>
+		</footer>
 
-  var revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  blocks.forEach(function (block) {
-    revealObserver.observe(block);
-  });
-});
-</script>
-
-<script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/reveal-cards.js"></script>
 </body>
+
 </html>

@@ -1,1227 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>6 Day Private Tour Iceland | South Coast Private Journey</title>
-<meta name="description" content="Explore Iceland's South Coast, Golden Circle, glacier lagoons, black sand beaches and volcanic landscapes on a 6 day private tour with your own driver-guide.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/style.css">
-<style>
-/* ========== 6-DAY TOUR CUSTOM STYLES ========== */
-
-/* --- Hero Stats Bar --- */
-.hero-stats-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  margin-top: 40px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  backdrop-filter: blur(8px);
-  max-width: 680px;
-}
-
-.hero-stat {
-  flex: 1;
-  min-width: 120px;
-  padding: 16px 20px;
-  position: relative;
-}
-
-.hero-stat:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 20%;
-  height: 60%;
-  width: 1px;
-  background: rgba(255,255,255,0.1);
-}
-
-.hero-stat-label {
-  display: block;
-  font-size: 0.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 4px;
-}
-
-.hero-stat-value {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--white);
-}
-
-/* --- Journey Route Map --- */
-.journey-section {
-  background: var(--white);
-  padding: 100px 0;
-  position: relative;
-}
-
-.journey-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--glacier), transparent);
-}
-
-.journey-intro {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
-}
-
-.journey-map {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  position: relative;
-}
-
-.journey-map::before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: calc(16.66% + 10px);
-  right: calc(16.66% + 10px);
-  height: 2px;
-  background: repeating-linear-gradient(90deg, var(--glacier) 0, var(--glacier) 8px, transparent 8px, transparent 16px);
-  z-index: 1;
-}
-
-.journey-stop {
-  background: var(--ice);
-  border-radius: 16px;
-  padding: 32px 24px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  transition: var(--transition);
-  border: 1px solid transparent;
-}
-
-.journey-stop:hover {
-  border-color: var(--glacier);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.journey-stop-number {
-  width: 44px;
-  height: 44px;
-  background: var(--navy);
-  color: var(--gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin: 0 auto 16px;
-  transition: var(--transition);
-}
-
-.journey-stop:hover .journey-stop-number {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-.journey-stop h4 {
-  font-size: 0.95rem;
-  color: var(--navy);
-  margin-bottom: 6px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.journey-stop p {
-  font-size: 0.78rem;
-  color: var(--stone);
-  line-height: 1.6;
-}
-
-/* --- Day Cards (Scroll Reveal) --- */
-.days-section {
-  padding: 100px 0;
-  background: var(--ice);
-}
-
-.day-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  background: var(--white);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 40px rgba(7,26,45,0.06);
-  margin-bottom: 40px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  border: 1px solid rgba(7,26,45,0.04);
-}
-
-.day-card.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.day-card-image {
-  min-height: 320px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.day-card-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(7,26,45,0.15) 0%, transparent 60%);
-}
-
-.day-card-content {
-  padding: 48px 48px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.day-card-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--navy);
-  color: var(--gold);
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 16px;
-  width: fit-content;
-}
-
-.day-card-title {
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-  color: var(--navy);
-  margin-bottom: 14px;
-  line-height: 1.25;
-}
-
-.day-card-text {
-  font-size: 0.95rem;
-  color: var(--stone);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.day-card-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.day-card-highlight {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--glacier);
-  background: var(--glacier-light);
-  padding: 5px 14px;
-  border-radius: 50px;
-  border: 1px solid rgba(111,183,200,0.15);
-}
-
-/* --- Highlights Grid --- */
-.highlights-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.highlight-card {
-  background: var(--white);
-  border-radius: 16px;
-  padding: 28px 20px;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(7,26,45,0.04);
-  transition: var(--transition);
-}
-
-.highlight-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(111,183,200,0.15);
-}
-
-.highlight-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 14px;
-  background: var(--glacier-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  color: var(--glacier);
-  transition: var(--transition);
-}
-
-.highlight-card:hover .highlight-icon {
-  background: var(--gold-light);
-  color: var(--gold);
-}
-
-.highlight-card h4 {
-  font-size: 0.88rem;
-  color: var(--navy);
-  margin-bottom: 6px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.highlight-card p {
-  font-size: 0.75rem;
-  color: var(--stone);
-  line-height: 1.5;
-}
-
-/* --- Custom Section --- */
-.custom-section {
-  background: var(--navy);
-  position: relative;
-}
-
-.custom-section .section-title,
-.custom-section .section-subtitle {
-  color: var(--white);
-}
-
-.custom-section .section-subtitle {
-  color: rgba(255,255,255,0.65);
-}
-
-.custom-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.custom-option {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 12px;
-  padding: 28px 24px;
-  text-align: center;
-  transition: var(--transition);
-}
-
-.custom-option:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(201,169,106,0.2);
-  transform: translateY(-3px);
-}
-
-.custom-option i {
-  font-size: 1.6rem;
-  color: var(--gold);
-  margin-bottom: 14px;
-}
-
-.custom-option h4 {
-  font-size: 0.9rem;
-  color: var(--white);
-  margin-bottom: 6px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.custom-option p {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.5);
-  line-height: 1.6;
-}
-
-/* --- Included / Not Included --- */
-.included-section {
-  background: var(--ice);
-}
-
-.included-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.included-col {
-  background: var(--white);
-  border-radius: 16px;
-  padding: 40px 36px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(7,26,45,0.04);
-}
-
-.included-col h3 {
-  font-size: 1.2rem;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.included-col h3 i {
-  font-size: 1.1rem;
-}
-
-.included-col ul {
-  list-style: none;
-}
-
-.included-col li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 0;
-  font-size: 0.92rem;
-  color: var(--stone);
-  border-bottom: 1px solid rgba(7,26,45,0.04);
-}
-
-.included-col li:last-child {
-  border-bottom: none;
-}
-
-.included-col li i {
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-.included-col .fa-check {
-  color: var(--aurora);
-}
-
-.included-col .fa-times {
-  color: #e74c3c;
-  opacity: 0.5;
-}
-
-/* --- Best Time --- */
-.best-time-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.season-card {
-  background: var(--white);
-  border-radius: 16px;
-  padding: 36px 28px;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(7,26,45,0.04);
-  transition: var(--transition);
-  text-align: center;
-}
-
-.season-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(111,183,200,0.15);
-}
-
-.season-card i {
-  font-size: 2rem;
-  color: var(--glacier);
-  margin-bottom: 16px;
-}
-
-.season-card h4 {
-  font-size: 1rem;
-  color: var(--navy);
-  margin-bottom: 10px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-}
-
-.season-card p {
-  font-size: 0.85rem;
-  color: var(--stone);
-  line-height: 1.7;
-}
-
-/* --- Driver Guide Premium Block --- */
-.driver-premium {
-  background: var(--white);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(7,26,45,0.04);
-}
-
-.driver-premium-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.driver-premium-image {
-  min-height: 400px;
-  background: url('../assets/images/private-driver-guide-iceland.jpg') center center / cover no-repeat;
-}
-
-.driver-premium-content {
-  padding: 56px 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.driver-premium-content h3 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-}
-
-.driver-premium-content p {
-  font-size: 0.95rem;
-  color: var(--stone);
-  line-height: 1.8;
-  margin-bottom: 24px;
-}
-
-.driver-premium-list {
-  list-style: none;
-}
-
-.driver-premium-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-  font-size: 0.9rem;
-  color: var(--navy);
-  font-weight: 500;
-  border-bottom: 1px solid rgba(7,26,45,0.04);
-}
-
-.driver-premium-list li:last-child {
-  border-bottom: none;
-}
-
-.driver-premium-list li i {
-  color: var(--glacier);
-  font-size: 0.85rem;
-}
-
-/* --- Final CTA Custom --- */
-.final-cta-6day {
-  position: relative;
-  padding: 120px 0;
-  overflow: hidden;
-}
-
-.final-cta-6day-bg {
-  position: absolute;
-  inset: 0;
-  background: url('../assets/images/final-cta-private-iceland-tour.jpg') center center / cover no-repeat;
-  background-attachment: fixed;
-}
-
-.final-cta-6day-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(7,26,45,0.92) 0%, rgba(7,26,45,0.65) 100%);
-}
-
-.final-cta-6day .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* --- Mobile Responsive --- */
-@media (max-width: 1200px) {
-  .highlights-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 1024px) {
-  .day-card { grid-template-columns: 1fr; }
-  .day-card-image { min-height: 250px; }
-  .day-card-content { padding: 32px 28px; }
-  .driver-premium-grid { grid-template-columns: 1fr; }
-  .driver-premium-image { min-height: 280px; }
-}
-
-@media (max-width: 900px) {
-  .journey-map { grid-template-columns: repeat(2, 1fr); }
-  .journey-map::before { display: none; }
-  .best-time-grid { grid-template-columns: 1fr; }
-  .custom-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-  .hero-stat:not(:last-child)::after { display: none; }
-  .hero-stat { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .hero-stats-bar { border-radius: 8px; }
-  .included-grid { grid-template-columns: 1fr; }
-  .day-card-content { padding: 28px 24px; }
-  .driver-premium-content { padding: 32px 24px; }
-  .journey-map { grid-template-columns: 1fr; }
-  .final-cta-6day { padding: 80px 0; }
-}
-
-@media (max-width: 600px) {
-  .highlights-grid { grid-template-columns: 1fr; }
-  .custom-grid { grid-template-columns: 1fr; }
-  .hero-stats-bar { flex-direction: column; }
-  .hero-stat { min-width: 100%; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 Day Private Tour Iceland | South Coast Private Journey</title>
+  <meta name="description" content="Explore Iceland's South Coast, Golden Circle, glacier lagoons, black sand beaches and volcanic landscapes on a 6 day private tour with your own driver-guide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style-day6.css">
 </head>
 <body>
 
-<!-- ==================== HEADER ==================== -->
-<header class="header" id="header">
-  <div class="container">
-    <a href="../index.html" class="logo">
-      Iceland Private Tours
-      <span>Premium Multi-Day Experiences</span>
-    </a>
-    <nav class="nav">
-      <ul class="nav-list" id="navList">
-        <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
-        <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
-        <li><a href="../index.html#route" class="nav-link">By Route</a></li>
-        <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
-        <li><a href="#" class="nav-link">About</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- ==================== HERO ==================== -->
-<section class="hero" style="min-height: 85vh;">
-  <div class="hero-bg" style="background-image: url('../assets/images/6-day-private-tour-iceland.jpg');"></div>
-  <div class="hero-overlay" style="background: linear-gradient(135deg, rgba(7,26,45,0.85) 0%, rgba(7,26,45,0.35) 50%, rgba(7,26,45,0.6) 100%);"></div>
-  <div class="hero-pattern"></div>
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-tag"><i class="fas fa-compass"></i> Private Multi-Day Tour</span>
-      <h1>6 Day Private Tour Iceland</h1>
-      <p>Discover the best of South Iceland at a relaxed pace with a private driver-guide, custom stops and time for glaciers, waterfalls, black sand beaches and the Glacier Lagoon.</p>
-      <div class="hero-actions">
-        <a href="../index.html#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
-        <a href="#journey" class="btn btn-secondary">View 6 Day Route</a>
-      </div>
-      <div class="hero-stats-bar">
-        <div class="hero-stat">
-          <span class="hero-stat-label">Duration</span>
-          <span class="hero-stat-value">6 Days / 5 Nights</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-label">Start</span>
-          <span class="hero-stat-value">Reykjavik or Keflavik</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-label">Style</span>
-          <span class="hero-stat-value">Private / Custom</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-label">Best for</span>
-          <span class="hero-stat-value">South Coast & Glacier Lagoon</span>
-        </div>
-      </div>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        Iceland Private Tours
+        <span>Premium Multi-Day Experiences</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list" id="navList">
+          <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
+          <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
+          <li><a href="../index.html#route" class="nav-link">By Route</a></li>
+          <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+          <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ==================== SEO INTRO ==================== -->
-<section class="intro section">
-  <div class="container">
-    <div class="intro-grid">
-      <div class="intro-text">
-        <span class="section-label">South Iceland Private Journey</span>
-        <h2 class="section-title">A Private 6 Day Journey Through South Iceland</h2>
-        <p>This tour is designed for travelers who want to explore the full breadth of South Iceland without rushing. Over six days, you will discover the iconic Golden Circle, the dramatic South Coast with its waterfalls and black sand beaches, the glacier area around Skaftafell, and the breathtaking Jokulsarlon Glacier Lagoon with Diamond Beach.</p>
-        <p>Unlike shorter itineraries, this private journey gives you time to venture further east toward Hofn and Vestrahorn, travel at a relaxed pace, and enjoy the flexibility to adapt the route as you go. Every stop, every detour and every moment is guided by your interests, with a dedicated <strong>private driver-guide</strong> who handles the planning and driving so you can focus on the experience.</p>
-        <div class="intro-keywords">
-          <span class="intro-keyword">6 day private tour Iceland</span>
-          <span class="intro-keyword">South Coast private journey</span>
-          <span class="intro-keyword">Glacier Lagoon private tour</span>
-          <span class="intro-keyword">Private driver-guide Iceland</span>
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" >
+    <div class="hero-bg tour-hero-bg"></div>
+    <div class="hero-overlay hero-overlay--tour"></div>
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag"><i aria-hidden="true" class="fas fa-compass"></i> Private Multi-Day Tour</span>
+        <h1>6 Day Private Tour Iceland</h1>
+        <p>Discover the best of South Iceland at a relaxed pace with a private driver-guide, custom stops and time for glaciers, waterfalls, black sand beaches and the Glacier Lagoon.</p>
+        <div class="hero-actions">
+          <a href="../index.html#contact" class="btn btn-primary"><i aria-hidden="true" class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+          <a href="#journey" class="btn btn-secondary">View 6 Day Route</a>
         </div>
-      </div>
-      <div class="intro-image" style="background-image: url('../assets/images/private-multiday-tour-iceland.jpg');">
-        <div class="intro-badge">
-          <i class="fas fa-route"></i>
-          <div class="intro-badge-text">
-            South Iceland in Depth
-            <small>6 days of private exploration</small>
+        <div class="hero-stats-bar">
+          <div class="hero-stat">
+            <span class="hero-stat-label">Duration</span>
+            <span class="hero-stat-value">6 Days / 5 Nights</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">Start</span>
+            <span class="hero-stat-value">Reykjavik or Keflavik</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">Style</span>
+            <span class="hero-stat-value">Private / Custom</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">Best for</span>
+            <span class="hero-stat-value">South Coast & Glacier Lagoon</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== WHY CHOOSE ==================== -->
-<section class="section" style="background: var(--navy);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label" style="color: var(--glacier);">Why Choose This Tour</span>
-      <h2 class="section-title" style="color: var(--white);">Why a 6 Day Private Tour?</h2>
-      <p class="section-subtitle" style="color: rgba(255,255,255,0.6);">More time, more depth, more freedom. This is the sweet spot between a short South Coast trip and a full Ring Road journey.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-        <h4>More Time Than a Short Tour</h4>
-        <p>With six days, you can reach Jokulsarlon, Diamond Beach, Vestrahorn and the southeast without rushing.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-user-tie"></i></div>
-        <h4>Private Driver-Guide Throughout</h4>
-        <p>Your guide stays with you from day one until your departure, providing continuity, local knowledge and a relaxed travel experience.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-sliders"></i></div>
-        <h4>Flexible Pace & Custom Stops</h4>
-        <p>Spend extra time at the Glacier Lagoon, stop for photography whenever the light calls, or add a detour to a hidden canyon.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-mountain"></i></div>
-        <h4>Better Access to Southeast Iceland</h4>
-        <p>Six days allows you to go beyond the standard South Coast route and experience the wilder landscapes of southeast Iceland.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ROUTE OVERVIEW (Journey Map) ==================== -->
-<section class="journey-section" id="journey">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Route Overview</span>
-      <h2 class="section-title">Your 6 Day Journey Across South Iceland</h2>
-      <p class="section-subtitle">A carefully planned route that takes you from Reykjavik through the Golden Circle, along the South Coast, into the glacier region and as far east as Vestrahorn, before returning along Iceland's scenic southern edge.</p>
-    </div>
-    <div class="journey-map">
-      <div class="journey-stop">
-        <div class="journey-stop-number">1</div>
-        <h4>Golden Circle</h4>
-        <p>Thingvellir, Geysir, Gullfoss and the start of your private journey</p>
-      </div>
-      <div class="journey-stop">
-        <div class="journey-stop-number">2</div>
-        <h4>South Coast Waterfalls</h4>
-        <p>Seljalandsfoss, Skogafoss and coastal views toward Vik</p>
-      </div>
-      <div class="journey-stop">
-        <div class="journey-stop-number">3</div>
-        <h4>Black Sand Beaches</h4>
-        <p>Reynisfjara, basalt columns and the Skaftafell glacier area</p>
-      </div>
-      <div class="journey-stop">
-        <div class="journey-stop-number">4</div>
-        <h4>Jokulsarlon & Diamond Beach</h4>
-        <p>Glacier Lagoon, floating icebergs and the black diamond shore</p>
-      </div>
-      <div class="journey-stop">
-        <div class="journey-stop-number">5</div>
-        <h4>Hofn & Vestrahorn</h4>
-        <p>Southeast landscapes, Viking Village mountain and local Icelandic culture</p>
-      </div>
-      <div class="journey-stop">
-        <div class="journey-stop-number">6</div>
-        <h4>Scenic Return</h4>
-        <p>Flexible route back through hidden stops to Reykjavik or Keflavik</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== DETAILED ITINERARY ==================== -->
-<section class="days-section" id="itinerary">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Detailed Itinerary</span>
-      <h2 class="section-title">Day by Day in South Iceland</h2>
-      <p class="section-subtitle">Each day is designed to give you a rich, unhurried experience of Iceland's south. Your driver-guide will adapt the timing and stops to match your interests, the weather and the season.</p>
-    </div>
-
-    <div class="day-card">
-      <div class="day-card-image" style="background-image: url('../assets/images/3-day-golden-circle-private-tour.jpg');"></div>
-      <div class="day-card-content">
-        <span class="day-card-badge">Day 1</span>
-        <h3 class="day-card-title">Arrival, Reykjavik or Golden Circle</h3>
-        <p class="day-card-text">Private pickup from Reykjavik or Keflavik Airport. Begin your journey with the Golden Circle, including Thingvellir National Park, the Geysir geothermal area and Gullfoss waterfall, depending on arrival time and your preferences.</p>
-        <div class="day-card-highlights">
-          <span class="day-card-highlight">Thingvellir National Park</span>
-          <span class="day-card-highlight">Geysir</span>
-          <span class="day-card-highlight">Gullfoss</span>
-          <span class="day-card-highlight">Private pickup</span>
-          <span class="day-card-highlight">Flexible start</span>
+  <!-- ==================== SEO INTRO ==================== -->
+  <section class="intro section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <span class="section-label">South Iceland Private Journey</span>
+          <h2 class="section-title">A Private 6 Day Journey Through South Iceland</h2>
+          <p>This tour is designed for travelers who want to explore the full breadth of South Iceland without rushing. Over six days, you will discover the iconic Golden Circle, the dramatic South Coast with its waterfalls and black sand beaches, the glacier area around Skaftafell, and the breathtaking Jokulsarlon Glacier Lagoon with Diamond Beach.</p>
+          <p>Unlike shorter itineraries, this private journey gives you time to venture further east toward Hofn and Vestrahorn, travel at a relaxed pace, and enjoy the flexibility to adapt the route as you go. Every stop, every detour and every moment is guided by your interests, with a dedicated <strong>private driver-guide</strong> who handles the planning and driving so you can focus on the experience.</p>
+          <div class="intro-keywords">
+            <span class="intro-keyword">6 day private tour Iceland</span>
+            <span class="intro-keyword">South Coast private journey</span>
+            <span class="intro-keyword">Glacier Lagoon private tour</span>
+            <span class="intro-keyword">Private driver-guide Iceland</span>
+          </div>
+        </div>
+        <div class="intro-image intro-image--6day">
+          <div class="intro-badge">
+            <i aria-hidden="true" class="fas fa-route"></i>
+            <div class="intro-badge-text">
+              South Iceland in Depth
+              <small>6 days of private exploration</small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="day-card">
-      <div class="day-card-content">
-        <span class="day-card-badge">Day 2</span>
-        <h3 class="day-card-title">South Coast Waterfalls and Vik</h3>
-        <p class="day-card-text">Travel along the South Coast with stops at Seljalandsfoss, Skogafoss and scenic coastal viewpoints before reaching the Vik area. Your driver-guide will recommend the best photo spots and hidden angles along the way.</p>
-        <div class="day-card-highlights">
-          <span class="day-card-highlight">Seljalandsfoss</span>
-          <span class="day-card-highlight">Skogafoss</span>
-          <span class="day-card-highlight">Eyjafjallajokull views</span>
-          <span class="day-card-highlight">Vik</span>
-          <span class="day-card-highlight">Coastal landscapes</span>
+  <!-- ==================== WHY CHOOSE ==================== -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label section-label--on-dark">Why Choose This Tour</span>
+        <h2 class="section-title section-title--on-dark">Why a 6 Day Private Tour?</h2>
+        <p class="section-subtitle section-subtitle--on-dark">More time, more depth, more freedom. This is the sweet spot between a short South Coast trip and a full Ring Road journey.</p>
+      </div>
+      <ul class="benefits-grid">
+        <li class="benefit-card">
+          <div class="benefit-icon"><i aria-hidden="true" class="fas fa-clock"></i></div>
+          <h4>More Time Than a Short Tour</h4>
+          <p>With six days, you can reach Jokulsarlon, Diamond Beach, Vestrahorn and the southeast without rushing.</p>
+        </li>
+        <li class="benefit-card">
+          <div class="benefit-icon"><i aria-hidden="true" class="fas fa-user-tie"></i></div>
+          <h4>Private Driver-Guide Throughout</h4>
+          <p>Your guide stays with you from day one until your departure, providing continuity, local knowledge and a relaxed travel experience.</p>
+        </li>
+        <li class="benefit-card">
+          <div class="benefit-icon"><i aria-hidden="true" class="fas fa-sliders"></i></div>
+          <h4>Flexible Pace & Custom Stops</h4>
+          <p>Spend extra time at the Glacier Lagoon, stop for photography whenever the light calls, or add a detour to a hidden canyon.</p>
+        </li>
+        <li class="benefit-card">
+          <div class="benefit-icon"><i aria-hidden="true" class="fas fa-mountain"></i></div>
+          <h4>Better Access to Southeast Iceland</h4>
+          <p>Six days allows you to go beyond the standard South Coast route and experience the wilder landscapes of southeast Iceland.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== ROUTE OVERVIEW (Journey Map) ==================== -->
+  <section class="journey-section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Route Overview</span>
+        <h2 class="section-title">Your 6 Day Journey Across South Iceland</h2>
+        <p class="section-subtitle">A carefully planned route that takes you from Reykjavik through the Golden Circle, along the South Coast, into the glacier region and as far east as Vestrahorn, before returning along Iceland's scenic southern edge.</p>
+      </div>
+      <ol class="journey-map">
+        <li class="journey-stop">
+          <div class="journey-stop-number">1</div>
+          <h4>Golden Circle</h4>
+          <p>Thingvellir, Geysir, Gullfoss and the start of your private journey</p>
+        </li>
+        <li class="journey-stop">
+          <div class="journey-stop-number">2</div>
+          <h4>South Coast Waterfalls</h4>
+          <p>Seljalandsfoss, Skogafoss and coastal views toward Vik</p>
+        </li>
+        <li class="journey-stop">
+          <div class="journey-stop-number">3</div>
+          <h4>Black Sand Beaches</h4>
+          <p>Reynisfjara, basalt columns and the Skaftafell glacier area</p>
+        </li>
+        <li class="journey-stop">
+          <div class="journey-stop-number">4</div>
+          <h4>Jokulsarlon & Diamond Beach</h4>
+          <p>Glacier Lagoon, floating icebergs and the black diamond shore</p>
+        </li>
+        <li class="journey-stop">
+          <div class="journey-stop-number">5</div>
+          <h4>Hofn & Vestrahorn</h4>
+          <p>Southeast landscapes, Viking Village mountain and local Icelandic culture</p>
+        </li>
+        <li class="journey-stop">
+          <div class="journey-stop-number">6</div>
+          <h4>Scenic Return</h4>
+          <p>Flexible route back through hidden stops to Reykjavik or Keflavik</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ==================== DETAILED ITINERARY ==================== -->
+  <section class="days-section" id="itinerary">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Detailed Itinerary</span>
+        <h2 class="section-title">Day by Day in South Iceland</h2>
+        <p class="section-subtitle">Each day is designed to give you a rich, unhurried experience of Iceland's south. Your driver-guide will adapt the timing and stops to match your interests, the weather and the season.</p>
+      </div>
+
+      <article class="day-card">
+        <div class="day-card-image">
+          <img src="../assets/images/3-day-golden-circle-private-tour.webp" alt="Golden Circle scenery on day 1 of the private Iceland tour" loading="lazy">
+        </div>
+        <div class="day-card-content">
+          <span class="day-card-badge">Day 1</span>
+          <h3 class="day-card-title">Arrival, Reykjavik or Golden Circle</h3>
+          <p class="day-card-text">Private pickup from Reykjavik or Keflavik Airport. Begin your journey with the Golden Circle, including Thingvellir National Park, the Geysir geothermal area and Gullfoss waterfall, depending on arrival time and your preferences.</p>
+          <div class="day-card-highlights">
+            <span class="day-card-highlight">Thingvellir National Park</span>
+            <span class="day-card-highlight">Geysir</span>
+            <span class="day-card-highlight">Gullfoss</span>
+            <span class="day-card-highlight">Private pickup</span>
+            <span class="day-card-highlight">Flexible start</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-card-content">
+          <span class="day-card-badge">Day 2</span>
+          <h3 class="day-card-title">South Coast Waterfalls and Vik</h3>
+          <p class="day-card-text">Travel along the South Coast with stops at Seljalandsfoss, Skogafoss and scenic coastal viewpoints before reaching the Vik area. Your driver-guide will recommend the best photo spots and hidden angles along the way.</p>
+          <div class="day-card-highlights">
+            <span class="day-card-highlight">Seljalandsfoss</span>
+            <span class="day-card-highlight">Skogafoss</span>
+            <span class="day-card-highlight">Eyjafjallajokull views</span>
+            <span class="day-card-highlight">Vik</span>
+            <span class="day-card-highlight">Coastal landscapes</span>
+          </div>
+        </div>
+        <div class="day-card-image">
+          <img src="../assets/images/south-coast-private-tour-iceland.webp" alt="South Coast waterfalls near Vik on day 2 of the private Iceland tour" loading="lazy">
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-card-image">
+          <img src="../assets/images/4-day-glacier-lagoon-private-tour.webp" alt="Black sand beaches and glacier landscapes on day 3 of the private Iceland tour" loading="lazy">
+        </div>
+        <div class="day-card-content">
+          <span class="day-card-badge">Day 3</span>
+          <h3 class="day-card-title">Black Sand Beaches and Glacier Landscapes</h3>
+          <p class="day-card-text">Explore Reynisfjara Black Sand Beach with its dramatic basalt columns and roaring Atlantic waves. Continue east through lava fields and glacial outwash plains toward the Skaftafell or glacier region.</p>
+          <div class="day-card-highlights">
+            <span class="day-card-highlight">Reynisfjara</span>
+            <span class="day-card-highlight">Dyrholaey</span>
+            <span class="day-card-highlight">Lava fields</span>
+            <span class="day-card-highlight">Glacier views</span>
+            <span class="day-card-highlight">Skaftafell area</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-card-content">
+          <span class="day-card-badge">Day 4</span>
+          <h3 class="day-card-title">Glacier Lagoon, Diamond Beach and Southeast Iceland</h3>
+          <p class="day-card-text">Visit Jokulsarlon Glacier Lagoon and the nearby Diamond Beach, where icebergs glisten on black volcanic sand. Enjoy the floating ice sculptures and dramatic southeast landscapes. Continue toward Hofn or Vestrahorn if the route and season allow.</p>
+          <div class="day-card-highlights">
+            <span class="day-card-highlight">Jokulsarlon Glacier Lagoon</span>
+            <span class="day-card-highlight">Diamond Beach</span>
+            <span class="day-card-highlight">Vatnajokull views</span>
+            <span class="day-card-highlight">Hofn</span>
+            <span class="day-card-highlight">Vestrahorn</span>
+          </div>
+        </div>
+        <div class="day-card-image">
+          <img src="../assets/images/winter-private-tour-iceland.webp" alt="Jokulsarlon Glacier Lagoon and Diamond Beach on day 4 of the private Iceland tour" loading="lazy">
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-card-image">
+          <img src="../assets/images/5-day-south-coast-private-tour.webp" alt="Scenic South Coast return route on day 5 of the private Iceland tour" loading="lazy">
+        </div>
+        <div class="day-card-content">
+          <span class="day-card-badge">Day 5</span>
+          <h3 class="day-card-title">Scenic Return Through the South Coast</h3>
+          <p class="day-card-text">Return west at a relaxed pace with flexible stops, hidden viewpoints and optional experiences depending on weather, season and your personal interests. Your guide knows the quiet spots that larger tours miss.</p>
+          <div class="day-card-highlights">
+            <span class="day-card-highlight">Hidden stops</span>
+            <span class="day-card-highlight">Flexible photography</span>
+            <span class="day-card-highlight">Waterfalls</span>
+            <span class="day-card-highlight">Canyons</span>
+            <span class="day-card-highlight">Volcanic landscapes</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-card-content">
+          <span class="day-card-badge">Day 6</span>
+          <h3 class="day-card-title">Final Icelandic Landscapes and Departure</h3>
+          <p class="day-card-text">Enjoy a final scenic route back to Reykjavik or Keflavik Airport. The day can be adapted to flight times, city sightseeing, the Blue Lagoon area, Reykjanes Peninsula or extra South Coast stops you may have missed.</p>
+          <div class="day-card-highlights">
+            <span class="day-card-highlight">Flexible ending</span>
+            <span class="day-card-highlight">Reykjavik</span>
+            <span class="day-card-highlight">Keflavik Airport</span>
+            <span class="day-card-highlight">Reykjanes Peninsula</span>
+            <span class="day-card-highlight">Optional Blue Lagoon area</span>
+          </div>
+        </div>
+        <div class="day-card-image">
+          <img src="../assets/images/private-tours-from-keflavik-airport.webp" alt="Final Icelandic landscapes before departure on day 6 of the private Iceland tour" loading="lazy">
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==================== HIGHLIGHTS ==================== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Tour Highlights</span>
+        <h2 class="section-title">What You Will Experience</h2>
+        <p class="section-subtitle">From tectonic plates to glacier lagoons, each highlight is a chapter in your private South Iceland story.</p>
+      </div>
+      <ul class="highlights-grid">
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-circle"></i></div>
+          <h4>Golden Circle</h4>
+          <p>Thingvellir, Geysir and Gullfoss in one private, unhurried day</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-water"></i></div>
+          <h4>South Coast Waterfalls</h4>
+          <p>Walk behind Seljalandsfoss and feel the spray of Skogafoss</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-mountain"></i></div>
+          <h4>Black Sand Beaches</h4>
+          <p>Reynisfjara's basalt columns and dramatic Atlantic coastline</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-snowflake"></i></div>
+          <h4>Skaftafell & Glacier Views</h4>
+          <p>Walk near the edge of Vatnajokull, Europe's largest glacier</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-iceberg"></i></div>
+          <h4>Jokulsarlon Glacier Lagoon</h4>
+          <p>Floating icebergs in a surreal glacial lake</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-gem"></i></div>
+          <h4>Diamond Beach</h4>
+          <p>Ice crystals scattered across volcanic black sand</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-image"></i></div>
+          <h4>Vestrahorn & Southeast Iceland</h4>
+          <p>The iconic mountain silhouette and wild southeastern coast</p>
+        </li>
+        <li class="highlight-card">
+          <div class="highlight-icon"><i aria-hidden="true" class="fas fa-user-tie"></i></div>
+          <h4>Private Driver-Guide</h4>
+          <p>Your own local expert throughout the entire journey</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== PRIVATE / CUSTOM SECTION ==================== -->
+  <section class="custom-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label section-label--on-dark">Designed Around You</span>
+        <h2 class="section-title">Your 6 Day Iceland Tour, Designed Around You</h2>
+        <p class="section-subtitle">Every private itinerary is different. Your route, pace and experiences are shaped by your travel style, the season and what matters most to you.</p>
+      </div>
+      <ul class="custom-grid">
+        <li class="custom-option">
+          <i aria-hidden="true" class="fas fa-sun"></i>
+          <h4>Season & Weather</h4>
+          <p>The itinerary flexes with Icelandic conditions, ensuring safe and rewarding travel year-round.</p>
+        </li>
+        <li class="custom-option">
+          <i aria-hidden="true" class="fas fa-camera"></i>
+          <h4>Photography Interests</h4>
+          <p>Extra time at golden hour locations, hidden waterfalls and dramatic coastal angles.</p>
+        </li>
+        <li class="custom-option">
+          <i aria-hidden="true" class="fas fa-child"></i>
+          <h4>Family Pace</h4>
+          <p>Shorter driving days, more frequent breaks and activities suited to all ages.</p>
+        </li>
+        <li class="custom-option">
+          <i aria-hidden="true" class="fas fa-star"></i>
+          <h4>Luxury Comfort</h4>
+          <p>Premium accommodation options, upgraded dining recommendations and a seamless experience.</p>
+        </li>
+        <li class="custom-option">
+          <i aria-hidden="true" class="fas fa-moon"></i>
+          <h4>Northern Lights in Winter</h4>
+          <p>Flexible evening routing when aurora conditions are favorable.</p>
+        </li>
+        <li class="custom-option">
+          <i aria-hidden="true" class="fas fa-map-pin"></i>
+          <h4>Start from Reykjavik or Keflavik</h4>
+          <p>Pickup from your hotel, guesthouse or the airport. The tour begins where you are.</p>
+        </li>
+      </ul>
+      <div class="custom-cta">
+        <a href="../index.html#contact" class="btn btn-primary btn-gold"><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a Custom Itinerary</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DRIVER-GUIDE SECTION ==================== -->
+  <section class="section section--ice">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Your Guide</span>
+        <h2 class="section-title">Travel with Your Own Private Driver-Guide</h2>
+        <p class="section-subtitle">Your driver-guide is the difference between a good trip and an unforgettable one. Here is why traveling with a private guide elevates your 6 day journey.</p>
+      </div>
+      <div class="driver-premium">
+        <div class="driver-premium-grid">
+          <div class="driver-premium-image"></div>
+          <div class="driver-premium-content">
+            <h3>More Than a Driver</h3>
+            <p>Your private driver-guide stays with you for the full six days, handling every road, every decision and every unexpected Icelandic weather change. You get local stories, insider knowledge and the freedom to explore without worrying about directions or road conditions.</p>
+            <ul class="driver-premium-list">
+              <li><i aria-hidden="true" class="fas fa-check-circle"></i> No large group — just you and your travel companions</li>
+              <li><i aria-hidden="true" class="fas fa-check-circle"></i> Flexible stops whenever something catches your eye</li>
+              <li><i aria-hidden="true" class="fas fa-check-circle"></i> Safer driving in Icelandic road and weather conditions</li>
+              <li><i aria-hidden="true" class="fas fa-check-circle"></i> Local knowledge and off-the-map recommendations</li>
+              <li><i aria-hidden="true" class="fas fa-check-circle"></i> A more relaxed, immersive travel experience</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="day-card-image" style="background-image: url('../assets/images/south-coast-private-tour-iceland.jpg');"></div>
     </div>
+  </section>
 
-    <div class="day-card">
-      <div class="day-card-image" style="background-image: url('../assets/images/4-day-glacier-lagoon-private-tour.jpg');"></div>
-      <div class="day-card-content">
-        <span class="day-card-badge">Day 3</span>
-        <h3 class="day-card-title">Black Sand Beaches and Glacier Landscapes</h3>
-        <p class="day-card-text">Explore Reynisfjara Black Sand Beach with its dramatic basalt columns and roaring Atlantic waves. Continue east through lava fields and glacial outwash plains toward the Skaftafell or glacier region.</p>
-        <div class="day-card-highlights">
-          <span class="day-card-highlight">Reynisfjara</span>
-          <span class="day-card-highlight">Dyrholaey</span>
-          <span class="day-card-highlight">Lava fields</span>
-          <span class="day-card-highlight">Glacier views</span>
-          <span class="day-card-highlight">Skaftafell area</span>
+  <!-- ==================== WHAT'S INCLUDED ==================== -->
+  <section class="included-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Inclusions</span>
+        <h2 class="section-title">What's Included</h2>
+        <p class="section-subtitle">Everything you need for a seamless private tour experience in Iceland.</p>
+      </div>
+      <div class="included-grid">
+        <div class="included-col">
+          <h3 class="included-col-title included-col-title--positive"><i class="fas fa-check-circle" aria-hidden="true"></i> Included</h3>
+          <ul>
+            <li><i aria-hidden="true" class="fas fa-check"></i> Private driver-guide for the full 6 days</li>
+            <li><i aria-hidden="true" class="fas fa-check"></i> Private vehicle with space for luggage and gear</li>
+            <li><i aria-hidden="true" class="fas fa-check"></i> Custom itinerary planning before your trip</li>
+            <li><i aria-hidden="true" class="fas fa-check"></i> Pickup and drop-off in Reykjavik or Keflavik</li>
+            <li><i aria-hidden="true" class="fas fa-check"></i> Flexible stops along the entire route</li>
+            <li><i aria-hidden="true" class="fas fa-check"></i> Support before and during your journey</li>
+          </ul>
         </div>
-      </div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-card-content">
-        <span class="day-card-badge">Day 4</span>
-        <h3 class="day-card-title">Glacier Lagoon, Diamond Beach and Southeast Iceland</h3>
-        <p class="day-card-text">Visit Jokulsarlon Glacier Lagoon and the nearby Diamond Beach, where icebergs glisten on black volcanic sand. Enjoy the floating ice sculptures and dramatic southeast landscapes. Continue toward Hofn or Vestrahorn if the route and season allow.</p>
-        <div class="day-card-highlights">
-          <span class="day-card-highlight">Jokulsarlon Glacier Lagoon</span>
-          <span class="day-card-highlight">Diamond Beach</span>
-          <span class="day-card-highlight">Vatnajokull views</span>
-          <span class="day-card-highlight">Hofn</span>
-          <span class="day-card-highlight">Vestrahorn</span>
-        </div>
-      </div>
-      <div class="day-card-image" style="background-image: url('../assets/images/winter-private-tour-iceland.jpg');"></div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-card-image" style="background-image: url('../assets/images/5-day-south-coast-private-tour.jpg');"></div>
-      <div class="day-card-content">
-        <span class="day-card-badge">Day 5</span>
-        <h3 class="day-card-title">Scenic Return Through the South Coast</h3>
-        <p class="day-card-text">Return west at a relaxed pace with flexible stops, hidden viewpoints and optional experiences depending on weather, season and your personal interests. Your guide knows the quiet spots that larger tours miss.</p>
-        <div class="day-card-highlights">
-          <span class="day-card-highlight">Hidden stops</span>
-          <span class="day-card-highlight">Flexible photography</span>
-          <span class="day-card-highlight">Waterfalls</span>
-          <span class="day-card-highlight">Canyons</span>
-          <span class="day-card-highlight">Volcanic landscapes</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-card">
-      <div class="day-card-content">
-        <span class="day-card-badge">Day 6</span>
-        <h3 class="day-card-title">Final Icelandic Landscapes and Departure</h3>
-        <p class="day-card-text">Enjoy a final scenic route back to Reykjavik or Keflavik Airport. The day can be adapted to flight times, city sightseeing, the Blue Lagoon area, Reykjanes Peninsula or extra South Coast stops you may have missed.</p>
-        <div class="day-card-highlights">
-          <span class="day-card-highlight">Flexible ending</span>
-          <span class="day-card-highlight">Reykjavik</span>
-          <span class="day-card-highlight">Keflavik Airport</span>
-          <span class="day-card-highlight">Reykjanes Peninsula</span>
-          <span class="day-card-highlight">Optional Blue Lagoon area</span>
-        </div>
-      </div>
-      <div class="day-card-image" style="background-image: url('../assets/images/private-tours-from-keflavik-airport.jpg');"></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ==================== HIGHLIGHTS ==================== -->
-<section class="section" style="background: var(--white);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Tour Highlights</span>
-      <h2 class="section-title">What You Will Experience</h2>
-      <p class="section-subtitle">From tectonic plates to glacier lagoons, each highlight is a chapter in your private South Iceland story.</p>
-    </div>
-    <div class="highlights-grid">
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-circle"></i></div>
-        <h4>Golden Circle</h4>
-        <p>Thingvellir, Geysir and Gullfoss in one private, unhurried day</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-water"></i></div>
-        <h4>South Coast Waterfalls</h4>
-        <p>Walk behind Seljalandsfoss and feel the spray of Skogafoss</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-mountain"></i></div>
-        <h4>Black Sand Beaches</h4>
-        <p>Reynisfjara's basalt columns and dramatic Atlantic coastline</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-snowflake"></i></div>
-        <h4>Skaftafell & Glacier Views</h4>
-        <p>Walk near the edge of Vatnajokull, Europe's largest glacier</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-iceberg"></i></div>
-        <h4>Jokulsarlon Glacier Lagoon</h4>
-        <p>Floating icebergs in a surreal glacial lake</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-gem"></i></div>
-        <h4>Diamond Beach</h4>
-        <p>Ice crystals scattered across volcanic black sand</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-image"></i></div>
-        <h4>Vestrahorn & Southeast Iceland</h4>
-        <p>The iconic mountain silhouette and wild southeastern coast</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon"><i class="fas fa-user-tie"></i></div>
-        <h4>Private Driver-Guide</h4>
-        <p>Your own local expert throughout the entire journey</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== PRIVATE / CUSTOM SECTION ==================== -->
-<section class="custom-section section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label" style="color: var(--glacier);">Designed Around You</span>
-      <h2 class="section-title">Your 6 Day Iceland Tour, Designed Around You</h2>
-      <p class="section-subtitle">Every private itinerary is different. Your route, pace and experiences are shaped by your travel style, the season and what matters most to you.</p>
-    </div>
-    <div class="custom-grid">
-      <div class="custom-option">
-        <i class="fas fa-sun"></i>
-        <h4>Season & Weather</h4>
-        <p>The itinerary flexes with Icelandic conditions, ensuring safe and rewarding travel year-round.</p>
-      </div>
-      <div class="custom-option">
-        <i class="fas fa-camera"></i>
-        <h4>Photography Interests</h4>
-        <p>Extra time at golden hour locations, hidden waterfalls and dramatic coastal angles.</p>
-      </div>
-      <div class="custom-option">
-        <i class="fas fa-child"></i>
-        <h4>Family Pace</h4>
-        <p>Shorter driving days, more frequent breaks and activities suited to all ages.</p>
-      </div>
-      <div class="custom-option">
-        <i class="fas fa-star"></i>
-        <h4>Luxury Comfort</h4>
-        <p>Premium accommodation options, upgraded dining recommendations and a seamless experience.</p>
-      </div>
-      <div class="custom-option">
-        <i class="fas fa-moon"></i>
-        <h4>Northern Lights in Winter</h4>
-        <p>Flexible evening routing when aurora conditions are favorable.</p>
-      </div>
-      <div class="custom-option">
-        <i class="fas fa-map-pin"></i>
-        <h4>Start from Reykjavik or Keflavik</h4>
-        <p>Pickup from your hotel, guesthouse or the airport. The tour begins where you are.</p>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 48px;">
-      <a href="../index.html#contact" class="btn btn-primary" style="background: var(--gold); color: var(--navy);"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== DRIVER-GUIDE SECTION ==================== -->
-<section class="section" style="background: var(--ice);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Your Guide</span>
-      <h2 class="section-title">Travel with Your Own Private Driver-Guide</h2>
-      <p class="section-subtitle">Your driver-guide is the difference between a good trip and an unforgettable one. Here is why traveling with a private guide elevates your 6 day journey.</p>
-    </div>
-    <div class="driver-premium">
-      <div class="driver-premium-grid">
-        <div class="driver-premium-image"></div>
-        <div class="driver-premium-content">
-          <h3>More Than a Driver</h3>
-          <p>Your private driver-guide stays with you for the full six days, handling every road, every decision and every unexpected Icelandic weather change. You get local stories, insider knowledge and the freedom to explore without worrying about directions or road conditions.</p>
-          <ul class="driver-premium-list">
-            <li><i class="fas fa-check-circle"></i> No large group — just you and your travel companions</li>
-            <li><i class="fas fa-check-circle"></i> Flexible stops whenever something catches your eye</li>
-            <li><i class="fas fa-check-circle"></i> Safer driving in Icelandic road and weather conditions</li>
-            <li><i class="fas fa-check-circle"></i> Local knowledge and off-the-map recommendations</li>
-            <li><i class="fas fa-check-circle"></i> A more relaxed, immersive travel experience</li>
+        <div class="included-col">
+          <h3 class="included-col-title included-col-title--negative"><i class="fas fa-times-circle" aria-hidden="true"></i> Not Included</h3>
+          <ul>
+            <li><i aria-hidden="true" class="fas fa-times"></i> Accommodation unless arranged in advance</li>
+            <li><i aria-hidden="true" class="fas fa-times"></i> Meals and drinks during the tour</li>
+            <li><i aria-hidden="true" class="fas fa-times"></i> Optional activities (glacier hiking, ice caves, boat tours)</li>
+            <li><i aria-hidden="true" class="fas fa-times"></i> Flights to and from Iceland</li>
+            <li><i aria-hidden="true" class="fas fa-times"></i> Travel insurance</li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== WHAT'S INCLUDED ==================== -->
-<section class="included-section section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Inclusions</span>
-      <h2 class="section-title">What's Included</h2>
-      <p class="section-subtitle">Everything you need for a seamless private tour experience in Iceland.</p>
-    </div>
-    <div class="included-grid">
-      <div class="included-col">
-        <h3 style="color: var(--aurora);"><i class="fas fa-check-circle" style="color: var(--aurora);"></i> Included</h3>
-        <ul>
-          <li><i class="fas fa-check"></i> Private driver-guide for the full 6 days</li>
-          <li><i class="fas fa-check"></i> Private vehicle with space for luggage and gear</li>
-          <li><i class="fas fa-check"></i> Custom itinerary planning before your trip</li>
-          <li><i class="fas fa-check"></i> Pickup and drop-off in Reykjavik or Keflavik</li>
-          <li><i class="fas fa-check"></i> Flexible stops along the entire route</li>
-          <li><i class="fas fa-check"></i> Support before and during your journey</li>
-        </ul>
+  <!-- ==================== BEST TIME TO TRAVEL ==================== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">When to Go</span>
+        <h2 class="section-title">Best Time to Travel</h2>
+        <p class="section-subtitle">The 6 day South Iceland tour is available year-round. Each season offers a completely different character and set of experiences.</p>
       </div>
-      <div class="included-col">
-        <h3 style="color: #e74c3c; opacity: 0.7;"><i class="fas fa-times-circle" style="color: #e74c3c; opacity: 0.5;"></i> Not Included</h3>
-        <ul>
-          <li><i class="fas fa-times"></i> Accommodation unless arranged in advance</li>
-          <li><i class="fas fa-times"></i> Meals and drinks during the tour</li>
-          <li><i class="fas fa-times"></i> Optional activities (glacier hiking, ice caves, boat tours)</li>
-          <li><i class="fas fa-times"></i> Flights to and from Iceland</li>
-          <li><i class="fas fa-times"></i> Travel insurance</li>
-        </ul>
-      </div>
+      <ul class="best-time-grid">
+        <li class="season-card">
+          <i class="fas fa-sun season-icon--summer" aria-hidden="true"></i>
+          <h4>Summer (Jun &ndash; Aug)</h4>
+          <p>Long daylight hours, easier road access, greener landscapes and the chance to explore the highlands and glacier areas in ideal conditions.</p>
+        </li>
+        <li class="season-card">
+          <i class="fas fa-snowflake" aria-hidden="true"></i>
+          <h4>Winter (Oct &ndash; Mar)</h4>
+          <p>Dramatic snow-covered landscapes, possible Northern Lights, ice cave access (seasonal), frozen waterfalls and a quieter, more intimate atmosphere.</p>
+        </li>
+        <li class="season-card">
+          <i class="fas fa-leaf season-icon--shoulder" aria-hidden="true"></i>
+          <h4>Shoulder Seasons (Apr &ndash; May / Sep)</h4>
+          <p>Fewer travelers, strong photography conditions, changing colors and a good balance of daylight and atmospheric weather patterns.</p>
+        </li>
+      </ul>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== BEST TIME TO TRAVEL ==================== -->
-<section class="section" style="background: var(--white);">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">When to Go</span>
-      <h2 class="section-title">Best Time to Travel</h2>
-      <p class="section-subtitle">The 6 day South Iceland tour is available year-round. Each season offers a completely different character and set of experiences.</p>
-    </div>
-    <div class="best-time-grid">
-      <div class="season-card">
-        <i class="fas fa-sun" style="color: #f39c12;"></i>
-        <h4>Summer (Jun &ndash; Aug)</h4>
-        <p>Long daylight hours, easier road access, greener landscapes and the chance to explore the highlands and glacier areas in ideal conditions.</p>
+  <!-- ==================== FAQ ==================== -->
+  <section class="section section--ice" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about the 6 day private tour in Iceland.</p>
       </div>
-      <div class="season-card">
-        <i class="fas fa-snowflake" style="color: var(--glacier);"></i>
-        <h4>Winter (Oct &ndash; Mar)</h4>
-        <p>Dramatic snow-covered landscapes, possible Northern Lights, ice cave access (seasonal), frozen waterfalls and a quieter, more intimate atmosphere.</p>
-      </div>
-      <div class="season-card">
-        <i class="fas fa-leaf" style="color: var(--aurora);"></i>
-        <h4>Shoulder Seasons (Apr &ndash; May / Sep)</h4>
-        <p>Fewer travelers, strong photography conditions, changing colors and a good balance of daylight and atmospheric weather patterns.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== FAQ ==================== -->
-<section class="section" style="background: var(--ice);" id="faq">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Questions</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <p class="section-subtitle">Everything you need to know about the 6 day private tour in Iceland.</p>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">
-          Is this 6 day tour fully private?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. This tour is exclusively private. You and your travel companions will have your own driver-guide and vehicle. You will not share your guide, itinerary or space with other groups.</p>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question"> Is this 6 day tour fully private? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Yes. This tour is exclusively private. You and your travel companions will have your own driver-guide and vehicle. You will not share your guide, itinerary or space with other groups.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can we customize the itinerary?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Absolutely. The entire route, daily timing, stops, accommodation style and activities can be adapted to your preferences. Your driver-guide also adjusts things along the way based on weather, energy levels and spontaneous interests.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Can we customize the itinerary? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Absolutely. The entire route, daily timing, stops, accommodation style and activities can be adapted to your preferences. Your driver-guide also adjusts things along the way based on weather, energy levels and spontaneous interests.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can the tour start from Keflavik Airport?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. The tour can start directly from Keflavik Airport on your arrival day, or from your accommodation in Reykjavik. We tailor the pickup to your travel plans.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Can the tour start from Keflavik Airport? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Yes. The tour can start directly from Keflavik Airport on your arrival day, or from your accommodation in Reykjavik. We tailor the pickup to your travel plans.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Is 6 days enough for the South Coast and Glacier Lagoon?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Six days is an ideal duration for exploring the Golden Circle, South Coast, Jokulsarlon Glacier Lagoon, Diamond Beach and the southeast region around Hofn and Vestrahorn at a comfortable pace.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Is 6 days enough for the South Coast and Glacier Lagoon? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Yes. Six days is an ideal duration for exploring the Golden Circle, South Coast, Jokulsarlon Glacier Lagoon, Diamond Beach and the southeast region around Hofn and Vestrahorn at a comfortable pace.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can we see the Northern Lights on this tour?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Northern Lights sightings depend on solar activity, cloud cover and the season. Between September and March, your driver-guide can adjust evening plans when aurora conditions are promising, giving you the best possible chance.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Can we see the Northern Lights on this tour? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Northern Lights sightings depend on solar activity, cloud cover and the season. Between September and March, your driver-guide can adjust evening plans when aurora conditions are promising, giving you the best possible chance.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Is this tour suitable for families?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Private tours are ideal for families. The pace, driving distance, stop frequency and activities can all be adjusted to suit children, teenagers or multi-generational groups.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Is this tour suitable for families? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Yes. Private tours are ideal for families. The pace, driving distance, stop frequency and activities can all be adjusted to suit children, teenagers or multi-generational groups.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Are hotels included?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Accommodation is not automatically included unless arranged during the booking process. We can recommend and help organize guesthouses, hotels or farm stays along the route to match your comfort level and budget.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Are hotels included? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Accommodation is not automatically included unless arranged during the booking process. We can recommend and help organize guesthouses, hotels or farm stays along the route to match your comfort level and budget.</p>
+          </div>
         </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">
-          Can we add activities like glacier hiking or ice caves?
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-answer">
-          <p>Yes. Optional activities such as glacier hiking, ice cave tours, boat trips on the Glacier Lagoon or snowmobiling can be arranged and added to your itinerary. These depend on the season and require advance coordination.</p>
+        <div class="faq-item">
+          <button class="faq-question"> Can we add activities like glacier hiking or ice caves? <i aria-hidden="true" class="fas fa-chevron-down"></i> </button>
+          <div class="faq-answer">
+            <p>Yes. Optional activities such as glacier hiking, ice cave tours, boat trips on the Glacier Lagoon or snowmobiling can be arranged and added to your itinerary. These depend on the season and require advance coordination.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== FINAL CTA ==================== -->
-<section class="final-cta-6day">
-  <div class="final-cta-6day-bg"></div>
-  <div class="final-cta-6day-overlay"></div>
-  <div class="container">
-    <div class="final-cta-content" style="grid-template-columns: 1fr; text-align: center;">
-      <div class="final-cta-text" style="max-width: 640px; margin: 0 auto;">
-        <span class="section-label" style="color: var(--gold);">Start Planning</span>
-        <h2 class="section-title">Plan Your 6 Day Private Tour in Iceland</h2>
-        <p>Tell us your travel dates, group size and interests, and we will design a private Iceland itinerary around your pace and preferences. No obligation, no rush, just a journey built for you.</p>
-        <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 16px;"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta-6day">
+    <div class="final-cta-6day-bg"></div>
+    <div class="final-cta-6day-overlay"></div>
+    <div class="container">
+      <div class="final-cta-content final-cta-content--centered">
+        <div class="final-cta-text final-cta-text--centered">
+          <span class="section-label section-label--gold">Start Planning</span>
+          <h2 class="section-title">Plan Your 6 Day Private Tour in Iceland</h2>
+          <p>Tell us your travel dates, group size and interests, and we will design a private Iceland itinerary around your pace and preferences. No obligation, no rush, just a journey built for you.</p>
+          <a href="../index.html#contact" class="btn btn-primary btn--spaced"><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a Custom Itinerary</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="../index.html" class="logo">
-          Iceland Private Tours
-          <span>Premium Multi-Day Experiences</span>
-        </a>
-        <p>Discover Iceland with private multi-day tours, custom itineraries and dedicated driver-guides. Premium travel experiences designed around your pace, interests and travel style.</p>
-      </div>
-      <div>
-        <h4>Tours</h4>
-        <ul class="footer-links">
-          <li><a href="../index.html">Private Multi-Day Tours</a></li>
-          <li><a href="../index.html">Custom Private Tours</a></li>
-          <li><a href="../index.html">Luxury Tours</a></li>
-          <li><a href="../index.html">Super Jeep Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>By Duration</h4>
-        <ul class="footer-links">
-          <li><a href="3-day-private-tour-iceland.html">3 Day Tours</a></li>
-          <li><a href="4-day-private-tour-iceland.html">4 Day Tours</a></li>
-          <li><a href="5-day-private-tour-iceland.html">5 Day Tours</a></li>
-          <li><a href="6-day-private-tour-iceland.html">6 Day Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul class="footer-links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Our Guides</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
-      <p>Premium private multi-day tours in Iceland</p>
-    </div>
-  </div>
-</footer>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" aria-label="Site footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-brand">
+						<a href="/" class="logo"> Iceland Private Tours <span>Premium Multi-Day Experiences</span> </a>
+						<p>
+							Discover Iceland with private multi-day tours, custom itineraries
+							and dedicated driver-guides. Premium travel experiences designed
+							around your pace, interests and travel style.
+						</p>
+					</div>
+					<nav aria-labelledby="footer-tours-heading">
+						<h2 class="footer-heading" id="footer-tours-heading">Tours</h2>
+						<ul class="footer-links">
+							<li><a href="#contact">Private Multi-Day Tours</a></li>
+							<li><a href="#contact">Custom Private Tours</a></li>
+							<li><a href="#contact">Luxury Tours</a></li>
+							<li><a href="#contact">Super Jeep Tours</a></li>
+						</ul>
+					</nav>
+					<nav aria-labelledby="footer-duration-heading">
+						<h2 class="footer-heading" id="footer-duration-heading"> By Duration </h2>
+						<ul class="footer-links">
+							<li> <a href="pages/3-day-private-tour-iceland.html">3 Day Tours</a> </li>
+							<li> <a href="pages/5-day-private-tour-iceland.html">5 Day Tours</a> </li>
+							<li> <a href="pages/7-day-private-tour-iceland.html">7 Day Tours</a> </li>
+							<li> <a href="pages/10-day-private-tour-iceland.html">10 Day Tours</a> </li>
+						</ul>
+					</nav>
+					<nav aria-labelledby="footer-company-heading">
+						<h2 class="footer-heading" id="footer-company-heading">Company</h2>
+						<ul class="footer-links">
+							<li><a href="#contact">About Us</a></li>
+							<li><a href="#contact">Our Guides</a></li>
+							<li><a href="#contact">Our Vehicles</a></li>
+							<li><a href="#contact">How to Book</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
+					<p>Premium private multi-day tours in Iceland</p>
+				</div>
+			</div>
+		</footer>
 
-<!-- ==================== SCROLL REVEAL SCRIPT ==================== -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const dayCards = document.querySelectorAll('.day-card');
-
-  const revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  dayCards.forEach(function (card) {
-    revealObserver.observe(card);
-  });
-});
-</script>
-
-<script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/reveal-cards.js"></script>
 </body>
 </html>

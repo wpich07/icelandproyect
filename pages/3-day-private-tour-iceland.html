@@ -1,618 +1,564 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3 Day Private Tour Iceland | Iceland Private Tours</title>
-<meta name="description" content="Book a 3-day private tour of Iceland with a dedicated driver-guide. Explore the Golden Circle, South Coast, waterfalls and glaciers at your own pace.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-
-<!-- ==================== HEADER ==================== -->
-<header class="header" id="header">
-  <div class="container">
-    <a href="../index.html" class="logo">
-      Iceland Private Tours
-      <span>Premium Multi-Day Experiences</span>
-    </a>
-    <nav class="nav">
-      <ul class="nav-list" id="navList">
-        <li><a href="../index.html#private-tours" class="nav-link">Private Tours</a></li>
-        <li><a href="../index.html#duration" class="nav-link">By Duration</a></li>
-        <li><a href="../index.html#route" class="nav-link">By Route</a></li>
-        <li><a href="../index.html#seasonal" class="nav-link">Seasonal</a></li>
-        <li><a href="#" class="nav-link"><!-- TODO: Create about page -->About</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="../index.html#contact" class="nav-cta">Request Custom Tour</a></li>
-      </ul>
-      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- ==================== PAGE HERO ==================== -->
-<section class="hero" style="min-height: 60vh;">
-  <div class="hero-bg" style="background-image: url('../assets/images/3-day-golden-circle-private-tour.jpg');"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-pattern"></div>
-  <div class="container">
-    <div class="hero-content">
-      <span class="hero-tag"><i class="fas fa-clock"></i> 3 Days</span>
-      <h1>3 Day Private Tour Iceland</h1>
-      <p>A short private itinerary from Reykjavík, ideal for the Golden Circle, South Coast waterfalls, black sand beaches and glaciers.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
-        <a href="../index.html" class="btn btn-secondary">← Back to All Tours</a>
-      </div>
-      <div class="hero-trust">
-        <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
-        <span><i class="fas fa-user"></i> Private / Custom</span>
-        <span><i class="fas fa-calendar"></i> Available year-round</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== TEMPLATE PLACEHOLDER ==================== -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Tour Details</span>
-      <h2 class="section-title">3-Day Private Iceland Itinerary</h2>
-      <p class="section-subtitle">This page template is ready for content. Add the full day-by-day itinerary, highlights, accommodation options, pricing and booking information here.</p>
-    </div>
-    <!-- TODO: Add full tour content, gallery, itinerary table, pricing, etc. -->
-    <!-- ================= СТИЛИ ================= -->
-<style>
-    .cinematic-wrapper {
-        background-color: var(--navy);
-        position: relative;
-    }
-
-    .scroll-day {
-        position: relative;
-        height: 150vh; 
-    }
-
-    .scroll-bg {
-        position: sticky;
-        top: 80px; 
-        height: calc(100vh - 80px);
-        width: 100%;
-        overflow: hidden;
-        z-index: 1;
-    }
-
-    .scroll-bg::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, rgba(7, 26, 45, 0.95) 0%, rgba(7, 26, 45, 0.4) 50%, rgba(7, 26, 45, 0.1) 100%);
-    }
-
-    .scroll-bg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: scale(1.05); 
-    }
-
-    .tactical-separator {
-        position: relative;
-        height: 35vh;
-        background-color: var(--navy);
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        box-shadow: 0 -20px 50px rgba(7,26,45,1), 0 20px 50px rgba(7,26,45,1);
-    }
-    
-    .separator-line {
-        width: 1px;
-        height: 50px;
-        background-color: var(--glacier);
-        opacity: 0.4;
-    }
-
-    .separator-text {
-        font-family: 'Courier New', Courier, monospace;
-        color: var(--glacier);
-        letter-spacing: 4px;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        opacity: 0.8;
-    }
-
-    .scroll-content {
-        position: absolute;
-        top: 15%;
-        left: 5%;
-        width: 90%;
-        max-width: 600px;
-        z-index: 2;
-        background: rgba(7, 26, 45, 0.7);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(111, 183, 200, 0.3);
-        border-radius: 4px;
-        padding: 40px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-        color: #ffffff;
-    }
-
-    .scroll-content::before, .scroll-content::after {
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        border: 2px solid var(--gold);
-    }
-    .scroll-content::before { top: 15px; left: 15px; border-right: none; border-bottom: none; }
-    .scroll-content::after { bottom: 15px; right: 15px; border-left: none; border-top: none; }
-
-    .scroll-badge {
-        background: transparent;
-        color: var(--gold);
-        border: 1px solid var(--gold);
-        padding: 4px 12px;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 800;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        display: inline-block;
-        margin-bottom: 15px;
-    }
-
-    .scroll-title {
-        font-size: 2.6rem;
-        margin-bottom: 15px;
-        line-height: 1.1;
-        color: var(--ice);
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: -1px;
-    }
-
-    .scroll-text {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: rgba(244, 248, 250, 0.85);
-        margin-bottom: 25px;
-    }
-
-    .tactical-stats {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px 20px;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        padding-top: 25px;
-    }
-
-    .t-stat { display: flex; flex-direction: column; }
-    .t-label { font-size: 0.65rem; text-transform: uppercase; color: var(--glacier); letter-spacing: 1.5px; margin-bottom: 5px; }
-    .t-value { font-family: 'Courier New', Courier, monospace; font-size: 1rem; font-weight: bold; color: var(--white); }
-    .t-coord { grid-column: span 2; font-family: 'Courier New', Courier, monospace; color: rgba(255,255,255,0.4); font-size: 0.8rem; text-align: right; margin-top: 15px; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 15px; }
-
-    /* ================= LIVE DASHBOARD ================= */
-    .live-dashboard {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background: rgba(7, 26, 45, 0.85);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255,255,255,0.15);
-        border-radius: 12px;
-        padding: 20px 25px;
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        z-index: 100;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.5s ease;
-        pointer-events: none;
-    }
-
-    .live-dashboard.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .classic-compass {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: 3px solid var(--gold);
-        background: #111;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
-    }
-
-    .compass-marks {
-        position: absolute;
-        inset: 4px;
-        border-radius: 50%;
-        border: 1px dashed rgba(255,255,255,0.3);
-    }
-
-    .compass-n { position: absolute; top: 2px; left: 50%; transform: translateX(-50%); color: var(--gold); font-size: 0.6rem; font-weight: bold; }
-    
-    .compass-needle {
-        position: absolute;
-        width: 4px;
-        height: 80%;
-        background: linear-gradient(to bottom, #ff4757 50%, #ffffff 50%);
-        border-radius: 2px;
-        transform-origin: center center;
-        transform: rotate(0deg);
-        transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .dash-info {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .dash-item {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 0.85rem;
-    }
-
-    .dash-lbl { color: var(--glacier); opacity: 0.8; text-transform: uppercase; }
-    .dash-val { color: var(--white); font-weight: bold; }
-
-    .altimeter-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        height: 60px;
-        padding-left: 15px;
-        border-left: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .altimeter-bar {
-        width: 8px;
-        height: 100%;
-        background: rgba(255,255,255,0.1);
-        border-radius: 4px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .altimeter-fill {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: var(--glacier);
-        height: 0%;
-        transition: height 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .alt-labels {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 0.65rem;
-        color: var(--white);
-        opacity: 0.6;
-    }
-
-    @media (max-width: 768px) {
-        .scroll-content { top: auto; bottom: 5%; left: 5%; width: 90%; padding: 30px 20px; }
-        .scroll-title { font-size: 2rem; }
-        .tactical-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
-        .live-dashboard { bottom: 15px; left: 15px; right: 15px; padding: 15px; gap: 15px; justify-content: space-between; }
-        .dash-item { flex-direction: column; gap: 2px; }
-    }
-</style>
-
-<!-- ================= LIVE DASHBOARD (ФИКСИРОВАННЫЙ) ================= -->
-<div class="live-dashboard" id="live-dashboard">
-    <div class="classic-compass">
-        <div class="compass-marks"></div>
-        <div class="compass-n">N</div>
-        <div class="compass-needle" id="dash-compass"></div>
-    </div>
-    
-    <div class="dash-info">
-        <div class="dash-item"><span class="dash-lbl">STAGE</span><span class="dash-val" id="dash-stage">01</span></div>
-        <div class="dash-item"><span class="dash-lbl">TEMP</span><span class="dash-val" id="dash-temp">-2°C</span></div>
-        <div class="dash-item"><span class="dash-lbl">ELEV</span><span class="dash-val" id="dash-elev">210m</span></div>
-    </div>
-
-    <div class="altimeter-container">
-        <div class="altimeter-bar">
-            <div class="altimeter-fill" id="dash-alt-fill"></div>
-        </div>
-        <div class="alt-labels">
-            <span>350m</span>
-            <span>0m</span>
-        </div>
-    </div>
-</div>
-
-<!-- ================= SEO INTRO & OVERVIEW ================= -->
-<section style="background-color: var(--stone); padding: 90px 5%; color: var(--ice);">
-    <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
-        <div style="margin-bottom: 20px;">
-            <span style="border: 1px solid var(--glacier); color: var(--glacier); padding: 5px 15px; font-family: 'Courier New', monospace; font-size: 0.9rem; text-transform: uppercase;">Disconnect. Explore.</span>
-        </div>
-        <h2 style="font-size: 3rem; margin-bottom: 24px; font-weight: 800; text-transform: uppercase; color: var(--white);">Leave The Office Behind</h2>
-        <p style="font-size: 1.2rem; line-height: 1.8; opacity: 0.9; max-width: 700px; margin: 0 auto;">
-            Trade your desk for dirt trails and glacial ice. This intensive <strong>3-day private tour</strong> is built for those who crave authentic wilderness. Led by an expert <strong>driver-guide</strong>, you will navigate raw volcanic landscapes and experience the unfiltered power of Iceland's nature. Scroll down to initiate the route.
-        </p>
-    </div>
-</section>
-
-<!-- ================= CINEMATIC SCROLL ITINERARY ================= -->
-<div class="cinematic-wrapper" id="itinerary-zone">
-    
-    <!-- Day 1 -->
-    <div class="scroll-day" data-heading="90" data-elev-perc="60" data-elev-txt="210m" data-temp="-2°C" data-stage="01">
-        <div class="scroll-bg">
-            <img src="https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80&w=1600&auto=format&fit=crop" alt="Golden Circle Volcanic Terrain">
-        </div>
-        <div class="scroll-content">
-            <span class="scroll-badge">Stage 01</span>
-            <h3 class="scroll-title">Tectonic Fissures</h3>
-            <p class="scroll-text">We leave the city limits and head straight into the rift valley of Thingvellir. Hike between the North American and Eurasian tectonic plates before confronting the erupting Strokkur geyser and the glacial floods of Gullfoss.</p>
-            
-            <div class="tactical-stats">
-                <div class="t-stat"><span class="t-label">Trail Time</span><span class="t-value">2.5 HRS</span></div>
-                <div class="t-stat"><span class="t-label">Terrain Type</span><span class="t-value">Volcanic Fissure</span></div>
-                <div class="t-stat"><span class="t-label">Drive Dist.</span><span class="t-value">150 KM</span></div>
-                <div class="t-stat"><span class="t-label">Hazard Level</span><span class="t-value" style="color: #f1c40f;">MODERATE</span></div>
-                <div class="t-stat"><span class="t-label">Primary Target</span><span class="t-value">Geysir System</span></div>
-                <div class="t-stat"><span class="t-label">Physical Effort</span><span class="t-value">2 / 5</span></div>
-                <div class="t-coord">GPS: 64.2559° N, 21.1295° W | ALT: 210M</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="tactical-separator">
-        <div class="separator-line"></div><div class="separator-text">Waypoint Secured</div><div class="separator-line"></div>
-    </div>
-
-    <!-- Day 2 -->
-    <div class="scroll-day" data-heading="180" data-elev-perc="5" data-elev-txt="10m" data-temp="+3°C" data-stage="02">
-        <div class="scroll-bg">
-            <img src="https://images.unsplash.com/photo-1489593426629-5e4e00ce821c?q=80&w=1600&auto=format&fit=crop" alt="Black Sand Beach Storm">
-        </div>
-        <div class="scroll-content">
-            <span class="scroll-badge">Stage 02</span>
-            <h3 class="scroll-title">Basalt & Ash</h3>
-            <p class="scroll-text">Descend to the rugged South Coast. Prepare to get soaked behind the roaring curtain of Seljalandsfoss. Later, navigate the harsh, wind-battered shores of Reynisfjara, where massive basalt columns meet the Atlantic surf.</p>
-            
-            <div class="tactical-stats">
-                <div class="t-stat"><span class="t-label">Trail Time</span><span class="t-value">3.5 HRS</span></div>
-                <div class="t-stat"><span class="t-label">Terrain Type</span><span class="t-value">Black Sand Coast</span></div>
-                <div class="t-stat"><span class="t-label">Drive Dist.</span><span class="t-value">200 KM</span></div>
-                <div class="t-stat"><span class="t-label">Wind Exposure</span><span class="t-value" style="color: #e74c3c;">HIGH (Gale)</span></div>
-                <div class="t-stat"><span class="t-label">Primary Target</span><span class="t-value">Reynisfjara</span></div>
-                <div class="t-stat"><span class="t-label">Physical Effort</span><span class="t-value">3 / 5</span></div>
-                <div class="t-coord">GPS: 63.4042° N, 19.0470° W | ALT: 10M</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="tactical-separator">
-        <div class="separator-line"></div><div class="separator-text">Waypoint Secured</div><div class="separator-line"></div>
-    </div>
-
-    <!-- Day 3 -->
-    <div class="scroll-day" data-heading="135" data-elev-perc="100" data-elev-txt="350m" data-temp="-5°C" data-stage="03">
-        <div class="scroll-bg">
-            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1600&auto=format&fit=crop" alt="Glacier Ice Cave">
-        </div>
-        <div class="scroll-content">
-            <span class="scroll-badge">Stage 03</span>
-            <h3 class="scroll-title">Blue Ice Ascent</h3>
-            <p class="scroll-text">Strap on your crampons. Today you conquer the ancient ice of Sólheimajökull glacier. A physically demanding but rewarding expedition through crevasses and ice ridges before our extraction back to civilization.</p>
-            
-            <div class="tactical-stats">
-                <div class="t-stat"><span class="t-label">Trail Time</span><span class="t-value">4.5 HRS</span></div>
-                <div class="t-stat"><span class="t-label">Terrain Type</span><span class="t-value">Glacial Ice</span></div>
-                <div class="t-stat"><span class="t-label">Required Gear</span><span class="t-value">Crampons/Ice Axe</span></div>
-                <div class="t-stat"><span class="t-label">Hazard Level</span><span class="t-value" style="color: #e74c3c;">EXTREME</span></div>
-                <div class="t-stat"><span class="t-label">Primary Target</span><span class="t-value">Sólheimajökull</span></div>
-                <div class="t-stat"><span class="t-label">Physical Effort</span><span class="t-value">5 / 5</span></div>
-                <div class="t-coord">GPS: 63.5323° N, 19.4673° W | ALT: 350M</div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- ================= LOGISTICS & PRICING ================= -->
-<section style="background-color: var(--navy); padding: 90px 5%; border-top: 1px solid rgba(255,255,255,0.05);">
-    <div class="container" style="max-width: 1100px; margin: 0 auto;">
-        
-        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start;">
-            
-            <div style="display: flex; flex-direction: column;">
-                <h3 style="color: var(--white); font-size: 1.8rem; margin-bottom: 25px; font-weight: 800; text-transform: uppercase;">Area of Operations</h3>
-                <div style="border-radius: 4px; overflow: hidden; border: 1px solid var(--stone); height: 100%; min-height: 450px; position: relative;">
-                    <div style="position: absolute; inset: 0; pointer-events: none; background: rgba(7, 26, 45, 0.1); box-shadow: inset 0 0 40px rgba(7,26,45,0.8); z-index: 2;"></div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715424.1687009477!2d-22.138478413110292!3d64.2185265538186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2sIceland!5e0!3m2!1sen!2ses!4v1716309876543!5m2!1sen!2ses" width="100%" height="100%" style="border:0; position: absolute; z-index: 1;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-            
-            <div style="background: rgba(244, 248, 250, 0.03); padding: 45px; border: 1px solid rgba(111, 183, 200, 0.2); border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
-                <h3 style="color: var(--white); font-size: 1.8rem; margin-bottom: 10px; font-weight: 800; text-transform: uppercase;">Expedition Logistics</h3>
-                
-                <div style="font-size: 3rem; color: var(--gold); font-weight: 800; margin-bottom: 35px; font-family: 'Courier New', monospace; line-height: 1;">
-                    €1,850 <span style="display: block; font-size: 0.9rem; color: rgba(255,255,255,0.5); font-weight: normal; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 1px; margin-top: 10px;">/ operator (per person)</span>
-                </div>
-                
-                <h4 style="color: var(--glacier); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;">Included Equipment & Gear</h4>
-                
-                <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.85); font-size: 1rem;">
-                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-truck-monster" style="color: var(--gold); margin-top: 4px;"></i> 
-                        <span><strong>Modified 4x4 Super Jeep</strong><br><span style="font-size: 0.85rem; opacity: 0.7;">Off-road tires, lifted suspension for river crossings.</span></span>
-                    </li>
-                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-icicles" style="color: var(--gold); margin-top: 4px;"></i> 
-                        <span><strong>Glacier Hardware</strong><br><span style="font-size: 0.85rem; opacity: 0.7;">Professional grade crampons & climbing ice axes.</span></span>
-                    </li>
-                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-helmet-safety" style="color: var(--gold); margin-top: 4px;"></i> 
-                        <span><strong>Safety Kit</strong><br><span style="font-size: 0.85rem; opacity: 0.7;">Certified helmets and safety harnesses for ice caves.</span></span>
-                    </li>
-                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start; gap: 15px;">
-                        <i class="fa-solid fa-walkie-talkie" style="color: var(--gold); margin-top: 4px;"></i> 
-                        <span><strong>Comms & Navigation</strong><br><span style="font-size: 0.85rem; opacity: 0.7;">VHF Radios & emergency GPS tracking beacons.</span></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= PREMIUM CTA ================= -->
-<section style="background-color: var(--navy); padding: 60px 5% 100px; text-align: center;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">Ready to Get Dirty?</h2>
-        <p style="color: rgba(244, 248, 250, 0.7); font-size: 1.15rem; margin-bottom: 40px;">Request your custom itinerary. We provide the 4x4, the gear, and the expert guide. You bring the stamina.</p>
-        
-        <button style="background-color: var(--gold); color: var(--navy); border: none; padding: 18px 45px; font-size: 1.1rem; font-weight: 800; border-radius: 4px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 15px rgba(201, 169, 106, 0.2); transition: all 0.3s ease;">
-            Request a Custom Itinerary
-        </button>
-    </div>
-</section>
-
-<!-- ================= СКРИПТ АНИМАЦИИ ДАШБОРДА ================= -->
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const dashboard = document.getElementById('live-dashboard');
-        const compassNeedle = document.getElementById('dash-compass');
-        const altFill = document.getElementById('dash-alt-fill');
-        const txtStage = document.getElementById('dash-stage');
-        const txtTemp = document.getElementById('dash-temp');
-        const txtElev = document.getElementById('dash-elev');
-        
-        const days = document.querySelectorAll('.scroll-day');
-        const itineraryZone = document.getElementById('itinerary-zone');
-
-        const zoneObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    dashboard.classList.add('visible');
-                } else {
-                    dashboard.classList.remove('visible');
-                }
-            });
-        }, { threshold: 0.05 });
-        
-        if(itineraryZone) zoneObserver.observe(itineraryZone);
-
-        const dayObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    
-                    const heading = el.getAttribute('data-heading');
-                    compassNeedle.style.transform = `rotate(${heading}deg)`;
-                    
-                    const elevPerc = el.getAttribute('data-elev-perc');
-                    altFill.style.height = `${elevPerc}%`;
-
-                    txtStage.textContent = el.getAttribute('data-stage');
-                    txtTemp.textContent = el.getAttribute('data-temp');
-                    txtElev.textContent = el.getAttribute('data-elev-txt');
-                }
-            });
-        }, { threshold: 0.4 });
-
-        days.forEach(day => dayObserver.observe(day));
-    });
-</script>
-  </div>
-</section>
-
-<!-- ==================== FINAL CTA ==================== -->
-<section class="final-cta">
-  <div class="final-cta-bg"></div>
-  <div class="final-cta-overlay"></div>
-  <div class="container">
-    <div class="final-cta-content" style="grid-template-columns: 1fr;">
-      <div class="final-cta-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
-        <span class="section-label" style="color: var(--gold);">Start Your Journey</span>
-        <h2 class="section-title">Ready to Book Your 3-Day Private Tour?</h2>
-        <p>Tell us your travel dates, group size and preferences. We will create a private 3-day Iceland itinerary designed around your pace and interests.</p>
-        <a href="#" class="btn btn-primary" style="margin-top: 16px;"><i class="fas fa-paper-plane"></i> Request a Custom Itinerary</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Day Private Tour Iceland | Iceland Private Tours</title>
+    <meta
+      name="description"
+      content="Book a 3-day private tour of Iceland with a dedicated driver-guide. Explore the Golden Circle, South Coast, waterfalls and glaciers at your own pace."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+      <div class="container">
         <a href="../index.html" class="logo">
           Iceland Private Tours
           <span>Premium Multi-Day Experiences</span>
         </a>
-        <p>Discover Iceland with private multi-day tours, custom itineraries and dedicated driver-guides. Premium travel experiences designed around your pace, interests and travel style.</p>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list" id="navList">
+            <li>
+              <a href="../index.html#private-tours" class="nav-link"
+                >Private Tours</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#duration" class="nav-link">By Duration</a>
+            </li>
+            <li>
+              <a href="../index.html#route" class="nav-link">By Route</a>
+            </li>
+            <li>
+              <a href="../index.html#seasonal" class="nav-link">Seasonal</a>
+            </li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li>
+              <a href="../index.html#contact" class="nav-link">Contact</a>
+            </li>
+            <li>
+              <a href="../index.html#contact" class="nav-cta"
+                >Request Custom Tour</a
+              >
+            </li>
+          </ul>
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="navList"
+          >
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+        </nav>
       </div>
-      <div>
-        <h4>Tours</h4>
-        <ul class="footer-links">
-          <li><a href="../index.html">Private Multi-Day Tours</a></li>
-          <li><a href="../index.html">Custom Private Tours</a></li>
-          <li><a href="../index.html">Luxury Tours</a></li>
-          <li><a href="../index.html">Super Jeep Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>By Duration</h4>
-        <ul class="footer-links">
-          <li><a href="3-day-private-tour-iceland.html">3 Day Tours</a></li>
-          <li><a href="5-day-private-tour-iceland.html">5 Day Tours</a></li>
-          <li><a href="../index.html">7 Day Tours</a></li>
-          <li><a href="../index.html">10 Day Tours</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul class="footer-links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Our Guides</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
-      <p>Premium private multi-day tours in Iceland</p>
-    </div>
-  </div>
-</footer>
+    </header>
 
-<script src="../assets/js/main.js"></script>
-</body>
+    <main id="main-content">
+      <!-- ==================== PAGE HERO ==================== -->
+      <section class="hero hero-page-day">
+        <div class="hero-3-day-img"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-pattern"></div>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-tag"><i class="fas fa-clock"></i> 3 Days</span>
+            <h1>3 Day Private Tour Iceland</h1>
+            <p>
+              A short private itinerary from Reykjavík, ideal for the Golden
+              Circle, South Coast waterfalls, black sand beaches and glaciers.
+            </p>
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary"
+                ><i class="fas fa-paper-plane"></i> Request a Custom
+                Itinerary</a
+              >
+              <a href="../index.html" class="btn btn-secondary"
+                >← Back to All Tours</a
+              >
+            </div>
+            <div class="hero-trust">
+              <span><i class="fas fa-map-pin"></i> Start: Reykjavík</span>
+              <span><i class="fas fa-user"></i> Private / Custom</span>
+              <span><i class="fas fa-calendar"></i> Available year-round</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TOUR CONTENT ==================== -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">Tour Details</span>
+            <h2 class="section-title">3-Day Private Iceland Itinerary</h2>
+            <p class="section-subtitle">
+              This page template is ready for content. Add the full day-by-day
+              itinerary, highlights, accommodation options, pricing and booking
+              information here.
+            </p>
+          </div>
+
+          <!-- ================= LIVE DASHBOARD ================= -->
+          <aside
+            class="live-dashboard"
+            id="live-dashboard"
+            role="status"
+            aria-live="polite"
+            aria-label="Live route dashboard"
+          >
+            <div class="classic-compass">
+              <div class="compass-marks"></div>
+              <div class="compass-n"></div>
+              <div class="compass-needle" id="dash-compass"></div>
+            </div>
+
+            <div class="dash-info">
+              <div class="dash-item">
+                <span class="dash-lbl">STAGE</span
+                ><span class="dash-val" id="dash-stage">01</span>
+              </div>
+              <div class="dash-item">
+                <span class="dash-lbl">TEMP</span
+                ><span class="dash-val" id="dash-temp">-2°C</span>
+              </div>
+              <div class="dash-item">
+                <span class="dash-lbl">ELEV</span
+                ><span class="dash-val" id="dash-elev">210m</span>
+              </div>
+            </div>
+
+            <div class="altimeter-container">
+              <div class="altimeter-bar">
+                <div class="altimeter-fill" id="dash-alt-fill"></div>
+              </div>
+              <div class="alt-labels">
+                <span>350m</span>
+                <span>0m</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- ================= SEO INTRO & OVERVIEW ================= -->
+          <section class="intro-section" aria-labelledby="intro-heading">
+            <div class="container intro-container">
+              <div class="intro-badge-wrap">
+                <span class="day-intro-badge">Disconnect. Explore.</span>
+              </div>
+              <h2 id="intro-heading" class="intro-title">
+                Leave The Office Behind
+              </h2>
+              <p class="day-intro-text">
+                Trade your desk for dirt trails and glacial ice. This intensive
+                <strong>3-day private tour</strong> is built for those who crave
+                authentic wilderness. Led by an expert
+                <strong>driver-guide</strong>, you will navigate raw volcanic
+                landscapes and experience the unfiltered power of Iceland's
+                nature. Scroll down to initiate the route.
+              </p>
+            </div>
+          </section>
+
+          <!-- ================= CINEMATIC SCROLL ITINERARY ================= -->
+          <div class="cinematic-wrapper" id="itinerary-zone">
+            <h2 class="visually-hidden">Day-by-Day Itinerary</h2>
+
+            <!-- Day 1 -->
+            <article
+              class="scroll-day"
+              data-heading="90"
+              data-elev-perc="60"
+              data-elev-txt="210m"
+              data-temp="-2°C"
+              data-stage="01"
+              aria-label="Day 1: Tectonic Fissures"
+            >
+              <div class="scroll-bg">
+                <img
+                  src="https://images.unsplash.com/photo-1529963183134-61a90db47eaf?q=80&w=1600&auto=format&fit=crop"
+                  alt="Golden Circle Volcanic Terrain"
+                />
+              </div>
+              <div class="scroll-content">
+                <span class="scroll-badge">Stage 01</span>
+                <h3 class="scroll-title">Tectonic Fissures</h3>
+                <p class="scroll-text">
+                  We leave the city limits and head straight into the rift
+                  valley of Thingvellir. Hike between the North American and
+                  Eurasian tectonic plates before confronting the erupting
+                  Strokkur geyser and the glacial floods of Gullfoss.
+                </p>
+
+                <dl class="tactical-stats">
+                  <div class="t-stat">
+                    <dt class="t-label">Trail Time</dt>
+                    <dd class="t-value">2.5 HRS</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Terrain Type</dt>
+                    <dd class="t-value">Volcanic Fissure</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Drive Dist.</dt>
+                    <dd class="t-value">150 KM</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Hazard Level</dt>
+                    <dd class="t-value t-value--caution">MODERATE</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Primary Target</dt>
+                    <dd class="t-value">Geysir System</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Physical Effort</dt>
+                    <dd class="t-value">2 / 5</dd>
+                  </div>
+                  <div class="t-stat t-stat--coord">
+                    <dt class="visually-hidden">Coordinates</dt>
+                    <dd class="t-coord">
+                      GPS: 64.2559° N, 21.1295° W | ALT: 210M
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+
+            <div class="tactical-separator">
+              <div class="separator-line"></div>
+              <div class="separator-text">Waypoint Secured</div>
+              <div class="separator-line"></div>
+            </div>
+
+            <!-- Day 2 -->
+            <article
+              class="scroll-day"
+              data-heading="180"
+              data-elev-perc="5"
+              data-elev-txt="10m"
+              data-temp="+3°C"
+              data-stage="02"
+              aria-label="Day 2: Basalt & Ash"
+            >
+              <div class="scroll-bg">
+                <img
+                  src="https://images.unsplash.com/photo-1489593426629-5e4e00ce821c?q=80&w=1600&auto=format&fit=crop"
+                  alt="Black Sand Beach Storm"
+                />
+              </div>
+              <div class="scroll-content">
+                <span class="scroll-badge">Stage 02</span>
+                <h3 class="scroll-title">Basalt & Ash</h3>
+                <p class="scroll-text">
+                  Descend to the rugged South Coast. Prepare to get soaked
+                  behind the roaring curtain of Seljalandsfoss. Later, navigate
+                  the harsh, wind-battered shores of Reynisfjara, where massive
+                  basalt columns meet the Atlantic surf.
+                </p>
+
+                <dl class="tactical-stats">
+                  <div class="t-stat">
+                    <dt class="t-label">Trail Time</dt>
+                    <dd class="t-value">3.5 HRS</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Terrain Type</dt>
+                    <dd class="t-value">Black Sand Coast</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Drive Dist.</dt>
+                    <dd class="t-value">200 KM</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Wind Exposure</dt>
+                    <dd class="t-value t-value--warning">HIGH (Gale)</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Primary Target</dt>
+                    <dd class="t-value">Reynisfjara</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Physical Effort</dt>
+                    <dd class="t-value">3 / 5</dd>
+                  </div>
+                  <div class="t-stat t-stat--coord">
+                    <dt class="visually-hidden">Coordinates</dt>
+                    <dd class="t-coord">
+                      GPS: 63.4042° N, 19.0470° W | ALT: 10M
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+
+            <div class="tactical-separator">
+              <div class="separator-line"></div>
+              <div class="separator-text">Waypoint Secured</div>
+              <div class="separator-line"></div>
+            </div>
+
+            <!-- Day 3 -->
+            <article
+              class="scroll-day"
+              data-heading="135"
+              data-elev-perc="100"
+              data-elev-txt="350m"
+              data-temp="-5°C"
+              data-stage="03"
+              aria-label="Day 3: Blue Ice Ascent"
+            >
+              <div class="scroll-bg">
+                <img
+                  src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=1600&auto=format&fit=crop"
+                  alt="Glacier Ice Cave"
+                />
+              </div>
+              <div class="scroll-content">
+                <span class="scroll-badge">Stage 03</span>
+                <h3 class="scroll-title">Blue Ice Ascent</h3>
+                <p class="scroll-text">
+                  Strap on your crampons. Today you conquer the ancient ice of
+                  Sólheimajökull glacier. A physically demanding but rewarding
+                  expedition through crevasses and ice ridges before our
+                  extraction back to civilization.
+                </p>
+
+                <dl class="tactical-stats">
+                  <div class="t-stat">
+                    <dt class="t-label">Trail Time</dt>
+                    <dd class="t-value">4.5 HRS</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Terrain Type</dt>
+                    <dd class="t-value">Glacial Ice</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Required Gear</dt>
+                    <dd class="t-value">Crampons/Ice Axe</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Hazard Level</dt>
+                    <dd class="t-value t-value--warning">EXTREME</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Primary Target</dt>
+                    <dd class="t-value">Sólheimajökull</dd>
+                  </div>
+                  <div class="t-stat">
+                    <dt class="t-label">Physical Effort</dt>
+                    <dd class="t-value">5 / 5</dd>
+                  </div>
+                  <div class="t-stat t-stat--coord">
+                    <dt class="visually-hidden">Coordinates</dt>
+                    <dd class="t-coord">
+                      GPS: 63.5323° N, 19.4673° W | ALT: 350M
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+          </div>
+
+          <!-- ================= LOGISTICS & PRICING ================= -->
+          <section
+            class="logistics-section"
+            aria-labelledby="logistics-heading"
+          >
+            <div class="container logistics-container">
+              <h2 id="logistics-heading" class="visually-hidden">
+                Logistics & Pricing
+              </h2>
+              <div class="logistics-grid">
+                <div class="logistics-col-map">
+                  <h3 class="card-heading">Area of Operations</h3>
+                  <figure class="map-frame">
+                    <figcaption class="visually-hidden">
+                      Map of the Iceland tour region
+                    </figcaption>
+                    <div class="logistics-map-embed">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715424.1687009477!2d-22.138478413110292!3d64.2185265538186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d22b52a3eb6043%3A0x6f8a0434e5c1459a!2sIceland!5e0!3m2!1sen!2ses!4v1716309876543!5m2!1sen!2ses" width="100%" class="logistics-map-iframe" title="Map of the 4-day Iceland private tour route" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                  </figure>
+                </div>
+                <div class="pricing-card">
+                  <h3 class="card-heading">Expedition Logistics</h3>
+                  <p class="price-display">
+                    €1,850
+                    <span class="price-unit">/ operator (per person)</span>
+                  </p>
+                  <h4 class="equipment-heading">Included Equipment & Gear</h4>
+                  <ul class="equipment-list">
+                    <li class="equipment-item">
+                      <i
+                        class="fa-solid fa-truck-monster equipment-icon"
+                        aria-hidden="true"
+                      ></i>
+                      <span
+                        ><strong>Modified 4x4 Super Jeep</strong><br /><span
+                          class="equipment-detail"
+                          >Off-road tires, lifted suspension for river
+                          crossings.</span
+                        ></span
+                      >
+                    </li>
+                    <li class="equipment-item">
+                      <i
+                        class="fa-solid fa-icicles equipment-icon"
+                        aria-hidden="true"
+                      ></i>
+                      <span
+                        ><strong>Glacier Hardware</strong><br /><span
+                          class="equipment-detail"
+                          >Professional grade crampons & climbing ice
+                          axes.</span
+                        ></span
+                      >
+                    </li>
+                    <li class="equipment-item">
+                      <i
+                        class="fa-solid fa-helmet-safety equipment-icon"
+                        aria-hidden="true"
+                      ></i>
+                      <span
+                        ><strong>Safety Kit</strong><br /><span
+                          class="equipment-detail"
+                          >Certified helmets and safety harnesses for ice
+                          caves.</span
+                        ></span
+                      >
+                    </li>
+                    <li class="equipment-item">
+                      <i
+                        class="fa-solid fa-walkie-talkie equipment-icon"
+                        aria-hidden="true"
+                      ></i>
+                      <span
+                        ><strong>Comms & Navigation</strong><br /><span
+                          class="equipment-detail"
+                          >VHF Radios & emergency GPS tracking beacons.</span
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= PREMIUM CTA ================= -->
+          <section
+            class="cta-secondary-section"
+            aria-labelledby="cta-secondary-heading"
+          >
+            <div class="container cta-secondary-container">
+              <h2 id="cta-secondary-heading" class="cta-secondary-title">
+                Ready to Get Dirty?
+              </h2>
+              <p class="cta-secondary-text">
+                Request your custom itinerary. We provide the 4x4, the gear, and
+                the expert guide. You bring the stamina.
+              </p>
+
+              <button type="button" class="cta-secondary-btn">
+                Request a Custom Itinerary
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ==================== FINAL CTA ==================== -->
+      <section class="final-cta">
+        <div class="final-cta-bg"></div>
+        <div class="final-cta-overlay"></div>
+        <div class="container">
+          <div class="final-cta-content final-cta-content--single">
+            <div class="final-cta-text final-cta-text--centered">
+              <span class="section-label section-label--gold"
+                >Start Your Journey</span
+              >
+              <h2 class="section-title">
+                Ready to Book Your 3-Day Private Tour?
+              </h2>
+              <p>
+                Tell us your travel dates, group size and preferences. We will
+                create a private 3-day Iceland itinerary designed around your
+                pace and interests.
+              </p>
+              <a href="#" class="btn btn-primary btn-spaced"
+                ><i class="fas fa-paper-plane" aria-hidden="true"></i> Request a
+                Custom Itinerary</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo">
+              Iceland Private Tours
+              <span>Premium Multi-Day Experiences</span>
+            </a>
+            <p>
+              Discover Iceland with private multi-day tours, custom itineraries
+              and dedicated driver-guides. Premium travel experiences designed
+              around your pace, interests and travel style.
+            </p>
+          </div>
+          <nav aria-label="Tours">
+            <h4>Tours</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Private Multi-Day Tours</a></li>
+              <li><a href="../index.html">Custom Private Tours</a></li>
+              <li><a href="../index.html">Luxury Tours</a></li>
+              <li><a href="../index.html">Super Jeep Tours</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="By Duration">
+            <h4>By Duration</h4>
+            <ul class="footer-links">
+              <li><a href="#">3 Day Tours</a></li>
+              <li><a href="5-day-private-tour-iceland.html">5 Day Tours</a></li>
+              <li><a href="7-day-private-tour-iceland.html">7 Day Tours</a></li>
+              <li>
+                <a href="10-day-private-tour-iceland.html">10 Day Tours</a>
+              </li>
+            </ul>
+          </nav>
+          <nav aria-label="Company">
+            <h4>Company</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#">Our Guides</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Iceland Private Tours. All rights reserved.</p>
+          <p>Premium private multi-day tours in Iceland</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
